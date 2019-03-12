@@ -219,4 +219,4 @@ Addendum:
 
 ----
 
-**UPDATE**: My site [is on Netlify now](http://localhost:1313/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, execept when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f643.png)" title=":upside_down_face:">:upside_down_face:</span>
+**UPDATE**: My site [is on Netlify now](/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, execept when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f643.png)" title=":upside_down_face:">:upside_down_face:</span>
