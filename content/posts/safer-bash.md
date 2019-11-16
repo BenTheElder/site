@@ -42,7 +42,7 @@ non-zero status (exit code). This provides a basic mechanism to ensure that
 scripts fail unless you intended to ignore a failure. 
 You can still intentionally ignore errors like: `some_failing_command || true`
 
-- `set -o nunset` causes unset variables to be treat as errors and cause an exit.
+- `set -o nounset` causes unset variables to be treat as errors and cause an exit.
 This will help prevent using variables that were never assigned.
 
 - `set -o pipefail` causes pipelines to retain / set hte last non-zero status.
