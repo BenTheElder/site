@@ -440,7 +440,7 @@ def post_process_mask(mask):
     mask = cv2.blur(mask.astype(float), (30,30))
     return mask
 
-def shift_img(img, dx, dy):
+def shift_image(img, dx, dy):
     img = np.roll(img, dy, axis=0)
     img = np.roll(img, dx, axis=1)
     if dy>0:
