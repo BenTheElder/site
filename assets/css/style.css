@@ -105,12 +105,6 @@ button, .button,
 .bg-color-light { background-color: #4f83cc; }
 .color-dark { color: #002f6c; }
 .bg-color-dark { background-color: #002f6c; }
-.color-secondary { color: #00e676; }
-.bg-color-secondary { background-color: #00e676; }
-.color-secondary-light { color: #66ffa6; }
-.bg-color-secondary-light { background-color: #66ffa6; }
-.color-secondary-dark { color: #00b248; }
-.bg-color-secondary-dark { background-color: #00b248; }
 
 .warning { background-color: #FDD835 !important; }
 .error { background-color: #FF1744 !important; }
@@ -662,7 +656,7 @@ button,
   margin: .2em .5em;
   line-height: 1.3;
   border: none;
-  border-radius: 3px;
+  border-radius: .2em;
   cursor: pointer;
   touch-action: manipulation;
   letter-spacing: .05em;
@@ -675,6 +669,9 @@ button,
   box-sizing: content-box;
   background-color: black;
   color: white;
+  background: #dbedff;
+  color: black;
+  border: .1em solid black;
 }
 a.button {
   border: none;
@@ -726,6 +723,8 @@ button:hover,
 .button:hover {
   /*background-color: #00C757;*/
   color: #00ff1f;
+  color: #105ae2;
+  border-color: #105ae2;
   /* 2dp shadow */
   /*-webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,0.14),
   0 3px 4px 0 rgba(0,0,0,0.12),
