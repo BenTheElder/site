@@ -476,7 +476,7 @@ def get_frame(cap, background_scaled):
     while mask is None:
         try:
             mask = get_mask(frame)
-        except:
+        except requests.RequestException:
             print("mask request failed, retrying")
     # post-process mask and frame
     mask = post_process_mask(mask)
