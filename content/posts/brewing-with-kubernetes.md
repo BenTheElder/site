@@ -15,7 +15,7 @@ More specifically the Raspberry Pi wired to [my CoffeePot controller](https://gi
 I've set up a public <a href="/projects/coffee">live status page</a>* displaying all of the sensor data as well as the last update time, with control restricted to users on my local network. I've done this simply by proxying the status endpoint and not the rest of the `coffeebot` service. I'm also busily adding back support for scheduling brewing as well as alarms via [the Google Calendar API](https://developers.google.com/google-apps/calendar/quickstart/go), listening to a dedicated `coffee` calendar on my personal account.
 
 <hr>
-\* As of September 2018 I've migrated to static site hosting and taken this page down for the moment.
+* As of September 2018 I've migrated to static site hosting and taken this page down for the moment.
 <hr>
 
 ## Background
