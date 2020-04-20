@@ -29,8 +29,6 @@ One interesting effect of using gomobile is that CreatureBox should work on Wind
  The gomobile tooling was definitely very interesting, but pure go apps are definitely still a little rough around the
  edges. I think it made a pretty resaonable compromise in this case, and it made focusing on the simulation logic very
  straight-forward.
-\
-\
 
 
 ## The Simulation
