@@ -10,7 +10,7 @@ categories:
 ---
 <!--prow diagram-->
 <div class="full-page-width" style="background-color: #1155b3; padding: 0; padding-bottom: 1em; padding-top: 1em; margin-top: -.25em;">
-  <div><img src="/images/prow_diagram.svg" title="Prow Diagram" width="1100px" style="max-width: 100%; margin: 0 auto; display: block" /></div>
+  <div><img src="/images/prow_diagram.svg" title="Prow Diagram" width="1100px" style="width: 1100px; max-width: 100%; margin: 0 auto; display: block" /></div>
   <!--diagram attribution-->
   <!--min-margin hack-->
   <div style="margin: 0; width: calc(100% - 1em); padding-left: .5em; padding-right: .5em; margin-bottom: -.25em;">
