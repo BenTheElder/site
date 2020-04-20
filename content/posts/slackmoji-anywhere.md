@@ -116,9 +116,10 @@ span.emoji::-moz-selection {
 }
 ```
 
-<p class="strike"> This seems to work in Webkit based browsers (Chrome, Safari, etc.) at least, 
+~~This seems to work in Webkit based browsers (Chrome, Safari, etc.) at least, 
 highlighting is slightly off on Firefox in varying ways depending on the platform,
-but still works and the shortcodes copy correctly. </p>
+but still works and the shortcodes copy correctly.~~
+
 **Update**: Thanks to some sleuthing with [matter123](https://github.com/matter123) this
 has been improved and now works pretty well in Firefox, Edge, Chrome, Safari ...
 
