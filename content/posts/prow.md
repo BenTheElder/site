@@ -50,12 +50,14 @@ Notes:
 
   - There are many other tools that didn't make the diagram or dicussion above, you can find these and more about everything at <a href="https://github.com/kubernetes/test-infra">github.com/kubernetes/test-infra</a>.
  
-  - These are all open source, except TestGrid, which is actually a <a href="https://testgrid.k8s.io">publicly hosted</a> and <a href="https://github.com/kubernetes/test-infra/tree/master/testgrid/config">configured</a> version of an internal tool developed at Google. We hope to open source a more performant rewrite of Testgrid sometime in Spring 2018.  
-  <hr>
-  **UPDATE (August 2018)**: Work on this is still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly. 
-  <hr>
-  **UPDATE (August 2019)**: The TestGrid repo is now created at <a href="https://github.com/GoogleCloudPlatform/testgrid">github.com/GoogleCloudPlatform/testgrid</a>, Michelle received approval and has started migrating the code. 🎉
-  <hr>
+  - These are all open source, except TestGrid, which is actually a <a href="https://testgrid.k8s.io">publicly hosted</a> and <a href="https://github.com/kubernetes/test-infra/tree/master/testgrid/config">configured</a> version of an internal tool developed at Google. We hope to open source a more performant rewrite of Testgrid sometime in Spring 2018.
  
   - A number of other projects / groups including <a href="https://www.openshift.com/">OpenShift</a>, <a href="https://istio.io/">Istio</a>, and <a href="https://www.jetstack.io/">Jetstack</a> are also using and contributing (greatly!) to Prow and the rest of Kubernetes "test-infra".
 
+---
+
+**UPDATE (August 2018)**: Work on this is still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly. 
+
+----
+
+**UPDATE (August 2019)**: The TestGrid repo is now created at <a href="https://github.com/GoogleCloudPlatform/testgrid">github.com/GoogleCloudPlatform/testgrid</a>, Michelle received approval and has started migrating the code. 🎉
