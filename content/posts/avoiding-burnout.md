@@ -37,7 +37,7 @@ Some of the advice I received:
 Some of this may sound very obvious, but I found it very helpful to actually
 hear it spelled out from people I know and respect, from my peers, and even people I don't know yet.
 
-Thank you to everyone who reached out and gave this advice. I really appreciate it. ❤
+Thank you to everyone who reached out and gave this advice. I really appreciate it. {{< emoji ":heart:" >}}
 
 Please keep an eye on your peers, I know others are going through similar bouts with burnout or are nearly at their own limits. Check up on them, and if they're up for it, go organize something fun and unrelated for a change.
 

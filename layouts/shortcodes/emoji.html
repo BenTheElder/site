@@ -1,0 +1,6 @@
+{{ $shorthand := .Get 0 }}
+{{ $emoji := $.Site.Data.emoji }}
+{{ $data := index $emoji $shorthand }}
+{{ $image := index $data "image" }}
+{{ $value := index $data "value" }}
+<span class="emoji" style="background-image:url({{$image}})" title="{{$shorthand}}">{{$value}}</span>

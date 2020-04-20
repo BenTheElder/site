@@ -10,7 +10,7 @@ title: Home
         <td>BSCS '17 @ <a href="http://www.gatech.edu/">Georgia Tech</a> <span class="emoji" style="background-image:url(/images/GT_Buzz_logo.svg)" title=":buzz:">:buzz:</span></td>
       </tr>
       <tr>
-        <td>Software Engineer @ <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#4285f4">e</span> <span class="emoji" style="background-image:url(/images/kubernetes_logo.svg)" title=":kubernetes:"/>:kubernetes:</span></td>
+        <td>Software Engineer @ <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#4285f4">e</span> {{< emoji ":kubernetes:" >}}</td>
       </tr>
       <tr>
         <td>Everything is fine <span class="emoji" style="background-image:url(/images/slackmoji/this_is_fine.jpg)" title=":this_is_fine:">:this_is_fine:</span></td>
