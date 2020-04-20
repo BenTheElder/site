@@ -13,7 +13,7 @@ reliable bash can be hard. I've been reviewing and fixing a lot of bash while
 working on [cleaning up] the Kubernetes project's scripts and wanted to collect
 some tips for writing more reliable scripts.
 
-<img alt="BASH The Bourne-Again Shell" class="centered" src="/images/bash-logo-web.png">
+<img alt="BASH The Bourne-Again Shell" class="centered" src="./bash-logo-web.png">
 
 ## Use ShellCheck
 
@@ -203,7 +203,7 @@ The Google Shell Style Guide has some fairly reasonable [recommendations about w
 While you could probably implement your entire app in bash, it might not be the
 best idea <sup><a href="#1">1</a></sup> <span class="emoji" style="background-image:url(/images/slackmoji/bash_fire.png)" title=":bash_fire:"/>:bash_fire:</span>
 
-<img alt="wargames ending" src="/images/Wargames_Ending.jpg">
+<img alt="wargames ending" src="./Wargames_Ending.jpg">
 <span class="centered-text block italic">[WOPR] on writing safe bash</span>
 
 <a href="#1"><span id="1">1</span></a>. I'll probably do it someday anyhow, just for fun. I actually like bash a lot. It's just tricky to avoid trivial bugs.
