@@ -203,8 +203,7 @@ The Google Shell Style Guide has some fairly reasonable [recommendations about w
 While you could probably implement your entire app in bash, it might not be the
 best idea <sup><a href="#1">1</a></sup> <span class="emoji" style="background-image:url(/images/slackmoji/bash_fire.png)" title=":bash_fire:"/>:bash_fire:</span>
 
-<img alt="wargames ending" src="./Wargames_Ending.jpg">
-<span class="centered-text block italic">[WOPR] on writing safe bash</span>
+{{< figure src="./Wargames_Ending.jpg" alt="wargames ending" caption="[WOPR] on writing safe bash" >}}
 
 <a href="#1"><span id="1">1</span></a>. I'll probably do it someday anyhow, just for fun. I actually like bash a lot. It's just tricky to avoid trivial bugs.
 
