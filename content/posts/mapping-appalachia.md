@@ -57,43 +57,43 @@ During the first B.E.T.A. some places I discovered along my travels were:
 <div style="border-left: 3px solid #3388ff; margin-left:-7px;">
 {{% md %}}
 1. [**Vault 76**](http://fallout.wikia.com/wiki/Vault_76) - An underground bunker where the journey begins.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-00.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-02.jpg" />
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-03.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-00.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-02.jpg" />
+  <img class="centered" src="./photo_2018-10-31_01-06-03.jpg"/>
 
 2. A crashed prop-plane of some sort at a farm.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-06.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-07.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-06.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-07.jpg"/>
 
 3. The Vault [Overseer](http://fallout.wikia.com/wiki/Vault_76_overseer)'s encampment. A pretty basic camp with a fire, some workbenches, and some storage chests.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_19-23-27.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_19-23-27.jpg"/>
 
 
 4. A tiny shack in the woods, guarded by a lone [Protectron](http://fallout.wikia.com/wiki/Protectron).
-   <img class="centered" src="/images/fallout76/photo_2018-10-31_18-53-48.jpg"/>
+   <img class="centered" src="./photo_2018-10-31_18-53-48.jpg"/>
 
 5. An abandoned water treatment plant. Overrun with [Liberator](http://fallout.wikia.com/wiki/Liberator_(Fallout_76)) robots.
 
 6. A large crashed plane, apparently a commercial airline. - 
   I explored the inside and found some interesting loot. The area was also heavily
 patrolled by Super Mutants, and they had an encampment nearby.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-10.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-11.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-11_2.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-10.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-11.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-11_2.jpg"/>
 
 7. A pharmaceutical company's building, with a very cool retro-futuristic aesthetic.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-06-12.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_18-49-48.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-06-12.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_18-49-48.jpg"/>
 
 8. Bolton Greens - A daycare for rich kids run by a robot, who was very concerned 
 with preparation for "The Halloween Gala". I took on a side quest to help for [caps](http://fallout.wikia.com/wiki/Bottle_cap), which mostly consisted of reminding other
 robots to return to the daycare and prepare for Halloween.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_19-10-52.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_19-10-52.jpg"/>
 
 9. Top of the World - A ski resort with a more retro-futuristic architecture 
 including a geodesic dome. I was attacked and killed by Super Mutant Skirmisher here.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_19-07-26.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_19-07-30.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_19-07-26.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_19-07-30.jpg"/>
 {{% /md %}}
 </div>
 
@@ -105,11 +105,11 @@ including a geodesic dome. I was attacked and killed by Super Mutant Skirmisher 
 <div style="border-left: 3px solid #f1e93c; margin-left:-7px;">
 {{% md %}}
 1. Vault 76 again.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-21-57.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-21-57.jpg"/>
 
 2. A logging plant, with logging robots still hard at work. One of them gave
 me some extra wood scraps, and said something like "Must. Chop. Wood. Forever."
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_19-19-51.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_19-19-51.jpg"/>
 
 3. A small town. Various factions resided here once, all long gone.
 
@@ -117,17 +117,17 @@ me some extra wood scraps, and said something like "Must. Chop. Wood. Forever."
 
 5. Poseidon - A nuclear power plant. There seemed to be a quest to get the power
 working again, but I moved on to explore other areas for now.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-22-06.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-22-06.jpg"/>
 
 6. A train station - A lone Protectron vendor resided here. There were no trains.
 
 7. The remains of [Charleston](https://en.wikipedia.org/wiki/Charleston,_West_Virginia), specifically the capital building. I spotted [The Grafton Monster](https://www.vgr.com/beasts-west-virginia-grafton-monster/) lurking around here and briefly engaged before wisening up and running away. I'll have to come back when I've leveled up further.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-22-01.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-22-01.jpg"/>
 
 8. The remains of an Airport, with many broken planes, and one more large crashed airplane
 against the air traffic control tower. The area was teeming with Super Mutants similar
 to the previous crash.
-  <img class="centered" src="/images/fallout76/photo_2018-10-31_01-22-14.jpg"/>
+  <img class="centered" src="./photo_2018-10-31_01-22-14.jpg"/>
 {{% /md %}}
 </div>
 
@@ -145,30 +145,30 @@ and only place I visited in the "Ash Heap Region". Thankfully I had already
 equipped a gas mask which saved me from getting lung disease many times ...
 There was a Power Armor station here, but the game broke when I tried to enter the power armor.
 This area had _many_ high level Scorched. I also acquired a shotgun here.
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-15-45.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-13-14.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-15-45.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-13-14.jpg"/>
 
 
 2. Hornwright Air Purifier Site #02 - Some malfunctioning terminals attached
 to some strange looking "air purifier", presumably there's a quest to fix these
 at some point, not much else here.
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-22-18.jpg"/>
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-22-23.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-22-18.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-22-23.jpg"/>
 
 
 3. Uncanny Caverns - Some kind of tourist spot, I encountered a "vicious wolf" here.
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-24-14.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-24-14.jpg"/>
 
 4. R & G Processing Services - Some kind of industrial plant.
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-32-27.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-32-27.jpg"/>
 
 5. Spruce Knob - "The highest place in West Virginia". I "captured" a public
 workspace there before moving on. There was also some kind of monorail like train
 station, with two cars there.
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-11-27.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-11-27.jpg"/>
 
 6. South Mountain Lookout - A Lookout Tower.
-  <img class="centered" src="/images/fallout76/photo_2018-11-02_00-31-20.jpg"/>
+  <img class="centered" src="./photo_2018-11-02_00-31-20.jpg"/>
 {{% /md %}}
 </div>
 
@@ -226,7 +226,7 @@ var map = L.map('map', {
 // our map will be a square 4356 x 4356 px
 var mapSize = 4356;
 var bounds = [[0,0], [mapSize, mapSize]];
-var image = L.imageOverlay('/images/fo76-map-optimized.jpg', bounds).addTo(map);
+var image = L.imageOverlay('./fo76-map-optimized.jpg', bounds).addTo(map);
 map.setMaxBounds(bounds);
 
 // helper that computes minimum zoom level to show the entire map
