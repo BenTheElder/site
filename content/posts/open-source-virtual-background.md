@@ -524,6 +524,7 @@ docker network create --driver bridge fakecam
 docker run -d \
   --name=bodypix \
   --network=fakecam \
+  -p 9000:9000 \
   --gpus=all --shm-size=1g --ulimit memlock=-1 --ulimit stack=67108864 \
   bodypix
 # start the camera, note that we need to pass through video devices,
@@ -532,7 +533,6 @@ docker run -d \
 docker run -d \
   --name=fakecam \
   --network=fakecam \
-  -p 8080:8080 \
   -u "$$(id -u):$$(getent group video | cut -d: -f3)" \
   $$(find /dev -name 'video*' -printf "--device %p ") \
   fakecam
