@@ -992,7 +992,6 @@ h1:hover a, h2:hover a, h3:hover a, h4:hover a {
   .card {
     padding-left: 1em !important;
     padding-right: 1em !important;
-    padding-top: 0.4em!important;
     font-size: 16px;
     max-width: 100%;
   }
