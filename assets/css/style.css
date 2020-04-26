@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
   background: white;
+  padding-top: .15em;
 }
 
 h1 { font-size: 2em; }
