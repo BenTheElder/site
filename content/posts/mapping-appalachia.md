@@ -49,7 +49,7 @@ After the B.E.T.A. my interest fell off quickly as the locations and quests fail
 <!--the map-->
 <figure id="map-wrapper"><div id="map" style=""></div></figure>
 
-## October 30th [B.E.T.A.](https://bethesda.net/en/article/XUtJrgiCgU6WqMASW8w0I/fallout-76-our-future-begins-together-in-beta) (Break-It Early Test Application)
+## October 30th [B.E.T.A.] (Break-It Early Test Application)
 <hr>
 
 During the first B.E.T.A. some places I discovered along my travels were:
@@ -367,3 +367,5 @@ addLocations('#ce0019', [
 ]);
 
 </script>
+
+[B.E.T.A.]: https://bethesda.net/en/article/XUtJrgiCgU6WqMASW8w0I/fallout-76-our-future-begins-together-in-beta
