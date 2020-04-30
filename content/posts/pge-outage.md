@@ -24,7 +24,7 @@ https://www.npr.org/2019/10/09/768544316/utility-giant-pg-e-voluntarily-shuts-of
 
 ## Overall Map Preview
 
-<div style="position:relative;padding-top:140%;">
+<div style="position:relative;padding-top:140%;background:#d1d1d1;">
     <iframe src="https://docs.google.com/viewer?embedded=true&url=https://elder.dev/files/pge-outage/PSPS_10-09-19_D-02_BaseLine_PUBLIC_ImpactedAreaMap_1008_1130.pdf" frameborder="0" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
 </div>
 
