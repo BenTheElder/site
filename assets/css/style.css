@@ -968,7 +968,7 @@ pre.chroma {
 /* heading anchors */
 h1 a.hanchor,
 h2 a.hanchor,
-h3 a.hanchor 
+h3 a.hanchor,
 h4 a.hanchor,
 h5 a.hanchor,
 h6 a.hanchor { 
@@ -983,7 +983,7 @@ h6 a.hanchor {
   margin: none;
   margin-left: -.75em;
   padding-right: 0;
-  padding-left: 0em;
+  padding-left: 0;
   line-height: 1em;
   padding-top: .25em;
   padding-top: .6em;
