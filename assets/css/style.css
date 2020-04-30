@@ -1011,6 +1011,22 @@ h6 a.hanchor:hover {
   margin-top: 0;
 }
 
+.block {
+  border-left: .25em solid #3388ff;
+  background: #f0f8ff;
+  margin: .5em -1em;
+  padding: .1em 1em;
+  padding-left: .5em;
+}
+.block.yellow {
+  border-color: #f1e93c;
+  background: #ffffe0;
+}
+.block.red {
+  border-color: #ce0019;
+  background: pink;
+}
+
 /* reduce padding for mobile */
 @media (max-width: 50em) {
   .header-content .brand {

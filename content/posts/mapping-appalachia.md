@@ -54,8 +54,7 @@ After the B.E.T.A. my interest fell off quickly as the locations and quests fail
 
 During the first B.E.T.A. some places I discovered along my travels were:
 
-<div style="border-left: 3px solid #3388ff; margin-left:-7px;">
-{{% md %}}
+{{% linedsection %}}
 1. [**Vault 76**](http://fallout.wikia.com/wiki/Vault_76) - An underground bunker where the journey begins.
   <img class="centered" src="./photo_2018-10-31_01-06-00.jpg"/>
   <img class="centered" src="./photo_2018-10-31_01-06-02.jpg" />
@@ -94,16 +93,14 @@ robots to return to the daycare and prepare for Halloween.
 including a geodesic dome. I was attacked and killed by Super Mutant Skirmisher here.
   <img class="centered" src="./photo_2018-10-31_19-07-26.jpg"/>
   <img class="centered" src="./photo_2018-10-31_19-07-30.jpg"/>
-{{% /md %}}
-</div>
+{{% /linedsection %}}
 
 <hr>
 <p class="centered-text">At this point I respawned back at the vault.</p>
 <hr>
 
 
-<div style="border-left: 3px solid #f1e93c; margin-left:-7px;">
-{{% md %}}
+{{% linedsection class="yellow" %}}
 1. Vault 76 again.
   <img class="centered" src="./photo_2018-10-31_01-21-57.jpg"/>
 
@@ -128,18 +125,16 @@ working again, but I moved on to explore other areas for now.
 against the air traffic control tower. The area was teeming with Super Mutants similar
 to the previous crash.
   <img class="centered" src="./photo_2018-10-31_01-22-14.jpg"/>
-{{% /md %}}
-</div>
+{{% /linedsection %}}
 
 
 ## November 1st B.E.T.A.
 
-<hr>
+---
 
 I got in another hour during the November 1st session.
 
-<div style="border-left: 3px solid #ce0019; margin-left:-7px;">
-{{% md %}}
+{{% linedsection class="red" %}}
 1. The Burning Mine - As the name suggests, a burnt out mine. This was the first
 and only place I visited in the "Ash Heap Region". Thankfully I had already
 equipped a gas mask which saved me from getting lung disease many times ...
@@ -169,8 +164,7 @@ station, with two cars there.
 
 6. South Mountain Lookout - A Lookout Tower.
   <img class="centered" src="./photo_2018-11-02_00-31-20.jpg"/>
-{{% /md %}}
-</div>
+{{% /linedsection %}}
 
 
 ## Notes
