@@ -966,16 +966,42 @@ pre.chroma {
 }
 
 /* heading anchors */
-.hanchor { 
+h1 a.hanchor,
+h2 a.hanchor,
+h3 a.hanchor 
+h4 a.hanchor,
+h5 a.hanchor,
+h6 a.hanchor { 
   font-size: 100%;
-  visibility: hidden;
-  font-size: .5em;
+  opacity: 0;
   vertical-align: middle;
   text-decoration: none !important;
   border-bottom: none;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+  float: left;
+  margin: none;
+  margin-left: -.75em;
+  padding-right: 0;
+  padding-left: 0em;
+  line-height: 1em;
+  padding-top: .25em;
+  padding-top: .6em;
+  font-size: .75em;
 }
-h1:hover a, h2:hover a, h3:hover a, h4:hover a { 
-  visibility: visible;
+h1:hover a.hanchor,
+h2:hover a.hanchor,
+h3:hover a.hanchor,
+h4:hover a.hanchor,
+h5:hover a.hanchor,
+h6:hover a.hanchor,
+h1 a.hanchor:hover,
+h2 a.hanchor:hover,
+h3 a.hanchor:hover,
+h4 a.hanchor:hover,
+h5 a.hanchor:hover,
+h6 a.hanchor:hover {
+  opacity: 1;
 }
 
 .tile figure, .tile figure.full-bleed,
