@@ -174,7 +174,7 @@ if ((${BASH_VERSINFO[0]}<4)); then
   exit 9
 fi
 ```
-(From: https://github.com/kubernetes/kubernetes/blob/66329fcea955522f2eeb5ec13c90d3f5ae7928d5/hack/update-vendor-licenses.sh#L134-L146)
+(From: [github.com/kubernetes/kubernetes/blob/66329fcea955522f2eeb5ec13c90d3f5ae7928d5/hack/update-vendor-licenses.sh#L134-L146](https://github.com/kubernetes/kubernetes/blob/66329fcea955522f2eeb5ec13c90d3f5ae7928d5/hack/update-vendor-licenses.sh#L134-L146))
 
 It is also worth noting that while most Linux distros ship GNU coreutils or 
 something reasonably compatible, macOS ships many *BSD derived utilities.
