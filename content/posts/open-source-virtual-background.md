@@ -545,10 +545,11 @@ be sure to select the "v4l2loopback" / `/dev/video20` camera in Zoom etc.
 
 Here's a quick clip I recorded of this in action:
 
-<video playsinline autoplay muted loop playsinline>
+<video autoplay muted loop playsinline>
     <source src="./holo-demo.webm" type="video/webm">
     <source src="./holo-demo.mp4" type="video/mp4">
-    Your browser does not support this video.
+    <!--ios is the worst-->
+    <source src="https://github.com/BenTheElder/site/raw/master/static/posts/open-source-virtual-background/holo-demo.mp4" type="video/mp4">
 </video>
 
 
