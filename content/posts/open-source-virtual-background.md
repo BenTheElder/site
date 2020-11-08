@@ -543,11 +543,12 @@ be sure to select the "v4l2loopback" / `/dev/video20` camera in Zoom etc.
 
 ## The Finished Result
 
-Here's a quick clip I recorded of this in action<sup><a href="#footnote-1">1</a></sup>:
+Here's a quick clip I recorded of this in action:
 
 <video autoplay muted loop playsinline>
-    <source src="./holo-demo.webm" type="video/webm">
-    <source src="./holo-demo.mp4" type="video/mp4">
+    <source src="./holo-demo.webma" type="video/webm">
+    <source src="./holo-demo.mp4a" type="video/mp4" onerror="videoFallback(parentNode)">
+    <img src="./holo-demo-lossy.gif">
 </video>
 
 
@@ -555,11 +556,18 @@ Look! I'm dialing into the millenium falcon with an open source camera stack!
 
 I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
 
-----
-
-
-<p id="footnote-1"><sup>1</sup> Will not load properly on iOS. Safari on iOS requires range requests and <a href="https://community.netlify.com/t/add-support-for-range-header-for-large-media-files/5733">Netlify
-does not support them</a> 🤷‍♂️. It should work on all other major platforms / browsers ...</p>
+<script>
+// https://webkit.org/blog/6784/new-video-policies-for-ios/
+// we wouldn't need this, except netlify has no byte range support and iOS / safari
+// requires it for video
+// https://community.netlify.com/t/add-support-for-range-header-for-large-media-files/5733
+function videoFallback(video)
+{
+  var img = video.querySelector('img');
+  if (img)
+    video.parentNode.replaceChild(img, video);
+}
+</script>
 
 [shelter in place]: https://www.sfchronicle.com/local-politics/article/Bay-Area-must-shelter-in-place-Only-15135014.php
 [COVID-19]: https://www.cdc.gov/coronavirus/2019-ncov/index.html
