@@ -4,7 +4,7 @@ title: Self-Driving Debian
 date: "2019-12-01"
 draft: false
 categories:
-- Linux
+- <span class="emoji" style="background-image:url(/images/slackmoji/linux.png)" title=":linux:"/>:linux:</span>
 - <span class="emoji" style="background-image:url(/images/slackmoji/debian.png)" title=":debian:"/>:debian:</span>
 ---
 

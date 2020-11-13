@@ -13,7 +13,7 @@ title: Home
         <td>Software Engineer @ <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#4285f4">e</span> {{< emoji ":kubernetes:" >}}</td>
       </tr>
       <tr>
-        <td>Everything is fine <span class="emoji" style="background-image:url(/images/slackmoji/this_is_fine.jpg)" title=":this_is_fine:">:this_is_fine:</span></td>
+        <td>Dog Dad to <a href="https://twitter.com/BobbyTheHound">@BobbyTheHound</a> <span class="emoji" style="background-image:url(/images/emoji/emoji_u2764.png)" title=":heart:">❤</span></td>
       </tr>
     </tbody>
   </table>

@@ -4,7 +4,7 @@ title: Open Source Virtual Background
 date: "2020-04-09"
 draft: false
 categories:
-- Linux
+- <span class="emoji" style="background-image:url(/images/slackmoji/linux.png)" title=":linux:"/>:linux:</span>
 - <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3a5.png)" title=":movie-camera:"/>:movie-camera:</span>
 ---
 

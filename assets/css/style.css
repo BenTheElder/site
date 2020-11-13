@@ -562,7 +562,7 @@ span.emoji {
   /* inline block allows us to set width and height */
   display: inline-block;
   /* the emoji is 1x1 character in size */
-  height: 1em;
+  height: 1.1em;
   width: 1.1em;
   /* We don't want the shortcode to overflow the emoji size */
   overflow: hidden;
@@ -845,7 +845,7 @@ blockquote>p {
   float: right;
   margin-right: -.8em;
   margin-left: 1em;
-  text-transform: lowercase;
+  text-transform: uppercase;
 }
 .category:last-of-type {
   margin-left: 0.5em;
