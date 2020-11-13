@@ -174,7 +174,7 @@ if ((${BASH_VERSINFO[0]}<4)); then
   exit 9
 fi
 ```
-(From: [github.com/kubernetes/kubernetes/blob/66329fcea955522f2eeb5ec13c90d3f5ae7928d5/hack/update-vendor-licenses.sh#L134-L146](https://github.com/kubernetes/kubernetes/blob/66329fcea955522f2eeb5ec13c90d3f5ae7928d5/hack/update-vendor-licenses.sh#L134-L146))
+(Excerpt from Kubernetes [hack/update-vendor-licenses.sh](https://github.com/kubernetes/kubernetes/blob/66329fcea955522f2eeb5ec13c90d3f5ae7928d5/hack/update-vendor-licenses.sh#L134-L146))
 
 It is also worth noting that while most Linux distros ship GNU coreutils or 
 something reasonably compatible, macOS ships many *BSD derived utilities.
@@ -205,7 +205,9 @@ best idea <sup><a href="#1">1</a></sup> <span class="emoji" style="background-im
 
 {{< figure src="./Wargames_Ending.jpg" alt="wargames ending" caption="[WOPR](https://en.wikipedia.org/wiki/WarGames) on writing safe bash" >}}
 
-<a href="#1"><span id="1">1</span></a>. I'll probably do it someday anyhow, just for fun. I actually like bash a lot. It's just tricky to avoid trivial bugs.
+----
+
+<sup><a href="#1" id="1">1</a></sup> I'll probably do it someday anyhow, just for fun. I actually like bash a lot. It's just tricky to avoid trivial bugs.
 
 [Bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 [cleaning up]: https://github.com/kubernetes/kubernetes/issues/72956
