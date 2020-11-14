@@ -3,7 +3,7 @@
   <div class="tile">
     <h1 class="page-title">{{.Title}}</h1>
     <hr class="full-bleed">
-    <div id="content">{{ partial "fancymarkdown.html" .Content }}</div>
-    </div>
+    {{ partial "fancymarkdown.html" .Content }}
+  </div>
 </div>
 {{ partial "footer.html" . }}

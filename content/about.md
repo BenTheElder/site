@@ -4,41 +4,106 @@ type: misc
 title: About
 ---
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
-I enjoy gaming, hiking, and building things.
-I want computers / machines to help people do more.
+I enjoy gaming, hiking, and building things. I love [my dog].
+I want computers / machines to help people do more and focus on what really matters.
 
-During [Google Summer of Code][summer-of-code] 2015 I [implemented][kube-proxy-pr] Tim Hockin's [proposal][kube-proxy-issue] to use iptables instead of userspace for proxying in [Kubernetes]'s [kube-proxy], which later evolved into the current default implementation.
-
-More recently I graduated with a B.S. in Computer Science from
-<a href="http://www.gatech.edu/">Georgia Tech</a> in the Spring of 2017 with
-"<a href="http://www.cc.gatech.edu/future/undergraduates/bscs/threads">threads</a>" in
-<a href="http://www.cc.gatech.edu/devices">Devices</a> and
-<a href="https://www.cc.gatech.edu/intelligence">Intelligence</a>.
-I joined Google as a Software Engineer ("SWE") in the Summer of 2017, working on [Test Infrastructure / GitHub Automation][test-infra] for Kubernetes.
-
-Currently my work is focused primarily on local test clusters with <a href="https://github.com/kubernetes-sigs/kind">KIND</a>, which I created and maintain.
-I also help maintain Kubernetes - particularly builid, test, and release.
-I hope to improve the developer and contributor experience. I love working
+I am an open source software developer.
+I help maintain [Kubernetes] - particularly builid, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. I love working
 with the community.
 
 <img src="/images/kubecon_barcelona_group.jpg" class="centered" alt="Ben" />
-<h2 class="centered centered-text">Resume</h2>
-<hr/>
-<p></p>
-<div class="tile warning centered centered-text">
-<p class="title bold centered centered-text">NOTE:&nbsp;&nbsp;These resumes are <span class="italic">very</span> out-of-date. <span style="background-image:url(/images/emoji/emoji_u1f937_1f3fb_200d_2642.png)" title=":shrug:" class="emoji">:shrug:</span></p>
+
+## Experience
+
+I am currently a Senior Software Engineer at Google on the Kubernetes Engineering Productivity team, which I lead.
+
+Below is a timeline highlighting some notable moments in my career.
+
+<div class="timeline">
+  <div class="timeline-entry">
+    <div class="date">October 2020</div>
+    <div class="description">Promoted to Senior Software Engineer, Google (L5)</div>
+  </div>
+  <div class="timeline-entry">
+    <div class="date">May 2020</div>
+    <div class="description">Chair, Kubernetes <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a></div>
+  </div>
+  <div class="timeline-entry">
+    <div class="date">April 2020</div>
+    <div class="description">Team Lead, Kubernetes Engineering Productivity</div>
+  </div>
+  <div class="timeline-entry">
+    <div class="date">October 2018</div>
+    <div class="description">Promoted to Software Engineer III, Google (L4)</div>
+  </div>
+  <div class="timeline-entry">
+    <div class="date">July 2017</div>
+    <div class="description">Software Engineer II (L3) at Google</div>
+    <div class="details">I started my first full time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
+  </div>
+  <div class="timeline-entry">
+    <div class="date">May 2017</div>
+    <div class="description">Graduated BSCS, <a href="https://www.gatech.edu/">Georgia Tech</a></div>
+  </div>
+  <div class="timeline-entry">
+    <div class="date">May – August 2015</div>
+    <div class="description"><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> Participant, Kubernetes</div>
+    <div class="details"><a href="https://github.com/kubernetes/kubernetes/pull/9210">Implemented</a> iptables <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">kube-proxy</a> proxier mode
+     under <a href="https://twitter.com/thockin">Tim Hockin</a>'s mentorship. This is still the default mode since v1.1 and widely used by most Kubernetes clusters.</div>
+  </div>
 </div>
-<div class="">
-<p class="centered-text">
-    <a href="/resume/resume_benjamin_isaac_elder.pdf">pdf</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="/resume/resume_benjamin_isaac_elder.doc">doc</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="/resume/resume_benjamin_isaac_elder.docx">docx</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-    <a href="/resume/resume_benjamin_isaac_elder.odt">odt</a>
-</p>
-</div>
-<p class="centered-text" style="margin-bottom:0;">See also my
-<a href="https://github.com/BenTheElder">GitHub profile</a> and
-<a href="/projects">projects page</a>.</p>
+
+## Speaking
+
+I'm a somewhat experienced speaker with half a dozen [KubeCon](https://www.cncf.io/kubecon-cloudnativecon-events/) talks and a couple
+of smaller internal (company) talks. My public talks are listed below.
+
+### KubeCon NA 2019
+
+I gave one talk and ran a workshop at [KubeCon NA 2019]. I also anchored a table
+at a [mentoring session](https://kccncna19.sched.com/event/WV57/mentoring-networking-signup-to-be-a-mentee-or-a-mentor) and represented Kubernetes [SIG Testing] and
+WG K8s Infra at the Kubernetes [Contributor Summit](https://events19.linuxfoundation.org/events/kubernetes-contributor-summit-north-america-2019/) [Meet & Greet](https://events19.linuxfoundation.org/events/kubernetes-contributor-summit-north-america-2019/program/schedule/).
+
+#### Deep Dive: KIND - Benjamin Elder & Antonio Ojea
+
+We spoke about [KIND internals and the challenges ahead on the road to 1.0](https://kccncna19.sched.com/event/Uah7/deep-dive-kind-benjamin-elder-google-antonio-ojea-garcia-suse).
+
+{{< youtube id="tT-GiZAr6eQ" class="video-wrapper" >}}
+
+#### A Kind Workflow for Contributing to Kubernetes - Benjamin Elder & Duffie Cooley & James Munnelly & Patrick Lang
+
+We ran a hands on tutorial for contributing and testing your Kubernetes code with [KIND].
+
+{{< youtube id="BPVO2mcfjJk" class="video-wrapper" >}}
+
+### KubeCon EU 2019
+
+I gave two talks at [KubeCon EU 2019] and participated as a mentor in one of the mentoring sessions, I also held a Kubernetes Contributor Summit Session on KIND (voted for / requested at the summit).
+
+#### Testing your K8s apps with KIND - Benjamin Elder & James Munnelly
+
+We spoke about [KIND and testing your Kubernetes Applications][testing-k8s-apps-with-kind].
+
+{{< youtube id="8KtmevMFfxA" class="video-wrapper" >}}
+
+#### Deep Dive: Testing SIG - Benjamin Elder & James Munnelly
+
+We spoke about KIND and how we use it to test Kubernetes for the [SIG Testing Deep Dive][sig-testing-deep-dive-kind].
+
+{{< youtube id="6m9frvTxK0o" class="video-wrapper" >}}
+
+### KubeCon NA 2018
+
+I gave one talk at [KubeCon NA 2018] and ran a Kubernetes Contributor Summit session on KIND (voted for / requested at the summit).
+
+#### Behind Your PR: How Kubernetes Uses Kubernetes to Run Kubernetes CI - Sen Lu & Benjamin Elder
+
+I spoke with [Sen Lu][@krzyzacy] about The Kubernetes Project's
+testing tools and infrastructure, including a brief discussion of [KIND] and running
+it on Kubernetes's [Kubernetes-based CI infrastructure][prow].
+
+{{< youtube id="pz0lpl6h-Gc" class="video-wrapper" >}}
+
 
 [BenTheElder]: https://twitter.com/BenTheElder
 [gsoc-kubernetes]: https://www.google-melange.com/archive/gsoc/2015/orgs/kubernetes/projects/bentheelder.html
@@ -48,3 +113,13 @@ with the community.
 [kube-proxy-pr]: https://github.com/kubernetes/kubernetes/pull/9210
 [test-infra]: https://github.com/kubernetes/test-infra
 [kube-proxy-issue]: https://github.com/kubernetes/kubernetes/issues/3760#issue-55311134
+[@krzyzacy]: https://github.com/krzyzacy
+[KIND]: https://kind.sigs.k8s.io
+[prow]: https://github.com/kubernetes/test-infra/blob/master/prow/README.md
+[KubeCon NA 2018]: https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2018/
+[KubeCon EU 2019]: https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-europe-2019/
+[KubeCon NA 2019]: https://events19.linuxfoundation.org/events/kubecon-cloudnativecon-north-america-2019/
+[testing-k8s-apps-with-kind]: https://kccnceu19.sched.com/event/MPYy/testing-your-k8s-apps-with-kind-benjamin-elder-google-james-munnelly-jetstackio
+[SIG Testing]: https://github.com/kubernetes/community/blob/master/sig-testing/README.md
+[sig-testing-deep-dive-kind]: https://kccnceu19.sched.com/event/MPkC/deep-dive-testing-sig-benjamin-elder-google-james-munnelly-jetstack
+[my dog]: https://twitter.com/BobbyTheHound
