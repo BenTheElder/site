@@ -38,7 +38,7 @@ Below is a timeline highlighting some notable moments in my career.
   </div>
   <div class="timeline-entry">
     <div class="date">July 2017</div>
-    <div class="description">Software Engineer II (L3) at Google</div>
+    <div class="description">Software Engineer II, Google (L3)</div>
     <div class="details">I started my first full time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
   </div>
   <div class="timeline-entry">
