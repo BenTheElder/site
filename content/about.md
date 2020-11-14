@@ -55,8 +55,8 @@ Below is a timeline highlighting some notable moments in my career.
 
 ## Speaking
 
-I'm a somewhat experienced speaker with half a dozen [KubeCon](https://www.cncf.io/kubecon-cloudnativecon-events/) talks and a couple
-of smaller internal (company) talks. My public talks are listed below.
+I'm a novice speaker with a few [KubeCon](https://www.cncf.io/kubecon-cloudnativecon-events/) talks and a couple
+of smaller internal (company) talks under my belt. My public talks are listed below.
 
 ### KubeCon NA 2019
 
