@@ -8,7 +8,7 @@ I enjoy gaming, hiking, and building things. I love [my dog].
 I want computers / machines to help people do more and focus on what really matters.
 
 I am an open source software developer.
-I help maintain [Kubernetes] – particularly builid, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. I love working
+I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. I love working
 with the community.
 
 <img src="/images/kubecon_barcelona_group.jpg" class="centered" alt="Ben and friends at KubeCon EU 2019" />
