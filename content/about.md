@@ -1,7 +1,7 @@
 ---
 markup: md
 type: misc
-title: About
+title: About Me
 ---
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
 I enjoy gaming, hiking, and building things. I love [my dog].

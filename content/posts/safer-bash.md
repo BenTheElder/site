@@ -201,13 +201,12 @@ It is also difficult to write complex, reliable programs in.
 The Google Shell Style Guide has some fairly reasonable [recommendations about when to use Bash][when to use bash].
 
 While you could probably implement your entire app in bash, it might not be the
-best idea <sup><a href="#1">1</a></sup> <span class="emoji" style="background-image:url(/images/slackmoji/bash_fire.png)" title=":bash_fire:"/>:bash_fire:</span>
+best idea <sup style="font-family:monospace"><a href="#footnote1" id="ref1">1</a></sup> <span class="emoji" style="background-image:url(/images/slackmoji/bash_fire.png)" title=":bash_fire:"/>:bash_fire:</span>
 
 {{< figure src="./Wargames_Ending.jpg" alt="wargames ending" caption="[WOPR](https://en.wikipedia.org/wiki/WarGames) on writing safe bash" >}}
 
-----
-
-<sup><a href="#1" id="1">1</a></sup> I'll probably do it someday anyhow, just for fun. I actually like bash a lot. It's just tricky to avoid trivial bugs.
+<hr class="footnotes">
+<sup  style="font-family:monospace" id="footnote1">1</sup> I'll probably do it someday anyhow, just for fun. I actually like bash a lot. It's just tricky to avoid trivial bugs. <a href="#ref1" style="font-family:monospace">↩︎</a>
 
 [Bash]: https://en.wikipedia.org/wiki/Bash_(Unix_shell)
 [cleaning up]: https://github.com/kubernetes/kubernetes/issues/72956

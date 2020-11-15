@@ -1,6 +1,6 @@
 # hugo (https://gohugo.io) configuration
 
-title = "BenTheElder"
+title = "elder.dev"
 copyright = "Copyright © 2015-{year} Benjamin Elder."
 baseURL = "https://elder.dev"
 languageCode = "en-us"

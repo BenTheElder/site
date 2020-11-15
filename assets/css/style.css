@@ -129,6 +129,11 @@ hr {
   margin-top: .25em !important;
   padding: 0 !important;
 }
+hr.footnotes {
+  margin-left: 0;
+  max-width: 8em;
+  margin-bottom: .25em !important;
+}
 
 a {
   text-decoration: none;
@@ -190,10 +195,11 @@ a:hover, a:focus {
   width: 98%;
   max-width: 28em;
   margin: 0 auto;
-  margin-bottom: -.35em;
+  margin-bottom: -.4em;
   margin-top: -.1em;
 }
 .header code {
+  background-color: #e0f0ff;
   border: .1em solid blue;
   border-radius: 0 0 .25em .25em;
   padding: .2em .3em;
