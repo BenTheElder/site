@@ -1193,19 +1193,21 @@ h6 a.hanchor:hover {
 }
 .timeline-entry .date {
   margin-left: .25em;
-  font-size: 1.2em;
+  font-size: 1.1em;
   width: fit-content;
   border-bottom: .1em solid black;
   /*text-decoration: underline;*/
 }
 .timeline-entry .description {
-  font-size: 1.1em;
+  font-size: 1em;
   margin-left: .25em;
   margin-top: .2em;
+  font-weight: bold;
 }
 .timeline-entry .details {
-  margin-left: .27em;
+  margin-left: calc(.25em * 1.1/.8);
   margin-top: .25em;
+  font-size: .8em;
 }
 
 /* style video embeds to be full-width in content */

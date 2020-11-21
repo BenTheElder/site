@@ -21,29 +21,37 @@ Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
   <div class="timeline-entry">
+    <div class="date">November 2020</div>
+    <div class="description">Awarded <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> 2020 <a href="https://www.cncf.io/announcements/2020/11/20/cloud-native-computing-foundation-announces-2020-community-awards-winners"/>Top Committer Award</a></div>
+    <div class="details"><blockquote>This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole. CNCF Maintainers (committers) voted for the Top Committer [...]</blockquote>
+    Previous Winners: <a href="https://twitter.com/fabxc">Fabian Reinartz</a> (2016), <a href="https://twitter.com/thockin">Tim Hockin</a> (2016), <a href="https://twitter.com/smarterclayton">Clayton Coleman</a> (2017), <a href="https://twitter.com/liggitt">Jordan Liggitt</a> (2018), <a href="https://twitter.com/fredbrancz">Frederic Branczyk</a> (2019)</div>
+  </div>
+  <div class="timeline-entry">
     <div class="date">October 2020</div>
-    <div class="description">Promoted to Senior Software Engineer, Google (L5)</div>
+    <div class="description">Promoted to Senior Software Engineer, Google</div>
   </div>
   <div class="timeline-entry">
     <div class="date">May 2020</div>
     <div class="description">Chair, Kubernetes <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a></div>
+    <div class="details">I was nominiated for and stepped into a Co-Chair role of the Kubernetes testing special interest group along with <a href="https://twitter.com/spiffx">Aaron Crickenberger</a> and <a href="https://github.com/stevekuznetsov">Steve Kuznetsov</a>. SIG Testing owns the infrastructure, frameworks, and tools used to test the Kubernetes project (amongst others).</a></div>
   </div>
   <div class="timeline-entry">
     <div class="date">April 2020</div>
-    <div class="description">Team Lead, Kubernetes Engineering Productivity</div>
+    <div class="description">Team Lead, Kubernetes Engineering Productivity, Google</div>
   </div>
   <div class="timeline-entry">
     <div class="date">October 2018</div>
-    <div class="description">Promoted to Software Engineer III, Google (L4)</div>
+    <div class="description">Promoted to Software Engineer III, Google</div>
   </div>
   <div class="timeline-entry">
     <div class="date">July 2017</div>
-    <div class="description">Software Engineer II, Google (L3)</div>
+    <div class="description">Software Engineer II, Google</div>
     <div class="details">I started my first full time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
   </div>
   <div class="timeline-entry">
     <div class="date">May 2017</div>
     <div class="description">Graduated BSCS, <a href="https://www.gatech.edu/">Georgia Tech</a></div>
+    <div class="details">With "threads" (specialization) in "Intelligence" (Machine Learning) and "Devices" (hardware/software, robotics etc.). I studied Electrical Engineering before switching to Computer Science.</div>
   </div>
   <div class="timeline-entry">
     <div class="date">May – August 2015</div>
