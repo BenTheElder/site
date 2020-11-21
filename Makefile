@@ -1,11 +1,11 @@
 # this file serves as aliases to useful commands using phony targets
 # usage:
 # `make serve`
-HUGO_VERSION=0.69.0
+HUGO_VERSION=0.78.2
 HUGO=docker run --rm -it \
 	-p 127.0.0.1:1313:1313 \
 	-v $$(pwd):/src \
-	--entrypoint=/usr/local/sbin/hugo jojomi/hugo:$(HUGO_VERSION) \
+	klakegg/hugo:$(HUGO_VERSION) \
 	--bind="0.0.0.0"
 # local development, run a local server with hugo
 serve:
@@ -16,3 +16,6 @@ serve-native: HUGO=hugo server
 serve-native: serve
 
 .PHONY: serve serve-native
+
+clean:
+	rm -rf ./resources
