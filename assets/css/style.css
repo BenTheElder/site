@@ -35,6 +35,11 @@ h4 { font-size: 1.1em; }
 h5 { font-size: .83em; }
 h6 { font-size: .75em; }
 
+h1, h2, h3, h4, h5, h6 {
+  margin-top: .75em;
+  margin-bottom: 0.25em;
+}
+
 #content {
   /*min-height: calc(100vh - 8.5em);*/
   min-width: 100%;
@@ -115,8 +120,6 @@ button, .button,
 .google-yellow { color: #f4c20d; }
 .google-red { color: #db3236; }
 .google-blue { color: #4885ed; }
-
-h2 { margin-top: 1em; }
 
 canvas { background-color: black; }
 
@@ -998,7 +1001,6 @@ h6 a.hanchor {
   padding-right: 0;
   padding-left: 0;
   line-height: 1em;
-  padding-top: .25em;
   padding-top: .6em;
   font-size: .75em;
 }
