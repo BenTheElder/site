@@ -36,7 +36,7 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="icon" style="background-image: url('/images/kubernetes-icon-color.png');"></div>
     <div class="date">May 2020</div>
     <div class="description">Chair, Kubernetes <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a></div>
-    <div class="details">I was nominiated for and stepped into a Co-Chair role of the Kubernetes testing special interest group along with <a href="https://twitter.com/spiffx">Aaron Crickenberger</a> and <a href="https://github.com/stevekuznetsov">Steve Kuznetsov</a>. SIG Testing owns the infrastructure, frameworks, and tools used to test the Kubernetes project (amongst others).</a></div>
+    <div class="details">I was nominated for and took on a Co-Chair role in the Kubernetes Testing Special Interest Group along with <a href="https://twitter.com/spiffx">Aaron Crickenberger</a> and <a href="https://github.com/stevekuznetsov">Steve Kuznetsov</a>. SIG Testing owns the infrastructure, frameworks, and tools used to test the Kubernetes project (amongst others).</a></div>
   </div>
   <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/google_g.png');"></div>
