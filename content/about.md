@@ -21,39 +21,48 @@ Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/cncf-icon-color.png');"></div>
     <div class="date">November 2020</div>
     <div class="description">Awarded <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> 2020 <a href="https://www.cncf.io/announcements/2020/11/20/cloud-native-computing-foundation-announces-2020-community-awards-winners"/>Top Committer Award</a></div>
     <div class="details"><blockquote>This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole. CNCF Maintainers (committers) voted for the Top Committer [...]</blockquote>
     Previous Winners: <a href="https://twitter.com/fabxc">Fabian Reinartz</a> (2016), <a href="https://twitter.com/thockin">Tim Hockin</a> (2016), <a href="https://twitter.com/smarterclayton">Clayton Coleman</a> (2017), <a href="https://twitter.com/liggitt">Jordan Liggitt</a> (2018), <a href="https://twitter.com/fredbrancz">Frederic Branczyk</a> (2019)</div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
     <div class="date">October 2020</div>
     <div class="description">Promoted to Senior Software Engineer, Google</div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/kubernetes-icon-color.png');"></div>
     <div class="date">May 2020</div>
     <div class="description">Chair, Kubernetes <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a></div>
     <div class="details">I was nominiated for and stepped into a Co-Chair role of the Kubernetes testing special interest group along with <a href="https://twitter.com/spiffx">Aaron Crickenberger</a> and <a href="https://github.com/stevekuznetsov">Steve Kuznetsov</a>. SIG Testing owns the infrastructure, frameworks, and tools used to test the Kubernetes project (amongst others).</a></div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
     <div class="date">April 2020</div>
     <div class="description">Team Lead, Kubernetes Engineering Productivity, Google</div>
+    <div class="details">After our previous Team / Tech Lead moved on to another opportunity I stepped into the semi-official lead role on the Kubernetes subteam of GKE Engineering Productivity.</div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
     <div class="date">October 2018</div>
     <div class="description">Promoted to Software Engineer III, Google</div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
     <div class="date">July 2017</div>
     <div class="description">Software Engineer II, Google</div>
-    <div class="details">I started my first full time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
+    <div class="details">I started my first full-time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/buzz.png');"></div>
     <div class="date">May 2017</div>
     <div class="description">Graduated BSCS, <a href="https://www.gatech.edu/">Georgia Tech</a></div>
-    <div class="details">With "threads" (specialization) in "Intelligence" (Machine Learning) and "Devices" (hardware/software, robotics etc.). I studied Electrical Engineering before switching to Computer Science.</div>
+    <div class="details">With "<a href="https://www.cc.gatech.edu/academics/degree-programs/bachelors/computer-science/threads">threads</a>" (specialization) in "<a href="http://www.cc.gatech.edu/intelligence">Intelligence</a>" (Machine Learning) and "<a href="http://www.cc.gatech.edu/devices">Devices</a>" (hardware/software, robotics, embedded etc.). I studied Electrical Engineering before switching to Computer Science.</div>
   </div>
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/480px-GSoC-icon.svg.png');"></div>
     <div class="date">May – August 2015</div>
     <div class="description"><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> Participant, Kubernetes</div>
     <div class="details"><a href="https://github.com/kubernetes/kubernetes/pull/9210">Implemented</a> iptables <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">kube-proxy</a> proxier mode

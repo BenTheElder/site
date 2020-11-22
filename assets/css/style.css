@@ -820,7 +820,7 @@ p.min-para:before {
 }
 
 blockquote {
-  border-left: .25em solid #2196F3;
+  border-left: .25em solid #008eff;
   background-color: #dbedff;
   padding: 1em;
   margin: 1em .0;
@@ -1160,11 +1160,12 @@ h6 a.hanchor:hover {
   padding-bottom: 1em;
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-left: -.25em;
 }
 .timeline::after {
   content: '';
   position: absolute;
-  width: .25em;
+  width: .225em;
   background-color: #105ae2;
   top: 0;
   bottom: 0;
@@ -1173,23 +1174,28 @@ h6 a.hanchor:hover {
   border-radius: 1em;
 }
 .timeline-entry {
-  margin-left: 1.4em;
+  margin-left: 1.5em;
   margin-top: 1em;
   position: relative;
 }
-.timeline-entry::after {
+.timeline-entry::after,
+.timeline-entry .icon {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
   border-radius: 50%;
-  height: .5em;
-  width: .5em;
-  margin-top: .5em;
-  margin-left: -1.375em;
-  border: .25em solid #105ae2;
-  background: white;
+  height: 1.5em;
+  width: 1.5em;
+  margin-top: .75em;
+  margin-left: -1.95em;
+  border: .2em solid #105ae2;
+  background: #fff;
+  background-size: 1.5em;
+}
+.timeline-entry .icon {
+  z-index: 3;
 }
 .timeline-entry .date {
   margin-left: .25em;
@@ -1200,12 +1206,12 @@ h6 a.hanchor:hover {
 }
 .timeline-entry .description {
   font-size: 1em;
-  margin-left: .25em;
+  margin-left: .35em;
   margin-top: .2em;
   font-weight: bold;
 }
 .timeline-entry .details {
-  margin-left: calc(.25em * 1.1/.8);
+  margin-left: calc(.3em * 1.1/.8);
   margin-top: .25em;
   font-size: .8em;
 }
