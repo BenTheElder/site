@@ -11,7 +11,7 @@ I am an open source software developer.
 I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. I love working
 with the community.
 
-<img src="/images/kubecon_barcelona_group.jpg" class="centered" alt="Ben and friends at KubeCon EU 2019" />
+<img src="/images/kubecon_barcelona_group.jpg" class="centered" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
 
 ## Experience
 
