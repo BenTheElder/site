@@ -4,7 +4,7 @@ type: misc
 title: About Ben
 ---
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
-I enjoy gaming, hiking, and building things. I love [my dog].
+I enjoy gaming, hiking, and building things. I love [my dog] and [my fiancé].
 I want computers / machines to help people do more and focus on what really matters.
 
 I am an open source software developer.
@@ -140,3 +140,4 @@ it on Kubernetes's [Kubernetes-based CI infrastructure][prow].
 [SIG Testing]: https://github.com/kubernetes/community/blob/master/sig-testing/README.md
 [sig-testing-deep-dive-kind]: https://kccnceu19.sched.com/event/MPkC/deep-dive-testing-sig-benjamin-elder-google-james-munnelly-jetstack
 [my dog]: https://twitter.com/BobbyTheHound
+[my fiancé]: https://twitter.com/BobbyTheHound/status/1329618939668615169
