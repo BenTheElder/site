@@ -360,11 +360,11 @@ a:hover, a:focus {
   margin: 0.5em auto;
   padding: 0;
 }
-img.with-border {
-  border: .2em solid #105ae2;
-  background-color: #105ae2;
-  box-sizing: border-box;
+
+img.outlined {
+  outline: .25em solid black;
 }
+
 .centered {
   display: block;
   margin-left: auto;
