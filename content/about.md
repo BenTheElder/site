@@ -65,8 +65,7 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="icon" style="background-image: url('/images/480px-GSoC-icon.svg.png');"></div>
     <div class="date">May – August 2015</div>
     <div class="description"><a href="https://summerofcode.withgoogle.com/">Google Summer of Code</a> Participant, Kubernetes</div>
-    <div class="details"><a href="https://github.com/kubernetes/kubernetes/pull/9210">Implemented</a> iptables <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">kube-proxy</a> proxier mode
-     under <a href="https://twitter.com/thockin">Tim Hockin</a>'s mentorship. This is still the default mode since v1.1 and widely used by most Kubernetes clusters.</div>
+    <div class="details"><a href="https://github.com/kubernetes/kubernetes/pull/9210">Implemented</a> iptables <a href="https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/">kube-proxy</a> proxier mode under <a href="https://twitter.com/thockin">Tim Hockin</a>'s mentorship while taking summer classes at Georgia Tech. This is still the default mode <a href="https://github.com/kubernetes/kubernetes/blob/dcc1ab176de1b6a41cd185f79b0430eeb2642327/CHANGELOG/CHANGELOG-1.2.md#other-notable-improvements">since v1.2</a> and widely used by most Kubernetes clusters.</div>
   </div>
 </div>
 
