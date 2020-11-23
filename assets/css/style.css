@@ -74,7 +74,7 @@ button, .button,
   font-family: 'Open Sans',-apple-system, BlinkMacSystemFont, Roboto, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 
 }
-.header a,
+.header,
 .page-title,
 .tile .title, .tile .sub-title,
 .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6,
@@ -198,28 +198,47 @@ a:hover, a:focus {
   width: 98%;
   max-width: 28em;
   margin: 0 auto;
-  margin-bottom: -.4em;
-  margin-top: -.1em;
+  margin-bottom: -.7em;
+  margin-top: 0.15em;
+  /*margin-top: 0.05em;*/
 }
 .header code {
   background-color: #e0f0ff;
   border: .1em solid blue;
-  border-radius: 0 0 .25em .25em;
+  /*border-radius: 0 0 .25em .25em;*/
   padding: .2em .3em;
 }
 .header a {
   margin-top: .25em;
-  font-weight: bold;
 }
+.header .branding {
+  /*display: none;*/
+  float: left;
+  background: #0057eb;
+  color: white;
+  border-radius: 50%;
+  height: 1.1em;
+  width: 1.1em;
+  line-height: 1.1em;
+  font-size: 1.2em;
+  /* padding: .2em; */
+  /* margin-top: .1em; */
+  margin-right: 0.2em;
+  margin-left: .1em;
+}
+.header .branding div {
+  font-size: .8em;
+  margin-top: .005em;
+}
+
 .header .circle-badge {
   width: 100%;
-  width: 2.5em;
-  height: 2.5em;
-  border-width: 6px;
+  width: 1.6em;
+  height: 1.6em;
+  border-width: 3px;
   margin-top: 0;
-  background: white;
-  border-color: #01579b;
-  padding: 2px;
+  border-color: blue;
+  background-color: blue;
 }
 .left {
   float: left;
@@ -255,16 +274,15 @@ a:hover, a:focus {
   width: calc(100% - 2em);
   position: relative;
   margin: auto auto 0 auto;
-  margin-top: 0.5em;
+  margin-top: 0;
   flex-shrink: 0;
   color: #414141;
-}
-
-.footer .nav {
-  font-size: 1.33em;
-  margin: .25em auto;
-  margin-top: -.2em;
-  /* border-bottom: 2px solid white; width: fit-content; padding: 0.25em 1.5em; padding-top: 0;*/
+  /* experimenting */
+  padding-bottom: 1.5em;
+  /*background: aliceblue;*/
+  padding-top: 1em;
+  padding-top: 0;
+  margin-top: 0.5em;
 }
 
 .tile,
@@ -486,7 +504,7 @@ img.outlined {
 
 .circle-badge {
   height: auto;
-  border-radius: 50%; border: 5px solid #105ae2;
+  border-radius: 50%; border: 3px solid #105ae2;
   background-color: #105ae2;
   margin: 0.1em auto;
   margin-bottom: 0.1em;
