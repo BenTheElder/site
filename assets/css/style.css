@@ -290,7 +290,7 @@ a:hover, a:focus {
   padding: 1.33em;
   background-color: white;
   color: rgba(0,0,0,0.87);
-  max-width: 34em;
+  max-width: 32em;
   margin: .75rem auto;
 }
 #content>.tile{
