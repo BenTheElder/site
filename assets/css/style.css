@@ -1231,19 +1231,3 @@ h6 a.hanchor:hover {
     margin-bottom: -.5em;
   }
 }
-
-/* tiny iphone screens */
-@media screen and (max-width: 420px) {
-  html, body {
-    font-size: 14px;
-  }
-  .chroma {
-    font-size: 12px;
-  }
-}
-/* tiny iphone screens */
-@media screen and (max-width: 320px) {
-  html, body {
-    font-size: 12px;
-  }
-}
