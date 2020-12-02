@@ -1150,7 +1150,7 @@ h6 a.hanchor:hover {
   border-radius: 50%;
   height: 1.5em;
   width: 1.5em;
-  margin-top: .75em;
+  margin-top: .6em;
   margin-left: -1.95em;
   border: .2em solid #105ae2;
   background: #fff;
@@ -1160,9 +1160,13 @@ h6 a.hanchor:hover {
   z-index: 3;
 }
 .timeline-entry .date {
-  margin-left: .25em;
+  display: inline;
+  padding-left: .1em;
+  padding-right: .25em;
+  margin-left: .2em;
+  padding-bottom: .1em;
   font-size: 1.1em;
-  border-bottom: .1em solid black;
+  border-bottom: .15em solid black;
   /*text-decoration: underline;*/
 }
 .timeline-entry .description {
@@ -1174,7 +1178,7 @@ h6 a.hanchor:hover {
 .timeline-entry .details {
   margin-left: calc(.3em * 1.1/.8);
   margin-top: .25em;
-  font-size: .8em;
+  font-size: .9em;
 }
 
 /* style video embeds to be full-width in content */
