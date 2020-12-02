@@ -4,7 +4,7 @@ type: misc
 title: KubeLife
 ---
 <canvas id="kubelife-canvas" height="1632" width="1632" class="full-bleed" style="width: 100%; margin-top: .5em">
-<div class="centered-text title white" style="background-color: black; padding: 1em">This automaton requires that you <a href="http://www.enable-javascript.com/">enable JavaScript</a>.</div>
+<div class="centered-text title" style="background-color: black; color: white; padding: 1em">This automaton requires that you <a href="http://www.enable-javascript.com/">enable JavaScript</a>.</div>
 </canvas>
 
 <div class="centered-text"><button id="kubelife-pause"><i class="material-icons">pause</i></button><button tabindex="0" onclick="doReset(event, this, initGOL)"><i class="material-icons">replay</i></button></div>

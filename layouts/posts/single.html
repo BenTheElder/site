@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
   <div id="content">
     <div class="tile blog-content">
-      <h1 class="page-title">{{if .Params.htmlTitle}}{{.Params.htmlTitle | safeHTML}}{{else}}{{.Title}}{{end}}{{if .Params.subtitle }}<span class="inline-block not-bold">:</span> <span class="inline not-bold"> {{.Params.subtitle}} </span>{{end}}</h1>{{range .Params.Categories}}<span class="category">{{. | safeHTML}}</span>{{end}}
+      <h1 class="page-title">{{if .Params.htmlTitle}}{{.Params.htmlTitle | safeHTML}}{{else}}{{.Title}}{{end}}{{if .Params.subtitle }}<span class="inline not-bold">:</span> <span class="inline not-bold"> {{.Params.subtitle}} </span>{{end}}</h1>{{range .Params.Categories}}<span class="category">{{. | safeHTML}}</span>{{end}}
         {{ $date := .Date.Format "January 2SUFFIX, 2006" }}
         {{ $day := .Date.Format "2" }}
         {{ $suffix := "th" }}
