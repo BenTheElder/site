@@ -64,6 +64,11 @@ ul ul {
   padding-left: 1em;
 }
 
+p {
+  margin-block-start: .5em;
+  margin-block-end: 1em;
+}
+
 /* fonts */
 html, body,
 .tile .section-title,
@@ -91,7 +96,6 @@ button, .button,
   font-weight: 600;
   color: black;
   display: block;
-  width: fit-content;
 }
 
 /* colors */
@@ -196,7 +200,7 @@ a:hover, a:focus {
   background: none;
   border: none;
   width: 98%;
-  max-width: 27em;
+  max-width: 28em;
   margin: 0 auto;
   margin-bottom: -.7em;
   margin-top: 0.15em;
@@ -290,7 +294,7 @@ a:hover, a:focus {
   padding: 1.33em;
   background-color: white;
   color: rgba(0,0,0,0.87);
-  max-width: 33em;
+  max-width: 34em;
   margin: .75rem auto;
 }
 #content>.tile{
@@ -1220,7 +1224,6 @@ h6 a.hanchor:hover {
 .timeline-entry .date {
   margin-left: .25em;
   font-size: 1.1em;
-  width: fit-content;
   border-bottom: .1em solid black;
   /*text-decoration: underline;*/
 }
