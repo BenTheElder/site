@@ -17,7 +17,7 @@ title: Home
       </tr>
     </tbody>
   </table>
-  <div style="padding-top: .33em; font-weight: bold">Occasionally I <a href="/posts">write things</a>. More <a href="/about">about me</a>.</div>
+  <div style="padding-top: .33em; font-weight: bold">Occasionally I <a href="/posts">write things</a>. <span class="inline-block">More <a href="/about">about me</a>.</span></div>
 </div>
 <hr style="margin: 0!important;"/>
 <div class="full-page-width" style="padding: .5em">
