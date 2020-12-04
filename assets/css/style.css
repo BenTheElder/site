@@ -839,7 +839,7 @@ p.min-para:before {
 }
 
 blockquote {
-  border-left: .25em solid #008eff;
+  border-left: .33rem solid #008eff;
   background-color: #dbedff;
   padding: 1em;
   margin: 1em .0;
