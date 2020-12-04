@@ -842,8 +842,7 @@ blockquote {
   border-left: .33rem solid #008eff;
   background-color: #dbedff;
   padding: 1em;
-  margin: 1em .0;
-  font-size: .95em !important;
+  margin: 1em 0;
 }
 
 blockquote>p {
