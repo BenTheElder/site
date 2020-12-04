@@ -1,0 +1,8 @@
+<head>
+    <title>{{ .Title }} / {{ .Site.Title }}</title>
+    {{ partialCached "meta.html" . }}
+    {{ partialCached "inlinecss.html" . }}
+  {{- if .Params.head }}
+    {{.Params.head | safeHTML}}
+  {{end}}
+</head>

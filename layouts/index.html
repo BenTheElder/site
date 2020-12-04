@@ -1,25 +1,6 @@
 {{ partial "header.html" . }}
   <div id="content">
     <div class="tile centered-text" style="">{{ partial "fancymarkdown.html" .Content }}
-      <p class="page-title">Posts</p>
-      <!--<hr class="full-bleed">-->
-      {{ range $i, $post := (where $.Site.Pages "Section" "posts").ByDate.Reverse }}
-      {{ if (or .Params.draft (eq .Params.title "Posts" ))}}{{ else }}
-      <a href="{{.Permalink}}" class="left-text full-bleed list-item {{- if eq $i 0}} first {{- end}}">
-        <p class="title">{{if .Params.htmlTitle}}{{.Params.htmlTitle | safeHTML}}{{else}}{{.Title}}{{end}}{{if .Params.subtitle }}<span class="inline not-bold">:</span> <span class="inline not-bold"> {{.Params.subtitle}} </span>{{end}}</p>{{range .Params.Categories}}<span class="category">{{. | safeHTML}}</span>{{end}}
-        {{ $date := .Date.Format "January 2SUFFIX, 2006" }}
-        {{ $day := .Date.Format "2" }}
-        {{ $suffix := "th" }}
-        {{ if or (eq $day "1") (or (eq $day "21") (eq $day "31")) }}
-          {{ $suffix = "st" }}
-        {{ else if or (eq $day "2") (eq $day "22") }}
-          {{ $suffix = "nd" }}
-        {{ else if or (eq $day "3") (eq $day "23") }}
-          {{ $suffix = "rd" }}
-        {{ end }}
-        <p class="sub-title">{{ replace $date "SUFFIX" $suffix }}</p>
-      </a>
-      {{ end }}{{ end }}
     </div>
   </div> 
 {{ partial "footer.html" . }}

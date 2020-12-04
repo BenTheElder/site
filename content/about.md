@@ -3,15 +3,17 @@ markup: md
 type: misc
 title: About Ben
 ---
+<div style="float: left; width: 6em; margin-right: .5em; margin-left: -.5em; margin-top: .33em; height: 6em"><img class="circle-badge" src="/images/ben-2020.33p.jpg" style="padding-top: 0; padding-bottom: 0; margin: 0;" alt="Ben" title="Ben"></div>
+
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
 I enjoy gaming, hiking, and building things. I love [my dog] and [my fiancé].
-I want computers / machines to help people do more and focus on what really matters.
+I want machines to help people do more and focus on what really matters.
 
 I am an open source software developer.
 I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. I love working
 with the community.
 
-<img src="/images/kubecon_barcelona_group.jpg" class="centered outlined" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
+<img src="/images/kubecon_barcelona_group.jpg" class="centered outlined" style="object-fit: cover; height: 14em" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
 
 ## Experience
 

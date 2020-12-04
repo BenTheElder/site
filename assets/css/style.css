@@ -1,7 +1,7 @@
 /* style elements */
 html {
   width: 100%;
-  font-size: 19.8px;
+  font-size: 18px;
   line-height: 1;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -185,15 +185,15 @@ a:hover, a:focus {
   margin-bottom: 0.8em;
   border-bottom: .25em solid #01579b;
   text-align: center;
-  /*redo*/
+  /*redo*/ 
   color: #105ae2;
   background: none;
   border: none;
   width: 98%;
-  max-width: 28em;
+  max-width: 29em;
   margin: 0 auto;
   margin-bottom: -.7em;
-  margin-top: 0.15em;
+  margin-top: 0.1em;
   /*margin-top: 0.05em;*/
 }
 .header code {
@@ -204,6 +204,9 @@ a:hover, a:focus {
 }
 .header a {
   margin-top: .25em;
+}
+.header a .emoji {
+  user-select: none;
 }
 .header .branding {
   /*display: none;*/
@@ -272,7 +275,7 @@ a:hover, a:focus {
   flex-shrink: 0;
   color: #414141;
   /* experimenting */
-  padding-bottom: 1.5em;
+  padding-bottom: .75em;
   /*background: aliceblue;*/
   padding-top: 1em;
   padding-top: 0;
@@ -284,7 +287,7 @@ a:hover, a:focus {
   padding: 1.33em;
   background-color: white;
   color: rgba(0,0,0,0.87);
-  max-width: 34em;
+  max-width: 35em;
   margin: .75rem auto;
 }
 #content>.tile{
@@ -293,7 +296,7 @@ a:hover, a:focus {
 }
 
 #content>.tile:first-child {
-  padding-top: .5em;
+  padding-top: .3em;
   padding-bottom: .5em;
 }
 
@@ -1196,7 +1199,6 @@ h6 a.hanchor:hover {
   height: 100%;
 }
 
-
 /* reduce padding for mobile */
 @media (max-width: 32em) {
   .tile,
@@ -1205,9 +1207,11 @@ h6 a.hanchor:hover {
     padding-right: 1em !important;
     max-width: 100%;
   }
+  .page-title {
+    font-size: 2em !important;
+  }
   .header {
     max-width: 98%;
-    font-size: 24px;
     /*margin-bottom: -.45em;*/
   }
   html, body {
@@ -1233,5 +1237,12 @@ h6 a.hanchor:hover {
   .tile>.full-bleed.list-item:last-child,
   .card>.full-bleed.list-item:last-child {
     margin-bottom: -.5em;
+  }
+}
+
+/* tiny screens */
+@media (max-width: 20em) {
+  .page-title {
+    font-size: 1.9em !important;
   }
 }

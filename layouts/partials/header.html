@@ -1,15 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>{{ .Title }} / {{ .Site.Title }}</title>
-  {{ partialCached "meta.html" . }}
-  {{ partialCached "inlinecss.html" . }}
-{{- if .Params.head }}
-  {{.Params.head | safeHTML}}
-{{end}}
-</head>
+{{ partial "head.html" . }}
 <body ontouchstart="return true"><a id="top"></a>
   <div class="header">
-    <div class="left"><a href="/"><div class="branding"><div>E</div></div> <span style="font-weight: bold;">elder.dev</span></a></div>
+    <div class="left"><a href="/"><span style="font-weight: bold;">Benjamin Elder</span></a></div>
     <div class="right"><a href="/posts"><span class="emoji" style="background-image:url(/images/memo-blue-edit.png)" title="posts">posts</span></a><a href="https://www.twitter.com/BenTheElder"><span class="emoji" style="background-image:url(/images/twitter-blue.png); background-size: 110%" title="twitter">twitter</span></a><a href="https://www.github.com/BenTheElder"><span class="emoji" style="background-image:url(/images/github-mark-blue-crappy.png); background-size: 70%" title="github">github</span></a></div>
   </div>
