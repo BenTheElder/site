@@ -27,6 +27,11 @@ function playYT(s) {
             playerVars: { 'autoplay': 1 },
             width: "100%",
             height: "100%",
+            events: {
+                'onReady': function (event) {
+                    event.target.playVideo();
+                },
+            },
         });
     }
     if (!oldYTAlreadyInjected) {
