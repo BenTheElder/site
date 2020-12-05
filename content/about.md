@@ -96,7 +96,7 @@ This is one of my favorites. 462 people registered as attending this workshop! I
 most of the session.
 Hopefully many of them learned something about contributing to Kubernetes and using KIND.
 
-{{< youtube id="BPVO2mcfjJk" class="video-wrapper" >}}
+{{< lazyYoutube id="BPVO2mcfjJk" >}}
 
 ### KubeCon EU 2019
 
@@ -115,13 +115,13 @@ enjoyed this talk and the Q&A, and I love working with my good friend [James Mun
         </figcaption>
 </figure>
 
-{{< youtube id="8KtmevMFfxA" class="video-wrapper" >}}
+{{< lazyYoutube id="8KtmevMFfxA" >}}
 
 #### Deep Dive: Testing SIG - Benjamin Elder & James Munnelly
 
 We spoke about KIND and how we use it to test Kubernetes for the [SIG Testing Deep Dive][sig-testing-deep-dive-kind].
 
-{{< youtube id="6m9frvTxK0o" class="video-wrapper" >}}
+{{< lazyYoutube id="6m9frvTxK0o" >}}
 
 ### KubeCon NA 2018
 
@@ -133,7 +133,7 @@ I spoke with [Sen Lu][@krzyzacy] about The Kubernetes Project's
 testing tools and infrastructure, including a brief discussion of [KIND] and running
 it on Kubernetes's [Kubernetes-based CI infrastructure][prow].
 
-{{< youtube id="pz0lpl6h-Gc" class="video-wrapper" >}}
+{{< lazyYoutube id="pz0lpl6h-Gc" >}}
 
 
 [BenTheElder]: https://twitter.com/BenTheElder

@@ -368,7 +368,9 @@ a:hover, a:focus {
 
 
 .tile img,
-.card img ,
+.card img,
+.tile object,
+.card object,
 .tile video,
 .card video
 {
@@ -1206,44 +1208,34 @@ h6 a.hanchor:hover {
 /* lazy load youtube */
 .lazyt.video-wrapper {
   position: relative;
+  display: inline-block;
+}
+.lazyt object.placeholder {
+  margin: 0;
+  cursor: pointer;
+  padding: 0;
+  display: inline-flex;
+  border: 3px solid gray;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 .lazyt img.placeholder {
-  outline: 1px solid gray;
-}
-/*
-.lazyt .playbutton,
-.lazyt .playbutton:before {
-	transform: translate3d( -42%, -50%, 0 );
-	top: 50%;
-  left: 50%;
-  position: absolute;
-  font-size: 2em;
-  cursor: pointer;
-  color: white;
-  background: rgba(10,10,10, 0.75);
-  width: 1.75em;
-  height: 1.4em;
-  line-height: 1.4em;
+  object-fit: cover;
+  width: 100%;
+  margin: 0;
   padding: 0;
-  padding-right: .1em;
-  padding-left: .2em;
-  text-align: center;
-  border-radius: .3em;
-  transition: background-color 0.2s ease;
-  user-select: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
-.lazyt .playbutton:hover {
-  background: red;
-}
-*/
-
 .lazyt.video-wrapper {
   margin-top: 1em;
   margin-bottom: 1em;
-}
-.lazyt img.placeholder {
-  margin: 0;
-  cursor: pointer;
 }
 .lazyt .placeholder.playbutton {
 	top: 50%;
