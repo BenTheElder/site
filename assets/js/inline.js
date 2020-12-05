@@ -13,7 +13,7 @@ window.playYT = function (wrapper, event) {
     var videoID = wrapper.getAttribute("data-id");
     var videoDiv = wrapper.children[0];
     // cleanup old chlidren
-    // TODO: this could be cleaner
+    // TODO: this probably could be cleaner?
     wrapper.children[1].remove();
     wrapper.children[1].remove();
     videoDiv.onclick = null;
@@ -23,7 +23,7 @@ window.playYT = function (wrapper, event) {
             createVid(videoDiv, videoID);
         }
     } else {
-        // TODO: what if it's injected already but still loadinig
+        // TODO: what if it's injected already but still loading?
         createVid(videoDiv, videoID);
     }
 }
@@ -31,16 +31,13 @@ window.playYT = function (wrapper, event) {
 function createVid(videoDiv, videoID) {
     var player = new YT.Player(videoDiv, {
         videoId: videoID,
-        // TODO: mobile?
         playerVars: { 'autoplay': 1, 'origin': window.location.href },
         width: "630px",
         height: "355px",
         events: {
-            'onReady': playOnReady,
+            'onReady': function (event) {
+                event.target.playVideo();
+            },
         },
     });
-}
-
-function playOnReady(event) {
-    event.target.playVideo();
 }
