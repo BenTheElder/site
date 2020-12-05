@@ -263,20 +263,22 @@ a:hover, a:focus {
 .footer {
   text-align: center;
   padding: 0.25em 1em;
-  padding-top: 0.5em;
   line-height: 1.75;
   font-size: .75em;
   font-weight: 500;
   width: calc(100% - 2em);
-  max-width: 45em;
+  max-width: 46em;
   position: relative;
   margin: auto auto 0 auto;
   flex-shrink: 0;
   color: #414141;
-  border-top: .01em solid #414141;
   /* experimenting */
   padding-bottom: .75em;
-  margin-top: 0.75em;
+  margin-top: .75em;
+}
+.footer>:first-child {
+  border-top: .01em solid #414141;
+  padding-top: .5em;
 }
 
 .tile,
@@ -294,7 +296,10 @@ a:hover, a:focus {
 
 #content>.tile:first-child {
   padding-top: .3em;
-  padding-bottom: .5em;
+  padding-bottom: .3em;
+}
+#content>.tile>:last-child {
+  margin-bottom: 0;
 }
 
 .tile>.full-bleed,
