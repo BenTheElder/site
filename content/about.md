@@ -13,7 +13,7 @@ I am an open source software developer.
 I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [kind] is my favorite and probably my most popular project. I love working
 with the community. 
 
-<img src="/images/kubecon_barcelona_group.jpg" class="centered outlined" style="object-fit: cover; height: 14em" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
+<img src="/images/kubecon_barcelona_group.32pct.jpg" class="centered outlined" style="object-fit: cover; height: 14em" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
 
 ## Experience
 
@@ -92,6 +92,10 @@ We spoke about [KIND internals and the challenges ahead on the road to 1.0](http
 
 We ran a hands on tutorial for contributing and testing your Kubernetes code with [KIND].
 
+This is one of my favorites. 462 people registered as attending this workshop! I really enjoyed going around helping people get through the workshop instead of speaking for
+most of the session.
+Hopefully many of them learned something about contributing to Kubernetes and using KIND.
+
 {{< youtube id="BPVO2mcfjJk" class="video-wrapper" >}}
 
 ### KubeCon EU 2019
@@ -101,6 +105,15 @@ I gave two talks at [KubeCon EU 2019] and participated as a mentor in one of the
 #### Testing your K8s apps with KIND - Benjamin Elder & James Munnelly
 
 We spoke about [KIND and testing your Kubernetes Applications][testing-k8s-apps-with-kind].
+
+I was pretty jet-lagged for this talk but I was blown away by the response. I really
+enjoyed this talk and the Q&A, and I love working with my good friend [James Munnelly].
+
+<figure>
+    <img src="/images/about/IMG_20190523_110248.20pct.jpg" alt="This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!" style="object-fit: cover; object-position: 50% 100%; max-height: 16em" title="my view from the stage shortly before the talk"> <figcaption>
+            <p><em>This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!</em></p>
+        </figcaption>
+</figure>
 
 {{< youtube id="8KtmevMFfxA" class="video-wrapper" >}}
 
@@ -142,3 +155,4 @@ it on Kubernetes's [Kubernetes-based CI infrastructure][prow].
 [sig-testing-deep-dive-kind]: https://kccnceu19.sched.com/event/MPkC/deep-dive-testing-sig-benjamin-elder-google-james-munnelly-jetstack
 [my dog]: https://twitter.com/BobbyTheHound
 [my fiancé]: https://twitter.com/BobbyTheHound/status/1329618939668615169
+[James Munnelly]: https://twitter.com/jamesmunnelly
