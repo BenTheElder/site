@@ -23,7 +23,7 @@ Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/cncf-icon-color.png'); background-size: 78%; background-position: 42% 42%;"></div>
+    <div class="icon" style="background-image: url('/images/cncf-icon-color.png'); background-size: 78%; background-position: 43% 43%;"></div>
     <div class="date">November 2020</div>
     <div class="description">Awarded <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> 2020 <a href="https://www.cncf.io/announcements/2020/11/20/cloud-native-computing-foundation-announces-2020-community-awards-winners"/>Top Committer Award</a></div>
     <div class="details"><blockquote>This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole. CNCF Maintainers (committers) voted for the Top Committer [...]</blockquote>
@@ -58,7 +58,7 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="details">I started my first full-time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
   </div>
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/buzz.png'); background-size: 79%; background-position: 50% 63%;"></div>
+    <div class="icon" style="background-image: url('/images/buzz.png'); background-size: 79%; background-position: 51% 64%;"></div>
     <div class="date">May 2017</div>
     <div class="description">Graduated BSCS, <a href="https://www.gatech.edu/">Georgia Tech</a></div>
     <div class="details">With "<a href="https://www.cc.gatech.edu/academics/degree-programs/bachelors/computer-science/threads">threads</a>" (specialization) in "<a href="http://www.cc.gatech.edu/intelligence">Intelligence</a>" (Machine Learning) and "<a href="http://www.cc.gatech.edu/devices">Devices</a>" (hardware/software, robotics, embedded etc.). I studied Electrical Engineering before switching to Computer Science.</div>
