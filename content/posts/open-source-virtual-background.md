@@ -550,12 +550,6 @@ Here's a quick clip I recorded of this in action:
     <source src="./holo-demo.mp4a" type="video/mp4" onerror="videoFallback(parentNode)">
     <img src="./holo-demo-lossy.gif">
 </video>
-
-
-Look! I'm dialing into the millenium falcon with an open source camera stack!
-
-I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
-
 <script>
 // https://webkit.org/blog/6784/new-video-policies-for-ios/
 // we wouldn't need this, except netlify has no byte range support and iOS / safari
@@ -568,6 +562,11 @@ function videoFallback(video)
     video.parentNode.replaceChild(img, video);
 }
 </script>
+
+
+Look! I'm dialing into the millenium falcon with an open source camera stack!
+
+I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
 
 [shelter in place]: https://www.sfchronicle.com/local-politics/article/Bay-Area-must-shelter-in-place-Only-15135014.php
 [COVID-19]: https://www.cdc.gov/coronavirus/2019-ncov/index.html
