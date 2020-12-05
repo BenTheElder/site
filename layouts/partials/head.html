@@ -2,6 +2,7 @@
     <title>{{ .Title }} / {{ .Site.Title }}</title>
     {{ partialCached "meta.html" . }}
     {{ partialCached "inlinecss.html" . }}
+    {{ partialCached "inlinejs.html" . }}
   {{- if .Params.head }}
     {{.Params.head | safeHTML}}
   {{end}}

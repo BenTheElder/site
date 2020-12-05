@@ -86,7 +86,7 @@ WG K8s Infra at the Kubernetes [Contributor Summit](https://events19.linuxfounda
 
 We spoke about [KIND internals and the challenges ahead on the road to 1.0](https://kccncna19.sched.com/event/Uah7/deep-dive-kind-benjamin-elder-google-antonio-ojea-garcia-suse).
 
-{{< youtube id="tT-GiZAr6eQ" class="video-wrapper" >}}
+{{< lazyYoutube id="tT-GiZAr6eQ" >}}
 
 #### A Kind Workflow for Contributing to Kubernetes - Benjamin Elder & Duffie Cooley & James Munnelly & Patrick Lang
 

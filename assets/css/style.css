@@ -1203,6 +1203,81 @@ h6 a.hanchor:hover {
   height: 100%;
 }
 
+/* lazy load youtube */
+.lazyt.video-wrapper {
+  position: relative;
+}
+.lazyt img.placeholder {
+  outline: 1px solid gray;
+}
+/*
+.lazyt .playbutton,
+.lazyt .playbutton:before {
+	transform: translate3d( -42%, -50%, 0 );
+	top: 50%;
+  left: 50%;
+  position: absolute;
+  font-size: 2em;
+  cursor: pointer;
+  color: white;
+  background: rgba(10,10,10, 0.75);
+  width: 1.75em;
+  height: 1.4em;
+  line-height: 1.4em;
+  padding: 0;
+  padding-right: .1em;
+  padding-left: .2em;
+  text-align: center;
+  border-radius: .3em;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+.lazyt .playbutton:hover {
+  background: red;
+}
+*/
+
+.lazyt.video-wrapper {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.lazyt img.placeholder {
+  margin: 0;
+  cursor: pointer;
+}
+.lazyt .placeholder.playbutton {
+	top: 50%;
+  left: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+  position: absolute;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  width: 68px;
+  height: 48px;
+  margin-left: -34px;
+  margin-top: -24px;
+  transition: background-color 0.2s ease;
+  user-select: none;
+  border: none;
+  outline: none;
+}
+.lazyt .placeholder.playbutton .ytp-large-play-button-bg {
+  opacity: .8;
+  fill: #111;
+  -moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+  -webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+  transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+}
+.lazyt:hover .placeholder .ytp-large-play-button-bg {
+  opacity: 1;
+  fill: #f00;
+  -moz-transition: opacity .1s cubic-bezier(0.0,0.0,0.2,1);
+  -webkit-transition: opacity .1s cubic-bezier(0.0,0.0,0.2,1);
+  transition: opacity .1s cubic-bezier(0.0,0.0,0.2,1);
+}
+
 /* reduce padding for mobile */
 @media (max-width: 32em) {
   .tile,
