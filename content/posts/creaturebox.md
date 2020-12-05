@@ -76,8 +76,3 @@ I posted the project to [my twitter](https://twitter.com/BenTheElder) before I w
 <blockquote class="twitter-tweet tw-align-center" lang="en"><p lang="en" dir="ltr"><a href="https://twitter.com/BenTheElder">@BenTheElder</a> nice implementation of creatures-avoiding-planks in golang. Have you thought abt using q-learning n-nets rather than evolution?</p>&mdash; hardmaru (@hardmaru) <a href="https://twitter.com/hardmaru/status/683177164447981568">January 2, 2016</a></blockquote>
 
 I may just have to explore that for my next project ([I replied back](https://twitter.com/BenTheElder/status/683178992606810112)).
-
-
-
-<div style="clear: both;"></div>
-
