@@ -10,7 +10,7 @@ title: Home
         <td>BSCS '17 @ <a href="http://www.gatech.edu/">Georgia Tech</a> <span class="emoji" style="background-image:url(/images/GT_Buzz_logo.svg)" title=":buzz:">:buzz:</span></td>
       </tr>
       <tr>
-        <td>Software Engineer @ <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#4285f4">e</span> {{< emoji ":kubernetes:" >}}</td>
+        <td>Senior Software Engineer @ <span style="color:#4285f4">G</span><span style="color:#ea4335">o</span><span style="color:#fbbc05">o</span><span style="color:#4285f4">g</span><span style="color:#34a853">l</span><span style="color:#4285f4">e</span> {{< emoji ":kubernetes:" >}}</td>
       </tr>
       <tr>
         <td>Dog Dad to <a href="https://twitter.com/BobbyTheHound">@BobbyTheHound</a> <span class="emoji" style="background-image:url(/images/emoji/emoji_u2764.png)" title=":heart:">❤</span></td>
