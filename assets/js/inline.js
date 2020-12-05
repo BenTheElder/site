@@ -21,7 +21,7 @@ function playYT(s) {
     videoDiv.onclick = null;
     videoDiv.classList = "";
     createVid = function () {
-        player = new YT.Player(videoDiv, {
+        var player = new YT.Player(videoDiv, {
             videoId: videoID,
             // TODO: mobile?
             playerVars: { 'autoplay': 1 },
