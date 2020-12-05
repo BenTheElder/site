@@ -1,5 +1,6 @@
 var ytAlreadyInjected = false;
-function playYT(s) {
+window.playYT = function (wrapper, event) {
+    console.log(wrapper, event);
     var oldYTAlreadyInjected = ytAlreadyInjected
     // inject youtube API if we haven't already
     if (!oldYTAlreadyInjected) {
@@ -9,37 +10,37 @@ function playYT(s) {
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         ytAlreadyInjected = true;
     }
-    var videoID = s.getAttribute("data-id");
-    var wrapper = s.parentElement;
+    var videoID = wrapper.getAttribute("data-id");
     var videoDiv = wrapper.children[0];
     // cleanup old chlidren
-    // TODO: this could be simpler
-    var obj = wrapper.children[1];
-    var play = wrapper.children[2];
-    obj.remove();
-    play.remove();
+    // TODO: this could be cleaner
+    wrapper.children[1].remove();
+    wrapper.children[1].remove();
     videoDiv.onclick = null;
     videoDiv.classList = "";
-    createVid = function () {
-        var player = new YT.Player(videoDiv, {
-            videoId: videoID,
-            // TODO: mobile?
-            playerVars: { 'autoplay': 1 },
-            width: "100%",
-            height: "100%",
-            events: {
-                'onReady': function (event) {
-                    event.target.playVideo();
-                },
-            },
-        });
-    }
     if (!oldYTAlreadyInjected) {
         window.onYouTubeIframeAPIReady = function () {
-            createVid();
+            createVid(videoDiv, videoID);
         }
     } else {
         // TODO: what if it's injected already but still loadinig
-        createVid();
+        createVid(videoDiv, videoID);
     }
+}
+
+function createVid(videoDiv, videoID) {
+    var player = new YT.Player(videoDiv, {
+        videoId: videoID,
+        // TODO: mobile?
+        playerVars: { 'autoplay': 1, 'origin': window.location.href },
+        width: "630px",
+        height: "355px",
+        events: {
+            'onReady': playOnReady,
+        },
+    });
+}
+
+function playOnReady(event) {
+    event.target.playVideo();
 }
