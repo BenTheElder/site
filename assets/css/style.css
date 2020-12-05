@@ -122,7 +122,7 @@ hr {
   background-color: #000;
   border: none !important;
   height: 3px !important;
-  margin-bottom: 0 !important;
+  margin-bottom: .25em !important;
   margin-top: .25em !important;
   padding: 0 !important;
 }
@@ -262,24 +262,21 @@ a:hover, a:focus {
 
 .footer {
   text-align: center;
-  padding: 0.5em 1em;
-  padding-bottom: .5em;
-  padding-top: 0; 
+  padding: 0.25em 1em;
+  padding-top: 0.5em;
   line-height: 1.75;
   font-size: .75em;
   font-weight: 500;
   width: calc(100% - 2em);
+  max-width: 45em;
   position: relative;
   margin: auto auto 0 auto;
-  margin-top: 0;
   flex-shrink: 0;
   color: #414141;
+  border-top: .01em solid #414141;
   /* experimenting */
   padding-bottom: .75em;
-  /*background: aliceblue;*/
-  padding-top: 1em;
-  padding-top: 0;
-  margin-top: 0.5em;
+  margin-top: 0.75em;
 }
 
 .tile,
