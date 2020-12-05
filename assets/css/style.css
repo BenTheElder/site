@@ -1245,6 +1245,7 @@ h6 a.hanchor:hover {
   height: 48px;
   margin-left: -34px;
   margin-top: -24px;
+  padding: 0;
   user-select: none;
   border: none;
   outline: none;
