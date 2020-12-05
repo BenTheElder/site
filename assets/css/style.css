@@ -264,6 +264,7 @@ a:hover, a:focus {
   text-align: center;
   padding: 0.25em 1em;
   line-height: 1.75;
+
   font-size: .75em;
   font-weight: 500;
   width: calc(100% - 2em);
@@ -1159,6 +1160,8 @@ h6 a.hanchor:hover {
   border: .2em solid #105ae2;
   background: #fff;
   background-size: 1.5em;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .timeline-entry .icon {
   z-index: 3;
