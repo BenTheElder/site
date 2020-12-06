@@ -547,23 +547,9 @@ Here's a quick clip I recorded of this in action:
 
 <video autoplay muted loop playsinline>
     <source src="./holo-demo.webm" type="video/webm">
-    <source src="./holo-demo.mp4" type="video/mp4" onerror="videoFallback(parentNode)">
+    <source src="./holo-demo.mp4" type="video/mp4" onerror="gifFallback(parentNode)">
     <img data-src="./holo-demo-lossy.gif">
 </video>
-<script>
-// https://webkit.org/blog/6784/new-video-policies-for-ios/
-// we wouldn't need this, except netlify has no byte range support and iOS / safari
-// requires it for video
-// https://community.netlify.com/t/add-support-for-range-header-for-large-media-files/5733
-function videoFallback(video)
-{
-    var img = video.querySelector('img');
-    if (img) {
-        img.src = img.dataset.src;
-        video.parentNode.replaceChild(img, video);
-    }
-}
-</script>
 
 
 Look! I'm dialing into the millenium falcon with an open source camera stack!

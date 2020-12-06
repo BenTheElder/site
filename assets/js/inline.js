@@ -1,14 +1,27 @@
-var ytAlreadyInjected = false;
-window.playYT = function (wrapper, event) {
+// https://webkit.org/blog/6784/new-video-policies-for-ios/
+// we wouldn't need this, except netlify has no byte range support and iOS / safari
+// requires it for video
+// https://community.netlify.com/t/add-support-for-range-header-for-large-media-files/5733
+function gifFallback(video) {
+    var img = video.querySelector('img');
+    if (img) {
+        img.src = img.dataset.src;
+        video.parentNode.replaceChild(img, video);
+    }
+}
+
+/* lazyloading youtube */
+var ytInjected = false;
+function playYT(wrapper, event) {
     console.log(wrapper, event);
-    var oldYTAlreadyInjected = ytAlreadyInjected
+    var preYTInjected = ytInjected
     // inject youtube API if we haven't already
-    if (!oldYTAlreadyInjected) {
+    if (!preYTInjected) {
         var tag = document.createElement('script');
         tag.src = "https://www.youtube.com/iframe_api";
         var firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        ytAlreadyInjected = true;
+        ytInjected = true;
     }
     var videoID = wrapper.getAttribute("data-id");
     var videoDiv = wrapper.children[0];
@@ -18,7 +31,7 @@ window.playYT = function (wrapper, event) {
     wrapper.children[1].remove();
     videoDiv.onclick = null;
     videoDiv.classList = "";
-    if (!oldYTAlreadyInjected) {
+    if (!preYTInjected) {
         window.onYouTubeIframeAPIReady = function () {
             createVid(videoDiv, videoID);
         }
