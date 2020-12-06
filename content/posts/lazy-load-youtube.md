@@ -47,21 +47,20 @@ predictable YouTube video thumbnail URLs like: `https://i3.ytimg.com/vi/$video_i
 
 For example the video https://youtube.com/watch?v=rPppjjvjQlk would have a
 thumbnail at
-https://i3.ytimg.com/vi/rPppjjvjQlk/maxresdefault.jpg, putting this in an `<img>`
+https://i3.ytimg.com/vi/rPppjjvjQlk/maxresdefault.jpg. Putting this in an `<img>`
 tag gives us:
 
 <img src="./rPppjjvjQlk-maxresdefault.jpg">
 
-In theory all videos >= 720p resolution should have a `maxresdefault.jpg` thumbnail
-(and also a `webp`).
+In theory all videos >= 720p resolution should have a `maxresdefault.jpg` thumbnail.
 
 In reality, some videos seem to be missing it anyhow, such as https://youtube.com/watch?v=BPVO2mcfjJk, which gives us:
 
 <img src="./maxresdefault-404.jpg">
 
-... That doesn't look so good! (Also, it's returning status [404])
+... That doesn't look so good! (Also it's returning a [404])
 
-To fix this, we can switch to the `hqdefault.jpg` thumnail instead, which gvies us:
+To fix this, we can switch to the `hqdefault.jpg` thumnail instead, which gives us:
 
 <img src="./BPVO2mcfjJk-hqdefault.jpg">
 
@@ -485,7 +484,7 @@ As-is, I'm already pretty happy with this approach, and will probably continue t
 and use it in most contexts.
 
 [^1]: "Avoid enormous network payloads" [web.dev/total-byte-weight/](https://web.dev/total-byte-weight/)
-[^2]: Found at `i3.ytimg.com/vi_webp/$video_id/$quality.webp`
+[^2]: Found at `i3.ytimg.com/vi_webp/$video_id/$quality.webp`, for `maxresdefault` quality these appear to be something like 1/2 the size versus jpeg.
 [^3]: Support from all browsers except IE and Safari based on [caniuse.com/webp]
 
 [lighthouse]: https://developers.google.com/web/tools/lighthouse

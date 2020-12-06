@@ -77,7 +77,8 @@ p {
 /* hugo footnotes */
 .footnotes>ol {
   padding-left: 1.8rem;
-  font-family: monospace
+  font-family: monospace;
+  margin-bottom: 0;
 }
 .footnotes>ol>li {
   margin-left: 0em;
