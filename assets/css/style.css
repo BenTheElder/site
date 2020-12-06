@@ -168,7 +168,7 @@ a:hover, a:focus {
 /* content layout and style */
 .header {
   margin: 0;
-  font-size: 1.3em;
+  font-size: 1.4em;
   font-weight: normal;
   letter-spacing: .02em;
   background-color: #01579b;
@@ -190,10 +190,10 @@ a:hover, a:focus {
   background: none;
   border: none;
   width: 98%;
-  max-width: 29em;
+  max-width: 27em;
   margin: 0 auto;
-  margin-bottom: -.7em;
-  margin-top: 0.1em;
+  margin-bottom: -1rem;
+  margin-top: 0.1rem;
   /*margin-top: 0.05em;*/
 }
 .header code {
@@ -204,6 +204,8 @@ a:hover, a:focus {
 }
 .header a {
   margin-top: .25em;
+  padding-left: .07rem;
+  padding-right: .07rem
 }
 .header a .emoji {
   user-select: none;
@@ -485,7 +487,7 @@ img.outlined {
 }
 
 .tile table td,
-.card table td { padding: .2em; }
+.card table td { padding: .16em; }
 
 .tile .bordered,
 .card .bordered {

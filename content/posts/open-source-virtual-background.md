@@ -546,9 +546,9 @@ be sure to select the "v4l2loopback" / `/dev/video20` camera in Zoom etc.
 Here's a quick clip I recorded of this in action:
 
 <video autoplay muted loop playsinline>
-    <source src="./holo-demo.webma" type="video/webm">
-    <source src="./holo-demo.mp4a" type="video/mp4" onerror="videoFallback(parentNode)">
-    <img src="./holo-demo-lossy.gif">
+    <source src="./holo-demo.webm" type="video/webm">
+    <source src="./holo-demo.mp4" type="video/mp4" onerror="videoFallback(parentNode)">
+    <img data-src="./holo-demo-lossy.gif">
 </video>
 <script>
 // https://webkit.org/blog/6784/new-video-policies-for-ios/
@@ -557,9 +557,11 @@ Here's a quick clip I recorded of this in action:
 // https://community.netlify.com/t/add-support-for-range-header-for-large-media-files/5733
 function videoFallback(video)
 {
-  var img = video.querySelector('img');
-  if (img)
-    video.parentNode.replaceChild(img, video);
+    var img = video.querySelector('img');
+    if (img) {
+        img.src = img.dataset.src;
+        video.parentNode.replaceChild(img, video);
+    }
 }
 </script>
 
