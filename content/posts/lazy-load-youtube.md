@@ -14,9 +14,8 @@ I thought I'd share about how this went / works.
 
 ## Why Lazy Load?
 
-YouTube is a pretty ubiquitous for video hosting and very easy to embed -- On any
-video just click "share" then "embed" and copy + paste the generated `<iframe>` into
-your page source. Done!
+YouTube is a pretty ubiquitous for video hosting and very easy to embed.
+For most videos you can just open the video on [youtube.com], click "share", click "embed", and finally copy + paste the generated `<iframe>` into your page source. Done!
 
 Unfortunately standard embedded YouTube videos do have drawbacks ...
 
