@@ -90,9 +90,11 @@ p {
 .footnotes>ol>li>p {
   padding: .3em;
   position: relative;
-  left: -.5em;
-  margin-right: -.5em;
+  left: -.4em;
+  margin-right: -.4em;
   padding-left: .5em;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
 }
 .footnote-ref {
   font-family: monospace;

@@ -8,11 +8,11 @@ categories:
 - <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3a5.png)" title=":movie-camera:"/>:movie-camera:</span>
 ---
 
-> First, let me acknowledge up front that **this is neither a novel problem nor a
-novel solution**. This is simply what I cobbled together to fit my own needs, and
-I thought I'd share about how this works.
+> First, let me acknowledge up-front that **this is neither a novel problem nor a
+novel solution**. This is simply what I cobbled together to fit my own needs,
+I thought I'd share about how this went / works.
 
-## Background
+## Why Lazy Load?
 
 YouTube is a pretty ubiquitous for video hosting and very easy to embed -- On any
 video just click "share" then "embed" and copy + paste the generated `<iframe>` into
@@ -20,7 +20,7 @@ your page source. Done!
 
 Unfortunately standard embedded YouTube videos do have drawbacks ...
 
-The drawback that kicked off this post is that they are pretty bandwidth intensive when not even played, nearly a megabyte (~820 kB) per video just to embed it in the page!
+The drawback that kicked off this post is that they are still pretty bandwidth intensive even when not played, at nearly a megabyte (~820 kB) per video just to embed it in the page!
 
 For a desktop website that might not be a lot, but on a 3G connection this is rather a lot, two videos is enough to completely consume a reasonable network bytes budget for a page. Quoting from the chrome [lighthouse] docs:
 
@@ -36,7 +36,7 @@ In particular I have the following requirements:
 
 - Placeholders must look decent on a static site, even without javascript
 - Videos should ideally actually play after the user clicks "play"
-- No frameworks, no builds, only: hugo, html, CSS, and minimal javascript
+- No frameworks, no compilation. Only static HTML, CSS, and minimal javascript
 
 
 ## The Placeholder
@@ -144,10 +144,10 @@ Now the placeholder preview image is all set, but it still doesn't look like a v
 An actual video embed currently looks like:
 <img src="./embed-screenshot.png">
 
-And has the key behaviors:
-- Hovering turns the translucent gray play button red
+And has the key noticeable behaviors:
+- Hovering turns the iconic YouTube play button from a translucent gray color to opaque red
 - On desktop hovering has `cursor: pointer`
-- Clicking anywhere plays the video
+- Clicking ~anywhere on the video starts playback
 
 We can get a more obvious video placeholder by at least mimicing the play button.
 
@@ -469,7 +469,7 @@ Pretty good!
 
 In this state the videos work pretty well, and use a fraction of the bandwidth, the `maxresdefault.jpg` are something like 120 kB versus 820+ for the whole embed, not bad.
 
-This could be improved further by using the more efficient `webp` images when in compatible browsers (basically anything but Safari or IE [^2]), or you could consider only using the "hq" images.
+This could be improved further by using the more efficient `webp` images [^2] when in compatible browsers (basically anything but Safari or IE [^3]), or you could consider only using the "hq" images.
 
 The lazy load could probably be made a bit nicer by adding a styled transition to loading in the video.
 
@@ -485,7 +485,8 @@ As-is, I'm already pretty happy with this approach, and will probably continue t
 and use it in most contexts.
 
 [^1]: "Avoid enormous network payloads" [web.dev/total-byte-weight/](https://web.dev/total-byte-weight/)
-[^2]: These are at `i3.ytimg.com/vi_webp/$video_id/$quality.webp`. Support from all browsers except IE and Safari based on [caniuse.com/webp]
+[^2]: Found at `i3.ytimg.com/vi_webp/$video_id/$quality.webp`
+[^3]: Support from all browsers except IE and Safari based on [caniuse.com/webp]
 
 [lighthouse]: https://developers.google.com/web/tools/lighthouse
 [hugo]: https://gohugo.io
