@@ -38,6 +38,10 @@ h6 { font-size: .75em; }
 h1, h2, h3, h4, h5, h6 {
   margin-top: .75em;
   margin-bottom: 0.25em;
+  margin-left: -.85rem;
+  padding-left: .85rem;
+  padding-right: .85rem;
+  margin-right: -.85rem;
 }
 
 #content {
@@ -67,6 +71,44 @@ ul ul {
 p {
   margin-block-start: .5em;
   margin-block-end: 1em;
+}
+
+/* hugo footnotes */
+.footnotes>ol {
+  padding-left: 1.8rem;
+  font-family: monospace
+}
+.footnotes>ol>li {
+  margin-left: 0em;
+}
+.footnotes hr {
+  margin-left: 0;
+  max-width: 8em;
+  margin-bottom: -.5em !important;
+}
+.footnotes>ol>li>p {
+  padding: .3em;
+  position: relative;
+  left: -.5em;
+  margin-right: -.5em;
+  padding-left: .5em;
+}
+.footnote-ref {
+  font-family: monospace;
+}
+:target,
+sup:target,
+.footnotes :target, .footnotes>ol>li:target>p  {
+  background: #ffff92;
+}
+sup {
+  font-size: 1em;
+  font-weight: bold;
+  vertical-align: super;
+  vertical-align: baseline;
+  line-height: 0;
+  position: relative;
+  top: -0.3em;
 }
 
 /* fonts */
@@ -1010,7 +1052,7 @@ h3 a.hanchor,
 h4 a.hanchor,
 h5 a.hanchor,
 h6 a.hanchor { 
-  font-size: 100%;
+  font-size: .75em;
   opacity: 0;
   vertical-align: middle;
   text-decoration: none !important;
@@ -1020,11 +1062,9 @@ h6 a.hanchor {
   float: left;
   margin: 0;
   margin-left: -.75em;
+  margin-top: .25em;
   padding-right: 0;
   padding-left: 0;
-  line-height: 1em;
-  padding-top: .6em;
-  font-size: .75em;
 }
 h1:hover a.hanchor,
 h2:hover a.hanchor,
@@ -1032,12 +1072,12 @@ h3:hover a.hanchor,
 h4:hover a.hanchor,
 h5:hover a.hanchor,
 h6:hover a.hanchor,
-h1 a.hanchor:hover,
-h2 a.hanchor:hover,
-h3 a.hanchor:hover,
-h4 a.hanchor:hover,
-h5 a.hanchor:hover,
-h6 a.hanchor:hover {
+h1 a.hanchor:hover, h1 a.hanchor:focus,
+h2 a.hanchor:hover, h2 a.hanchor:focus,
+h3 a.hanchor:hover, h3 a.hanchor:focus,
+h4 a.hanchor:hover, h4 a.hanchor:focus,
+h5 a.hanchor:hover, h5 a.hanchor:focus,
+h6 a.hanchor:hover, h6 a.hanchor:focus {
   opacity: 1;
 }
 
