@@ -192,7 +192,7 @@ a:hover, a:focus {
   width: 98%;
   max-width: 27em;
   margin: 0 auto;
-  margin-bottom: -1rem;
+  margin-bottom: -0.9rem;
   margin-top: 0.1rem;
   /*margin-top: 0.05em;*/
 }
