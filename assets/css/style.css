@@ -974,18 +974,18 @@ pre {
 }
 
 code {
-  background-color: rgb(219, 237, 255);
+  background-color: #ececec;
+  /*background-color: #f3f4f4;*/
   color: #000;
   border-radius: .22em;
   padding: .08em .22em;
   border: none;
-  /* box-shadow: 0.2em 0 0 #b2e2ff, -0.2em 0 0 #b2e2ff; */
-  /* margin-left: 0.2em; */
-  /* margin-right: 0.2em; */
   font-size: 90%;
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
+  /*color: #e01e5a;*/
+  border: .05em solid #d1d1d1;
 }
 
 .chroma {
