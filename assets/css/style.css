@@ -100,18 +100,21 @@ p {
 .footnote-ref {
   font-family: monospace;
 }
-:target,
-sup:target,
-.footnotes :target, .footnotes>ol>li:target>p  {
-  background: #ffff92;
+
+/* highlight selected footnote / ref */
+sup:target a.footnote-ref,
+.footnotes>ol>li:target>p {
+  background-color: #ffff92;
 }
 sup {
-  font-size: 1em;
+  display: inline-block;
+  font-size: .75em;
+  margin-top: -.25em;
   vertical-align: super;
-  vertical-align: baseline;
-  line-height: 0;
   position: relative;
-  top: -0.3em;
+}
+sup a.footnote-ref {
+  padding-top: .3em;
 }
 
 /* fonts */
@@ -1083,6 +1086,14 @@ h5 a.hanchor:hover, h5 a.hanchor:focus,
 h6 a.hanchor:hover, h6 a.hanchor:focus {
   opacity: 1;
 }
+/* make anchors scroll up a bit */
+*[id] {
+  border-top: 2.5rem solid transparent;
+  margin-top: -2.5rem;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
 
 .tile figure, .tile figure.full-bleed,
 .card figure, .card figure.full-bleed {
@@ -1241,6 +1252,7 @@ h6 a.hanchor:hover, h6 a.hanchor:focus {
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
+  margin-bottom: 1em;
 }
 .video-wrapper iframe {
   position: absolute;
