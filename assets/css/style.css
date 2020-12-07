@@ -942,6 +942,9 @@ blockquote>p {
 /*
 Code Highlight CSS
 */
+.highlight {
+  margin-bottom: 1em;
+}
 pre.chroma {
   overflow-x: auto;
   overflow-y: hidden;
