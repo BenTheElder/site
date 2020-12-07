@@ -14,6 +14,7 @@
         {{ end }}
        <p class="sub-title">{{ replace $date "SUFFIX" $suffix }}</p>
       <hr class="full-bleed">
+      {{if .Draft}}<blockquote><strong>NOTE:</strong> You've discovered a draft post! This entry is still under construction 🚧 and shouldn't be listed anywhere ... 🤔</blockquote>{{end}}
       {{ partial "fancymarkdown.html" .Content }}
     </div>
   </div>
