@@ -1061,19 +1061,16 @@ h3 a.hanchor,
 h4 a.hanchor,
 h5 a.hanchor,
 h6 a.hanchor { 
-  font-size: .75em;
-  opacity: 0;
+  font-size: 1em;
   vertical-align: middle;
   text-decoration: none !important;
   border-bottom: none;
-  -webkit-transition: opacity .2s;
-  transition: opacity .2s;
   float: left;
   margin: 0;
   margin-left: -.75em;
-  line-height: 2.4em;
   padding-right: 0;
   padding-left: 0;
+  visibility: hidden;
 }
 h1:hover a.hanchor,
 h2:hover a.hanchor,
@@ -1087,15 +1084,19 @@ h3 a.hanchor:hover, h3 a.hanchor:focus,
 h4 a.hanchor:hover, h4 a.hanchor:focus,
 h5 a.hanchor:hover, h5 a.hanchor:focus,
 h6 a.hanchor:hover, h6 a.hanchor:focus {
-  opacity: 1;
+  visibility: visible;
 }
 /* make anchors scroll up a bit */
-*[id] {
-  border-top: 2.5rem solid transparent;
-  margin-top: -2.5rem;
+h1[id], h2[id], h3[id], h4[id], h5[id], h6[id], sup[id] {
+  border-top: 1rem solid transparent;
+  margin-top: -1rem;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
   background-clip: padding-box;
+}
+sup[id] {
+  border-top: 5rem solid transparent;
+  margin-top: -5rem;
 }
 
 .tile figure, .tile figure.full-bleed,
