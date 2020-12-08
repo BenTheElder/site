@@ -241,7 +241,7 @@ a:hover, a:focus {
   max-width: 27em;
   margin: 0 auto;
   margin-bottom: -0.9rem;
-  margin-top: 0.1rem;
+  padding-top: 0.15rem;
   /*margin-top: 0.05em;*/
 }
 .header code {
