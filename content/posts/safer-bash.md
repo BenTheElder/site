@@ -8,7 +8,7 @@ categories:
 ---
 
 [Bash] scripts are a really convenient way to write simple utilities.
-Unfortunately many bash scripts in the wild are littered with bugs. <span class="emoji" style="background-image:url(/images/slackmoji/bash_fire.png)" title=":bash_fire:"/>:bash_fire:</span> Writing
+Unfortunately many bash scripts in the wild are littered with bugs. Writing
 reliable bash can be hard. I've been reviewing and fixing a lot of bash while
 working on [cleaning up] the Kubernetes project's scripts and wanted to collect
 some tips for writing more reliable scripts.

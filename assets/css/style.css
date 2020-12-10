@@ -1061,13 +1061,13 @@ h3 a.hanchor,
 h4 a.hanchor,
 h5 a.hanchor,
 h6 a.hanchor { 
-  font-size: 1em;
+  font-size: .8em;
   vertical-align: middle;
   text-decoration: none !important;
   border-bottom: none;
   float: left;
   margin: 0;
-  margin-left: -.75em;
+  margin-left: -.7em;
   padding-right: 0;
   padding-left: 0;
   visibility: hidden;
