@@ -23,7 +23,7 @@ Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
   <div class="timeline-entry">
-    <div class="icon" style=""><img src="/images/cncf-icon-color.png" style="width: 1.11em; height: 1.11em; margin: .1925em;"></div>
+    <div class="icon" style=""><div style="background-image:url('/images/cncf-icon-color.png'); width: 1.11em; height: 1.11em; background-size: 1.11em; background-position: center; background-repeat: no-repeat; margin: .1925em;"></div></div>
     <div class="date">November 2020</div>
     <div class="description">Awarded <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a> 2020 <a href="https://www.cncf.io/announcements/2020/11/20/cloud-native-computing-foundation-announces-2020-community-awards-winners"/>Top Committer Award</a></div>
     <div class="details"><blockquote>This award recognizes excellence in technical contributions to CNCF and its hosted projects. The CNCF Top Committer has made key commits to projects and, more importantly, contributes in a way that benefits the project as a whole. CNCF Maintainers (committers) voted for the Top Committer [...]</blockquote>
