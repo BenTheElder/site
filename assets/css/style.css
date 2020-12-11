@@ -432,7 +432,7 @@ a:hover, a:focus {
 }
 
 img.outlined {
-  outline: .25em solid black;
+  outline: 2px solid black;
 }
 
 .centered {
@@ -562,6 +562,7 @@ img.outlined {
   margin: 0.1em auto;
   margin-bottom: 0.1em;
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .no-margin { margin: 0 !important; }
@@ -1272,18 +1273,6 @@ sup[id] {
   position: relative;
   display: inline-block;
 }
-.lazyt object.placeholder {
-  margin: 0;
-  cursor: pointer;
-  padding: 0;
-  display: inline-flex;
-  border: 3px solid gray;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 .lazyt img.placeholder {
   object-fit: cover;
   width: 100%;
@@ -1294,6 +1283,7 @@ sup[id] {
   left: 0;
   width: 100%;
   height: 100%;
+  border: 2px solid black;
 }
 .lazyt .placeholder.playbutton {
 	top: 50%;

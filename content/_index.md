@@ -2,7 +2,13 @@
 title: Home
 ---
 <h1 class="page-title" style="font-size: 3em;">Hi, you've found Benjamin Elder's website. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f44b.png)" title=":wave:">:wave:</span></h1>
-<figure class="full-bleed index-icon" style="position: relative; width: 50%; padding-bottom: 50%; left: 50%; transform: translateX(-50%); margin-bottom: 1em; margin-top: .1em;"><img class="" style="position: absolute; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: black; border: .25em solid #000;" src="/images/ben-2020.33p.jpg" alt="ben's avatar"></figure>
+<figure class="full-bleed" style="position: relative; width: 50%; padding-bottom: 50%; left: 50%; transform: translateX(-50%); margin-bottom: 1em; margin-top: .1em;">
+  <picture>
+    <source type="image/webp" srcset="/images/ben-2020.33pct.webp">
+    <source type="image/jpeg" srcset="/images/ben-2020.33pct.jpg">
+    <img src="/images/ben-2020.33pct.jpg" alt="ben's avatar" style="position: absolute; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; overflow: hidden; background: black; border: .25em solid #000;">
+  </picture>
+</figure>
 <div class="" style="padding: .5em; padding-top: 0">
   <table style="margin: 0 auto;">
     <tbody>

@@ -3,7 +3,7 @@ markup: md
 type: misc
 title: About Ben
 ---
-<div style="float: left; width: 5.5em; margin-right: .5em; margin-left: -.5em; margin-top: .33em; height: 5.5em"><img class="circle-badge" src="/images/ben_avatar.30pct.jpg" style="padding-top: 0; padding-bottom: 0; margin: 0;" alt="Ben" title="Ben"></div>
+<div style="float: left; width: 5.5em; margin-right: .5em; margin-left: -.5em; margin-top: .33em; height: 5.5em" class="circle-badge"><picture><source type="image/webp" srcset="/images/ben_avatar.30pct.webp"><source type="image/jpeg" srcset="/images/ben_avatar.30pct.jpg"><img src="/images/ben_avatar.30pct.jpg" style="padding-top: 0; padding-bottom: 0; margin: 0;" alt="Ben" title="Ben"></picture></div>
 
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
 I enjoy gaming, hiking, and building things. I love [my dog] and [my fiancé].
@@ -13,7 +13,11 @@ I am an open source software developer.
 I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [kind] is my favorite and probably my most popular project. I love working
 with the community. 
 
-<img src="/images/kubecon_barcelona_group.32pct.jpg" class="centered outlined" style="object-fit: cover; height: 14em" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
+<picture>
+  <source type="image/webp" srcset="/images/kubecon_barcelona_group.32pct.webp">
+  <source type="image/jpeg" srcset="/images/kubecon_barcelona_group.32pct.jpg">
+  <img src="/images/kubecon_barcelona_group.32pct.jpg" class="centered outlined" style="object-fit: cover; height: 14em" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
+</picture>
 
 ## Experience
 
@@ -96,7 +100,7 @@ This is one of my favorites. 462 people registered as attending this workshop! I
 most of the session.
 Hopefully many of them learned something about contributing to Kubernetes and using KIND.
 
-{{< lazyYoutube id="BPVO2mcfjJk" >}}
+{{< lazyYoutube id="BPVO2mcfjJk" previewQuality="hq" >}}
 
 ### KubeCon EU 2019
 
@@ -110,9 +114,12 @@ I was pretty jet-lagged for this talk but I was blown away by the response. I re
 enjoyed this talk and the Q&A, and I love working with my good friend [James Munnelly].
 
 <figure>
-    <img src="/images/about/IMG_20190523_110248.20pct.jpg" alt="This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!" style="object-fit: cover; object-position: 50% 100%; max-height: 16em" title="my view from the stage shortly before the talk"> <figcaption>
-            <p><em>This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!</em></p>
-        </figcaption>
+  <object type="image/webp" data="/images/about/IMG_20190523_110248.20pct.webp" alt="This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!" style="object-fit: cover; object-position: 50% 100%; max-height: 16em" title="my view from the stage shortly before the talk">
+    <img src="/images/about/IMG_20190523_110248.20pct.jpg" alt="This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!" style="object-fit: cover; object-position: 50% 100%; max-height: 16em" title="my view from the stage shortly before the talk">
+  </object>
+  <figcaption>
+    <p><em>This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!</em></p>
+  </figcaption>
 </figure>
 
 {{< lazyYoutube id="8KtmevMFfxA" >}}
