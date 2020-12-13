@@ -1269,11 +1269,39 @@ sup[id] {
 }
 
 /* lazy load youtube */
-.lazyt.video-wrapper {
+.video-wrapper {
   position: relative;
   display: inline-block;
+  background: black;
 }
-.lazyt img.placeholder {
+.lazyt .placeholder a.video-title {
+  position: absolute;
+  top: 0;
+  left: 2px;
+  padding: .5em 1em;
+  width: calc(100% - 1.75em - 4px);
+  z-index: 3;
+  color: #f2f2f2;
+  -moz-transition: color .1s cubic-bezier(0.0,0.0,0.2,1);
+  -webkit-transition: color .1s cubic-bezier(0.0,0.0,0.2,1);
+  transition: color .1s cubic-bezier(0.0,0.0,0.2,1);
+  font-weight: normal;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  height: 1.5em;
+  line-height: 1.5em;
+  text-shadow: 0 0 2px rgba(0,0,0,.5);
+  border-bottom: none;
+  cursor: pointer;
+  background: rgba(0,0,0,0.5);
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.35));
+}
+.lazyt .placeholder a.video-title:hover {
+  color: #fff;
+}
+.lazyt .placeholder img {
   object-fit: cover;
   width: 100%;
   margin: 0;
@@ -1282,11 +1310,12 @@ sup[id] {
   top: 0;
   left: 0;
   width: 100%;
+  max-width: calc(100% - 4px);
   height: 100%;
   border: 2px solid black;
   cursor: pointer;
 }
-.lazyt .placeholder.playbutton {
+.lazyt .placeholder .playbutton {
 	top: 50%;
   left: 50%;
   position: absolute;
@@ -1301,15 +1330,16 @@ sup[id] {
   user-select: none;
   border: none;
   outline: none;
+  z-index: 4;
 }
-.lazyt .placeholder.playbutton .ytp-large-play-button-bg {
+.lazyt .placeholder .playbutton .ytp-large-play-button-bg {
   opacity: .8;
   fill: #111;
   -moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
   -webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
   transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
 }
-.lazyt:hover .placeholder .ytp-large-play-button-bg {
+.lazyt .placeholder .thumbnail:hover .ytp-large-play-button-bg {
   opacity: 1;
   fill: #f00;
   -moz-transition: opacity .1s cubic-bezier(0.0,0.0,0.2,1);

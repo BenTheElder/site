@@ -1,8 +1,7 @@
 ---
 markup: md
 title: Lazy Loading YouTube Videos
-date: "2020-12-06"
-draft: true
+date: "2020-12-12"
 categories:
 - web
 - <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3a5.png)" title=":movie-camera:"/>:movie-camera:</span>
@@ -21,9 +20,13 @@ Unfortunately standard embedded YouTube videos do have drawbacks ...
 
 The drawback that kicked off this post is that they are still pretty bandwidth intensive even when not played, at nearly a megabyte (~820 kB) per video just to embed it in the page!
 
-For a desktop website that might not be a lot, but on a 3G connection this is rather a lot, two videos is enough to completely consume a reasonable network bytes budget for a page. Quoting from the chrome [lighthouse] docs:
+
+If you have a page with a single video this is not so bad, especially on a desktop
+websitie, but on a 3G connection this is rather a lot.
+Two videos is enough to completely consume a reasonable bandwidth budget for a webpage. Quoting from the chrome [lighthouse] docs:
 
 > Aim to keep your total byte size below 1,600 KiB. This target is based on the amount of data that can be theoretically downloaded on a 3G connection while still achieving a [Time to Interactive](https://web.dev/interactive) of 10 seconds or less. [^1]
+
 
 A fairly obvious approach to avoiding this is to replace the video embeds with
 placeholders and then only load the video when the user clicks "play".
@@ -33,9 +36,9 @@ on static sites like this one (built with [hugo]).
 
 In particular I have the following requirements:
 
-- Placeholders must look decent on a static site, even without javascript
+- Placeholders must look recognizably lke the embedded vdeo 
 - Videos should ideally actually play after the user clicks "play"
-- No frameworks, no compilation. Only static HTML, CSS, and minimal javascript
+- No frameworks, no compilation. Only static HTML, CSS, and minimal Javascript
 
 
 ## The Placeholder
@@ -59,16 +62,13 @@ In reality, some videos seem to be missing it anyhow, such as https://youtube.co
 
 ... That doesn't look so good! (Also it's returning a [404])
 
-To fix this, we can switch to the `hqdefault.jpg` thumnail instead, which gives us:
+To fix this, we can switch this video to the next-best qualty `hqdefault.jpg` thumnail instead, which gives us:
 
 <img src="./BPVO2mcfjJk-hqdefault.jpg">
 
-That's a bit better, but still leaves us with two problems:
+That's a bit better, but still leaves us with a problem: The native youtube embed will not show
 
-1. The native youtube embed will not show black bars like this.
-2. `hqdefault` is not as nice looking, we don't want to use this if we can avoid it. How are we going to do an image fallback without javascript?
-
-To solve the first problem, we just need a little layout tweak + some css:
+To fix this we just need a little layout tweak + some css:
 
 HTML:
 ```html
@@ -93,6 +93,7 @@ CSS:
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
+  background: black;
 }
 /* style lazy loaded youtube video placeholder image */
 .lazyt img.placeholder {
@@ -117,26 +118,6 @@ Which gives us:
 
 That's more like it!
 
-
-The second problem is tricky, we want a way to handle "this image doesn't load" with
-"switch to a fallback" but have it work for all page viewers without javascript.
-
-It turns out this *is* possible, see https://stackoverflow.com/a/980910.
-
-TLDR: Use an `<object>` tag for the desired image, an nested `<img>` tag for the fallback. This works in IE6+.
-
-Updated HTML:
-```html
-<!--wrapper div-->
-<div class="video-wrapper lazyt">
-  <!-- the placeholder image -->
-  <object data="https://i3.ytimg.com/vi/BPVO2mcfjJk/maxresdefault.jpg" type="image/jpeg">
-    <!-- the fallback placeholder image -->
-    <img class="placeholder" src="https://i3.ytimg.com/vi/BPVO2mcfjJk/hqdefault.jpg">
-  </object>
-</div>
-```
-
 Now the placeholder preview image is all set, but it still doesn't look like a video.
 
 An actual video embed currently looks like:
@@ -157,10 +138,7 @@ Updated HTML:
 <!--wrapper div-->
 <div class="video-wrapper lazyt">
   <!-- the placeholder image -->
-  <object data="https://i3.ytimg.com/vi/BPVO2mcfjJk/maxresdefault.jpg" type="image/jpeg">
-    <!-- the fallback placeholder image -->
-    <img class="placeholder" src="https://i3.ytimg.com/vi/BPVO2mcfjJk/hqdefault.jpg">
-  </object>
+  <img class="placeholder" src="https://i3.ytimg.com/vi/BPVO2mcfjJk/maxresdefault.jpg">
   <!-- placeholder play button -->
   <button class="placeholder playbutton" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>
 </div>
@@ -215,9 +193,7 @@ Which gives us:
 
 <div class="lazyt-v1 video-wrapper-v1">
   <!-- the placeholder image -->
-  <object class="placeholder-v1" data="./404.jpg" type="image/jpeg">
-    <img class="placeholder-v1" src="./BPVO2mcfjJk-hqdefault.jpg">
-  </object>
+  <img class="placeholder-v1" src="./BPVO2mcfjJk-hqdefault.jpg">
   <button class="placeholder-v1 playbutton-v1" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg-v1" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>
 </div>
 <style>
@@ -232,6 +208,7 @@ Which gives us:
   height: 0;
   padding-bottom: 56.25%;
   position: relative;
+  background: black;
 }
 /* style lazy loaded youtube video placeholder image */
 .lazyt-v1 img.placeholder-v1 {
@@ -297,7 +274,7 @@ Which gives us:
 }
 </style>
 
-Looking pretty good!
+That's starting to look better.
 
 We could continue trying to mimic every little visual detail, but those are likely to change
 on us in the future anyhow, and it turns out later that we may want users to be
@@ -396,9 +373,7 @@ And now finally we have:
 <div class="lazyt-v1 video-wrapper-v1" onclick="playYTV1(this,'BPVO2mcfjJk')">
   <div></div>
   <!-- the placeholder image -->
-  <object class="placeholder-v1" data="./BPVO2mcfjJk-maxresdefault.jpg" type="image/jpeg">
-    <img class="placeholder-v1" src="./BPVO2mcfjJk-hqdefault.jpg">
-  </object>
+  <img class="placeholder-v1" src="./BPVO2mcfjJk-hqdefault.jpg">
   <button class="placeholder-v1 playbutton-v1" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg-v1" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>
 </div>
 
@@ -407,9 +382,7 @@ And one with a `maxresdefault` thumb:
 <div class="lazyt-v1 video-wrapper-v1" onclick="playYTV1(this,'rPppjjvjQlk')">
   <div></div>
   <!-- the placeholder image -->
-  <object class="placeholder-v1" data="./rPppjjvjQlk-maxresdefault.jpg" type="image/jpeg">
-    <img class="placeholder-v1" src="./rPppjjvjQlk-hqdefault.jpg">
-  </object>
+  <img class="placeholder-v1" src="./rPppjjvjQlk-maxresdefault.jpg">
   <button class="placeholder-v1 playbutton-v1" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg-v1" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>
 </div>
 
@@ -463,31 +436,77 @@ function createVidV1(videoDiv, videoID) {
 
 Pretty good!
 
-## Followup
+## Optimization
 
 In this state the videos work pretty well, and use a fraction of the bandwidth, the `maxresdefault.jpg` are something like 120 kB versus 820+ for the whole embed, not bad.
 
-This could be improved further by using the more efficient `webp` images [^2] when in compatible browsers (basically anything but Safari or IE [^3]), or you could consider only using the "hq" images.
+We can improve further by using the more efficient `webp` thumbnails when in compatible browsers (basically anything but Safari or IE [^2]), or you could consider only using the "hq" images.
 
-The lazy load could probably be made a bit nicer by adding a styled transition to loading in the video.
+The webp images are instead at:
+`i3.ytimg.com/vi_webp/$video_id/$quality.webp`
 
-It might also be worth reconsidering leaving the placeholder this simple, e.g.
-it would be useful to have a clickable link the video on [youtube.com] in some cases.
+To deal with browser compatibility we can use the `<picture>` element, wrapping our existing
+`<img>` and adding `<source>` tags for webp and jpeg thumbnails.
+In compatible browsers the sources will be preferred first to last by which
+format is supported. In older browsers the `<picture>` wll be ignored and in
+all browsers the `<img>` tag will be used for display.
 
-For some use cases, you might also want to take the step of mirroring the thumbnails.
-Not only would this allow you to avoid the fallback shenanigans, it would allow
-you to not load any third-party resources until the user actually tries to play the video.
-To preserve the visuals for this post, I've done so for the examples here.
+The updated embed is then like:
+```html
+<div class="video-wrapper lazyt">
+  <!-- the placeholder image -->
+  <picture>
+    <source type="image/webp" srcset="https://i3.ytimg.com/vi_webp/BPVO2mcfjJkmaxresdefault.webp">
+    <source type="image/jpeg" srcset="https://i3.ytimg.com/vi/BPVO2mcfjJk/maxresdefault.jpg">
+    <img class="placeholder" src="https://i3.ytimg.com/vi/BPVO2mcfjJk/maxresdefault.jpg" alt="click to play the video" type="image/jpeg">
+  </picture>
+  <!-- placeholder play button -->
+  <button class="placeholder playbutton" aria-label="Play"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="ytp-large-play-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>
+</div>
+```
 
-As-is, I'm already pretty happy with this approach, and will probably continue to refine it
-and use it in most contexts.
+These images are approxmately 50% smaller in my limited sampling, our first example
+drops from ~120 kB to ~60 kB.
+
+
+## Wrap Up
+
+I'm relatively happy with this approach, and will probably continue to refine it
+and use it selectively.
+
+There are a few remaining drawbacks:
+
+1. Lazy loading the video takes some small additional time upon clicking play.
+
+2. There's no way for the user to open the video on [youtube.com] without starting playback.
+
+3. On iOS the video will not play after clicking the fake play button, the user must click the real play button after the video loads following clicking the fake one.
+
+The first of these is largely ignorable / a small cost to pay for faster page loads.
+
+The second is solvable by improving the placeholder design to add a video title / link similar to the real embedded video.
+
+The last of these unfortunately does not seem to have a work-around, it relates to
+how iOS / safari blocks auto-playinig videos. On pretty much all other browsers
+this implementation seems to work as expected.
+
+Depending on your use-case, that last flaw may be a bit of a deal-breaker.
+Currently I think this makes the most sense on pages with multiple videos, which
+may not all be viewed by the average user.
+
+It is also obviously painful to replace a small embed snippet with this when writing
+pages by hand - I chose to implement a hugo [shortcode] (~templated snippet) to avoid this.
+Similar functionality should be available in most site generators.
+
+I'm also pretty certain that the javascript used here is *not* idiomatic, but
+the concept and functionality should hold 🙃
 
 [^1]: "Avoid enormous network payloads" [web.dev/total-byte-weight/](https://web.dev/total-byte-weight/)
-[^2]: Found at `i3.ytimg.com/vi_webp/$video_id/$quality.webp`, for `maxresdefault` quality these appear to be something like 1/2 the size versus jpeg.
-[^3]: Support from all browsers except IE and Safari based on [caniuse.com/webp]
+[^2]: Support from all browsers except IE and Safari based on [caniuse.com/webp]
 
 [lighthouse]: https://developers.google.com/web/tools/lighthouse
 [hugo]: https://gohugo.io
+[shortcode]: https://gohugo.io/content-management/shortcodes/
 [404]: https://en.wikipedia.org/wiki/HTTP_404
 [IFrame Player API]: https://developers.google.com/youtube/iframe_api_reference
 [youtube.com]: https://youtube.com

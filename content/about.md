@@ -90,7 +90,7 @@ WG K8s Infra at the Kubernetes [Contributor Summit](https://events19.linuxfounda
 
 We spoke about [KIND internals and the challenges ahead on the road to 1.0](https://kccncna19.sched.com/event/Uah7/deep-dive-kind-benjamin-elder-google-antonio-ojea-garcia-suse).
 
-{{< lazyYoutube id="tT-GiZAr6eQ" >}}
+{{< lazyYoutube id="tT-GiZAr6eQ" title="Deep Dive: Kind - Benjamin Elder, Google & Antonio Ojea Garcia, SUSE" >}}
 
 #### A Kind Workflow for Contributing to Kubernetes - Benjamin Elder & Duffie Cooley & James Munnelly & Patrick Lang
 
@@ -100,7 +100,7 @@ This is one of my favorites. 462 people registered as attending this workshop! I
 most of the session.
 Hopefully many of them learned something about contributing to Kubernetes and using KIND.
 
-{{< lazyYoutube id="BPVO2mcfjJk" previewQuality="hq" >}}
+{{< lazyYoutube id="BPVO2mcfjJk" previewQuality="hq" title="Tutorial: A Kind Workflow for Contri... Benjamin Elder, Duffie Cooley, James Munnelly &amp; Patrick Lang" >}}
 
 ### KubeCon EU 2019
 
@@ -122,13 +122,13 @@ enjoyed this talk and the Q&A, and I love working with my good friend [James Mun
   </figcaption>
 </figure>
 
-{{< lazyYoutube id="8KtmevMFfxA" >}}
+{{< lazyYoutube id="8KtmevMFfxA" title="Testing your K8s apps with KIND - Benjamin Elder, Google & James Munnelly, Jetstack.io">}}
 
 #### Deep Dive: Testing SIG - Benjamin Elder & James Munnelly
 
 We spoke about KIND and how we use it to test Kubernetes for the [SIG Testing Deep Dive][sig-testing-deep-dive-kind].
 
-{{< lazyYoutube id="6m9frvTxK0o" >}}
+{{< lazyYoutube id="6m9frvTxK0o" title="Deep Dive: Testing SIG - Benjamin Elder, Google & James Munnelly, Jetstack" >}}
 
 ### KubeCon NA 2018
 
@@ -140,7 +140,7 @@ I spoke with [Sen Lu][@krzyzacy] about The Kubernetes Project's
 testing tools and infrastructure, including a brief discussion of [KIND] and running
 it on Kubernetes's [Kubernetes-based CI infrastructure][prow].
 
-{{< lazyYoutube id="pz0lpl6h-Gc" >}}
+{{< lazyYoutube id="pz0lpl6h-Gc" title="Behind Your PR: How Kubernetes Uses Kubernetes - Sen Lu & Benjamin Elder" >}}
 
 
 [BenTheElder]: https://twitter.com/BenTheElder

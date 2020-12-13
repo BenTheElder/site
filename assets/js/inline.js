@@ -12,8 +12,9 @@ function gifFallback(video) {
 
 /* lazyloading youtube */
 var ytInjected = false;
-function playYT(wrapper, event) {
-    console.log(wrapper, event);
+function playYT(thumbnail, event) {
+    // we nested the click handler
+    wrapper = thumbnail.parentNode.parentNode;
     var preYTInjected = ytInjected
     // inject youtube API if we haven't already
     if (!preYTInjected) {
@@ -27,7 +28,6 @@ function playYT(wrapper, event) {
     var videoDiv = wrapper.children[0];
     // cleanup old chlidren
     // TODO: this probably could be cleaner?
-    wrapper.children[1].remove();
     wrapper.children[1].remove();
     videoDiv.onclick = null;
     videoDiv.classList = "";
