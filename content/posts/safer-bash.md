@@ -13,8 +13,6 @@ reliable bash can be hard. I've been reviewing and fixing a lot of bash while
 working on [cleaning up] the Kubernetes project's scripts and wanted to collect
 some tips for writing more reliable scripts.
 
-<img alt="BASH The Bourne-Again Shell" class="centered" src="./bash-logo-web.png">
-
 ## Use ShellCheck
 
 [ShellCheck][shellcheck] is an excellent open source linter for shell 
