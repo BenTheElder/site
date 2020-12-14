@@ -16,7 +16,7 @@ with the community.
 <picture>
   <source type="image/webp" srcset="/images/kubecon_barcelona_group.32pct.webp">
   <source type="image/jpeg" srcset="/images/kubecon_barcelona_group.32pct.jpg">
-  <img src="/images/kubecon_barcelona_group.32pct.jpg" class="centered outlined" style="object-fit: cover; height: 14em" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
+  <img src="/images/kubecon_barcelona_group.32pct.jpg" class="centered outlined" style="object-fit: cover; height: 14em; width: 100%" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
 </picture>
 
 ## Experience

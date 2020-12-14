@@ -1,7 +1,7 @@
 /* style elements */
 html {
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
@@ -19,7 +19,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
-  line-height: 1.6;
+  line-height: 1.5;
   color: black;
   min-height: 100%;
   /* sticky footer */
@@ -534,8 +534,8 @@ img.outlined {
   word-wrap: break-word;
 }
 
-.tile table td,
-.card table td { padding: .16em; }
+/*.tile table td,
+.card table td { padding: .16em; }*/
 
 .tile .bordered,
 .card .bordered {
