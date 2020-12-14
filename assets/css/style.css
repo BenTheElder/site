@@ -12,7 +12,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans',-apple-system, BlinkMacSystemFont, Roboto, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  background: white;
+  background: #fafafa;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
   /* sticky footer */
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #fafafa;
 }
 
 h1 { font-size: 2em; }
@@ -335,7 +335,7 @@ a:hover, a:focus {
 .tile,
 .card {
   padding: 1.33em;
-  background-color: white;
+  background-color: #fafafa;
   color: rgba(0,0,0,0.87);
   max-width: 35em;
   margin: .75rem auto;
@@ -534,8 +534,8 @@ img.outlined {
   word-wrap: break-word;
 }
 
-/*.tile table td,
-.card table td { padding: .16em; }*/
+.tile table td,
+.card table td { padding: .16em; }
 
 .tile .bordered,
 .card .bordered {
