@@ -12,7 +12,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans',-apple-system, BlinkMacSystemFont, Roboto, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  background: #fafafa;
+  background: #fff;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
   /* sticky footer */
   display: flex;
   flex-direction: column;
-  background: #fafafa;
+  background: #fff;
 }
 
 h1 { font-size: 2em; }
@@ -254,7 +254,7 @@ a:hover, a:focus {
   padding-left: .07rem;
   padding-right: .07rem
 }
-.header a .emoji {
+.header a .emoji, .header a .icon {
   user-select: none;
 }
 .header .branding {
@@ -276,16 +276,10 @@ a:hover, a:focus {
   font-size: .8em;
   margin-top: .005em;
 }
-
-.header .circle-badge {
-  width: 100%;
-  width: 1.6em;
-  height: 1.6em;
-  border-width: 3px;
-  margin-top: 0;
-  border-color: blue;
-  background-color: blue;
+.header .right a {
+  border-bottom: none;
 }
+
 .left {
   float: left;
 }
@@ -334,7 +328,7 @@ a:hover, a:focus {
 .tile,
 .card {
   padding: 1.33em;
-  background-color: #fafafa;
+  background-color: #fff;
   color: rgba(0,0,0,0.87);
   max-width: 35em;
   margin: .75rem auto;
@@ -643,7 +637,8 @@ img.emoji {
   margin-top: 0;
 }
 
-span.emoji {
+
+span.emoji, span.icon {
   /* inline block allows us to set width and height */
   display: inline-block;
   /* the emoji is 1x1 character in size */
@@ -662,14 +657,21 @@ span.emoji {
   line-height: 1;
   margin-top: -0.15em;
   text-align: left;
+  /* try to hide the actual text, we want the emoji to appear selected */
+  color: transparent;
+  text-shadow: none;
+}
+.span.emoji {
   /* make sure the text is selectable */
   user-select: all;
   -webkit-user-select: all; /* Chrome/Safari */
   -moz-user-select: all; /* Firefox */
   -ms-user-select: all; /* IE10+ */
-  /* try to hide the actual text, we want the emoji to appear selected */
-  color: transparent;
-  text-shadow: none;
+}
+
+span.icon {
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 /* set a consistent highlight color for the site */
@@ -677,6 +679,7 @@ span.emoji {
 /* and a pretty good choice, but adjust it to 25% transparent, */
 /* for non-webkit browsers so we can still see the emoji image */
 /* webkit will control the highlight color transparency itself */
+/*
 ::selection {
   background-color: rgba(180,213,254,0.75);
 }
@@ -684,17 +687,20 @@ span.emoji {
   background-color: #b4d5fe;
 }
 /* firefox for android does not seem to know ::selection */
+/*
 ::-moz-selection {
   background-color: rgba(180,213,254,0.75);
-}
+}*/
 /* emoji text needs to stay transparent */
-span.emoji::selection {
+/*
+span.emoji::selection, span.icon::selection {
   color: transparent!important;
-}
+}*/
 /* repeat for firefox on android */
-span.emoji::-moz-selection {
+/*
+span.emoji::-moz-selection , span.icon::-moz-selection {
   color: transparent!important;
-}
+}*/
 
 /* make code highlight with different color for contrast */
 .chroma *::selection {
@@ -1406,8 +1412,7 @@ sup[id] {
 
 
 /*-webkit-font-smoothing: unset!important;*/
-
-@media (prefers-color-scheme: dark) { 
+@media (prefers-color-scheme: dark) {
   html, body, .tile, .card {
     background: #151516;
     background: rgb(25, 39, 52);
@@ -1416,9 +1421,14 @@ sup[id] {
   }
   a, .tile>a.full-bleed.list-item .title {
     color: rgb(27, 149, 224);
+    color: #48b9ff;
   }
   a:hover {
     border-color: rgb(27, 149, 224);
+    border-color: #48b9ff;
+  }
+  .category {
+    border-color: #008eff;
   }
   body .page-title, .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6 {
     color: #eee;
@@ -1433,10 +1443,14 @@ sup[id] {
     color: #d3d7de;
     border-bottom-color: #d3d7de;
   }
+  .timeline-entry .icon {
+    background-color: #eef;
+    background-color: rgb(25, 39, 52);
+  }
   code {
     background: #121212;
     color: #eee;
-    border: none;
+    border-color: #808080;
   }
   blockquote {
     background: #1a1b1d;
@@ -1447,8 +1461,8 @@ sup[id] {
   img.outlined {
     outline-color: #d3d7de;
   }
-  .category, button {
-    border-color: rgb(27, 149, 224);
+  .header a span.icon, table span.icon {
+    filter: invert(1);
   }
   .footer {
     color: #ccc;
@@ -1456,5 +1470,9 @@ sup[id] {
   .footer>:first-child {
     border-top-color: #ccc;
   }
+  sup:target a.footnote-ref,
+  .footnotes>ol>li:target>p {
+    background-color: #ffff0066;
+  }
 }
-
+*/
