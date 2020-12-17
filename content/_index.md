@@ -30,19 +30,19 @@ title: Home
   <table style="margin: 0 auto; text-align: left;">
     <tbody>
       <tr>
-        <td style="text-align: right"><span class="bold">Email <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)" title=":email:">:email:</span></span></td>
+        <td style="text-align: right"><span class="bold">Email <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)"></span></span></td>
         <td><a href="mailto:ben@elder.dev">ben@elder.dev</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Work <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)" title=":email:">:email:</span></span></td>
+        <td style="text-align: right"><span class="bold">Work <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)"></span></span></span></td>
         <td><a href="mailto:bentheelder@google.com">bentheelder@google.com</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">GitHub <span class="icon" style="background-image:url(/images/GitHub-Mark-120px-plus.png)" title=":github:">:github:</span></span></td>
+        <td style="text-align: right"><span class="bold">GitHub <span class="icon" style="background-image:url(/images/GitHub-Mark-120px-plus.png); background-size: 95%"></span></span></td>
         <td><a href="https://www.github.com/BenTheElder">BenTheElder</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Twitter <span class="icon" style="background-image:url(/images/icons8-twitter.svg)" title=":twitter:">:twitter:</span></span></td>
+        <td style="text-align: right"><span class="bold">Twitter <span class="icon" style="background-image:url(/images/icons8-twitter.svg)"></span></span></td>
         <td><a href="https://twitter.com/BenTheElder">@BenTheElder</a></td>
       </tr>
     </tbody>
