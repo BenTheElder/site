@@ -232,7 +232,6 @@ a:hover, a:focus {
   height: 1.5em;
   min-height: 1.5em;
   line-height: normal;
-  padding: 0;
   border-bottom: 3px solid black;
   margin-bottom: 0.8em;
   border-bottom: .25em solid #01579b;
@@ -242,12 +241,11 @@ a:hover, a:focus {
   color: #1b6bff;
   background: none;
   border: none;
-  width: 98%;
+  width: calc(100% - 1rem);
   max-width: 27em;
   margin: 0 auto;
-  margin-bottom: -0.9rem;
-  padding-top: 0.15rem;
-  /*margin-top: 0.05em;*/
+  margin-bottom: -0.7rem;
+  padding-top: 0.35rem;
 }
 .header a {
   margin-top: .25em;
@@ -290,6 +288,26 @@ a:hover, a:focus {
   display: inline-block;
 }
 
+.footer {
+  text-align: center;
+  padding: 0.25rem 1rem;
+  padding-bottom: .75rem;
+  line-height: 1.75;
+  font-size: .75em;
+  font-weight: 500;
+  width: calc(100% - 2rem);
+  max-width: 46em;
+  position: relative;
+  margin: auto auto 0 auto;
+  flex-shrink: 0;
+  color: #414141;
+  /* experimenting */
+  margin-top: .75em;
+}
+.footer>:first-child {
+  border-top: .01em solid #414141;
+  padding-top: .5em;
+}
 .footer a {
   font-style: inherit;
   background-color: transparent;
@@ -301,28 +319,6 @@ a:hover, a:focus {
   font-family: inherit;
   margin-bottom: 0;
   position: relative;
-}
-
-.footer {
-  text-align: center;
-  padding: 0.25em 1em;
-  line-height: 1.75;
-
-  font-size: .75em;
-  font-weight: 500;
-  width: calc(100% - 2em);
-  max-width: 46em;
-  position: relative;
-  margin: auto auto 0 auto;
-  flex-shrink: 0;
-  color: #414141;
-  /* experimenting */
-  padding-bottom: .75em;
-  margin-top: .75em;
-}
-.footer>:first-child {
-  border-top: .01em solid #414141;
-  padding-top: .5em;
 }
 
 .tile,
