@@ -3,7 +3,7 @@ html {
   width: 100%;
   font-size: 20px;
   line-height: 1;
-  -webkit-font-smoothing: antialiased !important;
+  /*-webkit-font-smoothing: antialiased !important;*/
   -moz-osx-font-smoothing: grayscale !important;
   text-rendering: optimizeLegibility !important;
   -webkit-tap-highlight-color: transparent;
@@ -1413,7 +1413,7 @@ sup[id] {
     background: #151516;
     background: rgb(25, 39, 52);
     color: #d3d7de;
-    color: #eee;
+    color: #efefef;
   }
   a, .tile>a.full-bleed.list-item .title {
     color: rgb(27, 149, 224);
@@ -1427,13 +1427,13 @@ sup[id] {
     border-color: #008eff;
   }
   body .page-title, .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6 {
-    color: #eee;
+    color: #efefef;
   }
   .tile .sub-title {
     color: rgba(255,255,255,.75);
   }
   hr {
-    background: #eee;
+    background: #efefef;
   }
   .timeline-entry .date {
     color: #d3d7de;
@@ -1445,7 +1445,7 @@ sup[id] {
   }
   code {
     background: #121212;
-    color: #eee;
+    color: #efefef;
     border-color: #808080;
   }
   blockquote {
