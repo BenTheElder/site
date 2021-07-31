@@ -1415,7 +1415,8 @@ sup[id] {
     background: #141f29;
     color: #d3d7de;
     color: #efefef;
-    color: #fff;
+    color: #eee;
+    font-weight: 300;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
@@ -1433,7 +1434,7 @@ sup[id] {
   }
   body .page-title, .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6 {
     color: #efefef;
-    /*color: #3DFF00;*/
+    color: #3DFF00;
   }
   .tile .sub-title {
     color: rgba(255,255,255,.75);
