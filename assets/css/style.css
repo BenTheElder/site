@@ -1412,8 +1412,13 @@ sup[id] {
   html, body, .tile, .card {
     background: #151516;
     background: rgb(25, 39, 52);
+    background: #141f29;
     color: #d3d7de;
     color: #efefef;
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
   }
   a, .tile>a.full-bleed.list-item .title {
     color: rgb(27, 149, 224);
@@ -1428,6 +1433,7 @@ sup[id] {
   }
   body .page-title, .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6 {
     color: #efefef;
+    /*color: #3DFF00;*/
   }
   .tile .sub-title {
     color: rgba(255,255,255,.75);
@@ -1441,7 +1447,6 @@ sup[id] {
   }
   .timeline-entry .icon {
     background-color: #eef;
-    background-color: rgb(25, 39, 52);
   }
   code {
     background: #121212;

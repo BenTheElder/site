@@ -1,11 +1,11 @@
 # this file serves as aliases to useful commands using phony targets
 # usage:
 # `make serve`
-HUGO_VERSION=0.78.2
+HUGO_VERSION=0.86.1
 HUGO=docker run --rm -it \
 	-p 127.0.0.1:1313:1313 \
 	-v $$(pwd):/src \
-	klakegg/hugo:$(HUGO_VERSION) \
+	klakegg/hugo:$(HUGO_VERSION)-ext-alpine \
 	--bind="0.0.0.0"
 # local development, run a local server with hugo
 serve:

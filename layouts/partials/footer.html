@@ -1,5 +1,5 @@
 <div class="footer">
-  <div><span class="copyright">{{ replace `Copyright © 2015-{year} Benjamin Elder` "{year}" now.Year | safeHTML}}</span> • <a class="nowrap" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> • <a href="https://github.com/BenTheElder/site">Source</a> • Modified: {{if .GitInfo}}<a href="https://github.com/BenTheElder/site/commit/{{.GitInfo.Hash}}">{{end}}{{.Lastmod.Format "02 Jan 2006 15:04 -0700" }}{{if .GitInfo}}</a>{{end}}</div>
+  <div><span class="copyright">{{ replace `Copyright © 2015-{year} Benjamin Elder` "{year}" now.Year | safeHTML}}</span> • <a class="nowrap" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> • <a href="https://github.com/BenTheElder/site">Source</a> • Modified: {{if .GitInfo}}<a href="https://github.com/BenTheElder/site/commit/{{.GitInfo.Hash}}">{{end}}{{.Lastmod.UTC.Format "02 Jan 2006 15:04 UTC" }}{{if .GitInfo}}</a>{{end}}</div>
   <div><a href="/">Home 🏠</a> | <a href="/about">About Ben 🤔</a> | <a href="/posts">Posts 📝</a> • <a href="/posts/index.xml">RSS 📶</a> | <a href="#top">Top &#11014;&#65039;</a></div>
 </div>
 </body>
