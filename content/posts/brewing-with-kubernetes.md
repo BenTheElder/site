@@ -9,14 +9,14 @@ categories:
 ---
 
 My coffee pot is now a node in my home Kubernetes cluster, and it's awesome.
-<img src="/images/coffeebot_25pct.jpg" title="my coffee pot"></img>
+<img src="./optim/coffeebot.25pct.jpg" title="my coffee pot"/>
 More specifically the Raspberry Pi wired to [my CoffeePot controller](https://github.com/bentheelder/mrcoffeebot) now runs on Kubernetes thanks to [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) in a cluster with [the node running my site](/posts/migrating-my-site-to-kubernetes).
 
 I've set up a public <a href="/projects/coffee">live status page</a>* displaying all of the sensor data as well as the last update time, with control restricted to users on my local network. I've done this simply by proxying the status endpoint and not the rest of the `coffeebot` service. I'm also busily adding back support for scheduling brewing as well as alarms via [the Google Calendar API](https://developers.google.com/google-apps/calendar/quickstart/go), listening to a dedicated `coffee` calendar on my personal account.
 
-<hr>
+<hr/>
 * As of September 2018 I've migrated to static site hosting and taken this page down for the moment.
-<hr>
+<hr/>
 
 ## Background
 
@@ -24,6 +24,7 @@ This might look a little ridiculous, but deploying (and debugging!) software upd
 
 If you know me then you know that I'm not a morning person and that I tend to sleep in more on the weekends, so a simple same-time-every-day alarm clock type coffee maker simply wasn't cutting it. When I needed to build a "smart device" for a college course (CS 3651 *Prototyping Intelligence Appliances*) I created the original incarnation of this based around an [Mbed](https://www.mbed.com/en/) and an old Android phone I had on hand. The phone since died, so I finally decided to fix this up and upgrade to a full Linux box, and here we are.
 
+{{< figure src="./optim/IMG_20160804_150506.25pct.jpg" caption="The original Mr. Coffee Bot" alt="photo of the original Mr. Coffee Bot project from college" >}}
 
 ## Getting the Raspberry Pi Into my Cluster
 
@@ -38,6 +39,10 @@ I opted to solve this by re-creating my cluster, this time using [Weave Net](htt
 I solved this by editing the existing DaemonSet to have a `nodeSelector` for `beta.kubernetes.io/arch: amd64` and creating a copy with `arm` subsituted for `amd64` throughout the DaemonSet based on [this gist](https://gist.github.com/squidpickles/dda268d9a444c600418da5e1641239af).
 
 These two rough spots are definitely not ideal, but also weren't particularly difficult to work around. Hopefully [we'll fix #2 in particular](https://github.com/kubernetes/kubeadm/issues/51) by publishing all of the core components with multi-architecture images.
+
+<hr/>
+<strong>UPDATE (AUGUST 2021)</strong>: This has since been fixed upstream, these images are properly multi-arch and kubeadm references the manifest list instead of architecture specific images.
+<hr/>
 
 ## Leveraging Kubernetes
 
