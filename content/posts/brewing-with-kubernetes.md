@@ -77,4 +77,6 @@ Similarly the heater is explicitly disabled on boot, and every time one second p
 
 Using Kubernetes standardizes deploying software, managing network services, and monitoring applications. It turns out all of these things are very handy for over-re-engineering your $18 coffee maker.
 
-I hope this will be useful and/or interesting to someone. I'm off to brew some more coffee <span class="emoji" style="background-image:url(/images/emoji/emoji_u2615.png)" title=":coffee:">:coffee:</span>
+And yet: Is this overkill? Absolutely. 🙃
+
+I hope this will be useful and / or interesting to someone. I'm off to brew some more coffee ☕️
