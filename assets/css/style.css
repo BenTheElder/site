@@ -1417,7 +1417,7 @@ sup[id] {
     color: #d3d7de;
     color: #efefef;
     color: #eee;
-    font-weight: 300;
+    /*font-weight: 300;*/
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -o-font-smoothing: antialiased;
