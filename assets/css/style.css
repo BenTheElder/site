@@ -128,6 +128,7 @@ button, .button,
 
 }
 .header,
+.heading,
 .page-title,
 .tile .title, .tile .sub-title,
 .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6,
@@ -135,13 +136,13 @@ button, .button,
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6,
 .timeline .date {
   font-family: Montserrat,-apple-system, BlinkMacSystemFont, Roboto, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  font-weight: 600;
 }
 .page-title,
 .tile .title, .tile .sub-title,
 .tile h1, .tile h2, .tile h3, .tile h4, .tile h5, .tile h6,
 .card .title, .card .sub-title,
 .card h1, .card h2, .card h3, .card h4, .card h5, .card h6 {
-  font-weight: 600;
   color: #008A00;
   display: block;
 }

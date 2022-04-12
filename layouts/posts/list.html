@@ -2,10 +2,11 @@
   <div id="content">
     <div class="tile">
       <h1 class="page-title">Posts</h1>
+      <hr class="full-bleed">
       {{ range $i, $post := .Pages.ByDate.Reverse }}
       {{ if .Params.draft }}{{ else }}
-      <a href="{{.Permalink}}" class="full-bleed list-item {{- if eq $i 0}} first {{- end}}">
-        <p class="title">{{if .Params.htmlTitle}}{{.Params.htmlTitle | safeHTML}}{{else}}{{.Title}}{{end}}{{if .Params.subtitle }}<span class="inline not-bold">:</span> <span class="inline not-bold"> {{.Params.subtitle}} </span>{{end}}</p>{{range .Params.Categories}}<span class="category">{{. | safeHTML}}</span>{{end}}
+      <div style="margin: 1em 0">
+        <a href="{{.Permalink}}" class="heading" style="font-size: 1.5em;">{{if .Params.htmlTitle}}{{.Params.htmlTitle | safeHTML}}{{else}}{{.Title}}{{end}}{{if .Params.subtitle }}<span class="inline not-bold">:</span> <span class="inline not-bold"> {{.Params.subtitle}} </span>{{end}}</a>
         {{ $date := .Date.Format "January 2SUFFIX, 2006" }}
         {{ $day := .Date.Format "2" }}
         {{ $suffix := "th" }}
@@ -17,7 +18,7 @@
           {{ $suffix = "rd" }}
         {{ end }}
         <p class="sub-title">{{ replace $date "SUFFIX" $suffix }}</p>
-      </a>
+      </div>
       {{ end }}{{ end }}
     </div>
   </div>

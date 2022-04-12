@@ -1,7 +1,7 @@
 # this file serves as aliases to useful commands using phony targets
 # usage:
 # `make serve`
-HUGO_VERSION=0.86.1
+HUGO_VERSION=0.96.0
 HUGO=docker run --rm -it \
 	-p 127.0.0.1:1313:1313 \
 	-v $$(pwd):/src \
