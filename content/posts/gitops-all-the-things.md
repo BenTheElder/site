@@ -22,11 +22,11 @@ Why? - Well, do you like the sound of:
 
 - having complete history of all your infrastructure configuration
 - roll-backing broken configuration as easily as clicking "revert"
-- having a consistent interface to your automation (IE source control and declaritive configs)
+- having a consistent interface to your automation (IE source control and declarative configs)
 
 We've been doing this to varying degrees for years with the Kubernetes project [Test Infrastructure] and it works _wonderfully_. Since our configs are in public source control anyone can file a PR to change them or inspect the historical configuration.
 
-When things break (and they will, it happens), **having quick access to configuration history is invaluble**.
+When things break (and they will, it happens), **having quick access to configuration history is invaluable**.
 Being able to make fixes by sending a pull-request with configuration updates also makes for an excellent experience. Some of our tooling here has been quite rough, but as we bring things more in line with this model it is much easier to work with.
 
 Following this model I've moved this site to [Hugo], [Netlify], and [GitHub] and managing it has never been easier (the official [Kubernetes website] uses [the same stack]).

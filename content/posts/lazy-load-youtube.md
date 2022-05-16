@@ -22,7 +22,7 @@ The drawback that kicked off this post is that they are still pretty bandwidth i
 
 
 If you have a page with a single video this is not so bad, especially on a desktop
-websitie, but on a 3G connection this is rather a lot.
+website, but on a 3G connection this is rather a lot.
 Two videos is enough to completely consume a reasonable bandwidth budget for a webpage. Quoting from the chrome [lighthouse] docs:
 
 > Aim to keep your total byte size below 1,600 KiB. This target is based on the amount of data that can be theoretically downloaded on a 3G connection while still achieving a [Time to Interactive](https://web.dev/interactive) of 10 seconds or less. [^1]
@@ -36,7 +36,7 @@ on static sites like this one (built with [hugo]).
 
 In particular I have the following requirements:
 
-- Placeholders must look recognizably lke the embedded vdeo 
+- Placeholders must look recognizably lke the embedded video 
 - Videos should ideally actually play after the user clicks "play"
 - No frameworks, no compilation. Only static HTML, CSS, and minimal Javascript
 
@@ -128,7 +128,7 @@ And has the key noticeable behaviors:
 - On desktop hovering has `cursor: pointer`
 - Clicking ~anywhere on the video starts playback
 
-We can get a more obvious video placeholder by at least mimicing the play button.
+We can get a more obvious video placeholder by at least mimicking the play button.
 
 It turns out this button is just an inline SVG with some CSS for the color change,
 which we can emulate like so:
@@ -280,8 +280,8 @@ We could continue trying to mimic every little visual detail, but those are like
 on us in the future anyhow, and it turns out later that we may want users to be
 able to recognize that the video is not fully loaded yet, so we'll leave the placeholder here.
 
-This is very lightweight, with just a small amount of iniline HTML / CSS / SVG, and one
-relatively small thumnail image. We've only taken a dependency on the YouTube thumnail server.
+This is very lightweight, with just a small amount of inline HTML / CSS / SVG, and one
+relatively small thumbnail image. We've only taken a dependency on the YouTube thumbnail server.
 
 ## Actual Lazy Loading
 
@@ -297,11 +297,11 @@ To take action when the user clicks on the video we'll set an `onclick` handler
 on the video wrapper div, like: `<div class="lazyt video-wrapper" onclick="playYT(this)">`
 
 Now we just need to make the video load. To do this we could just inject an `<iframe>` in place
-of the placeholders on click. This approach works pretty well actually. If we set the `autoplay=1` attribute on the embed url we can even get the video to play as epected, but not in all browsers.
+of the placeholders on click. This approach works pretty well actually. If we set the `autoplay=1` attribute on the embed url we can even get the video to play as expected, but not in all browsers.
 
 To support autoplay in more browsers, we can instead use the YouTube [IFrame Player API],
 loading the API itself once the user clicks on any video. 
-The iframe player API supports controlling the embeded player from outside the iframe,
+The iframe player API supports controlling the embedded player from outside the iframe,
 allowing us to trigger playback in most browsers.
 
 Based on the API examples, I hacked up this:
@@ -465,7 +465,7 @@ The updated embed is then like:
 </div>
 ```
 
-These images are approxmately 50% smaller in my limited sampling, our first example
+These images are approximately 50% smaller in my limited sampling, our first example
 drops from ~120 kB to ~60 kB.
 
 
@@ -487,7 +487,7 @@ The first of these is largely ignorable / a small cost to pay for faster page lo
 The second is solvable by improving the placeholder design to add a video title / link similar to the real embedded video.
 
 The last of these unfortunately does not seem to have a work-around, it relates to
-how iOS / safari blocks auto-playinig videos. On pretty much all other browsers
+how iOS / safari blocks auto-playing videos. On pretty much all other browsers
 this implementation seems to work as expected.
 
 Depending on your use-case, that last flaw may be a bit of a deal-breaker.

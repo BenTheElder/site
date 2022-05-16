@@ -11,7 +11,7 @@ categories:
 <a href="https://github.com/BenTheElder/creaturebox">CreatureBox</a> is a simple evolutionary obstacle avoidance demo I wrote inspired by [studio otoro](http://otoro.net)'s awesome
  [creatures avoiding planks](http://blog.otoro.net/2015/05/07/creatures-avoiding-planks/).
 I wanted to build something similar for fun and try out golang's [Go mobile](https://github.com/golang/mobile)
- project as well, so over the break between semsters I took a little time to write one.
+ project as well, so over the break between semesters I took a little time to write one.
 
 ## gomobile
 
@@ -44,7 +44,7 @@ The simulation uses <a href="https://github.com/llgcode">llgcode</a>'s awesome [
 
 
 ## "Brains"
-I then implemented the "brains" for the creatures, mimicing the design described in the studio otoro blog post.
+I then implemented the "brains" for the creatures, mimicking the design described in the studio otoro blog post.
 Each creature has a fully connected two layer (input and output) neural network. Most of the outputs are recurrent like
  the studio otoro demo. Each creature receives a number of "distance to edge or obstacle" inputs in
  evenly distributed directions about them as well as the previous output for the recurrent nodes, and produces a turn

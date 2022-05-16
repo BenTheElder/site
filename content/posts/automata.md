@@ -45,7 +45,7 @@ This is probably the most famous of all cellular automata. Additionally, the
 In the top right of the demo we have a <a href="http://conwaylife.com/w/index.php?title=Beacon">beacon</a> and <a href="http://conwaylife.com/w/index.php?title=Blinker">blinker</a>, both stable patterns (<a href="http://conwaylife.com/wiki/Oscillator">oscillators</a>) that will repeat endlessly between their two states. Below these you there is a <a href="http://conwaylife.com/wiki/Monogram">monogram</a> (another oscillator).
 In the bottom left is a <a href="http://conwaylife.com/wiki/Pentadecathlon">pentadecathlon</a>.
 Across the top starting from the top left you can see the <a href="http://conwaylife.com/wiki/Gosper%27s_glider_gun">Gosper's Glider Gun</a>
- a particularly interesting pattern that generates <a href="http://conwaylife.com/wiki/Glider">gliders</a>, small repetitve patterns
+ a particularly interesting pattern that generates <a href="http://conwaylife.com/wiki/Glider">gliders</a>, small repetitive patterns
  that 'glide' across the grid.  
 
 NOTE: The colors in this demo are inverted from the standard style for
@@ -95,7 +95,7 @@ At the top left and just below are two clocks, circles of `Conductor` around
 ## Rule 110
 
 [Rule 110](https://en.wikipedia.org/wiki/Rule_110) is an 
-[elementary cellular automata]("https://en.wikipedia.org/wiki/Elementary_cellular_automaton"), meaning that it is a one-dimensional / single-row ceullar automata. With only two states (`0` and `1`) and eight rules, this simple automata is interesting because it because it produces intricate patterns and is the only Turing-complete elementary cellular automata. Cells in Rule 110 update based on their current value and that of their left and right neighbors according to the following rules:
+[elementary cellular automata]("https://en.wikipedia.org/wiki/Elementary_cellular_automaton"), meaning that it is a one-dimensional / single-row cellular automata. With only two states (`0` and `1`) and eight rules, this simple automata is interesting because it because it produces intricate patterns and is the only Turing-complete elementary cellular automata. Cells in Rule 110 update based on their current value and that of their left and right neighbors according to the following rules:
 
 If left neighbor, current value, right neighbor are ...
 

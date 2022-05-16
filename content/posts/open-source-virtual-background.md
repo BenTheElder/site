@@ -36,7 +36,7 @@ processing?
 
 Since I use Linux on my personal desktop (when not playing PC games) I chose to 
 use the [OpenCV][OpenCV] [python bindings] as I'm already familiar with them and they include
-useful image processing primatives in addition to [V4L2] bindings for reading from
+useful image processing primitives in addition to [V4L2] bindings for reading from
 webcams.
 
 Reading a frame from the webcam with `python-opencv` is very simple:
@@ -91,7 +91,7 @@ good results.
 Specifically we'd need lots of webcam like images with the ideal
 human foreground marked pixel by pixel versus the background.
 
-Building this sort of dataset in prepartion for training a neural net probably would
+Building this sort of dataset in preparation for training a neural net probably would
 be a *lot* of work. Thankfully a research team at Google has already done all of this hard
 work and open sourced a pre-trained neural network for "person segmentation" 
 called [BodyPix] that works pretty well! ❤️
@@ -280,7 +280,7 @@ effect.
 
 Hollywood holograms typically have the following properties:
 
-- washed out / monocrhomatic color, as if done with a bright laser
+- washed out / monochromatic color, as if done with a bright laser
 - scan lines or a grid like effect, as if many beams created the image
 - "ghosting" as if the projection is done in layers or imperfectly reaching the correct distance
 
@@ -552,7 +552,7 @@ Here's a quick clip I recorded of this in action:
 </video>
 
 
-Look! I'm dialing into the millenium falcon with an open source camera stack!
+Look! I'm dialing into the Millennium Falcon with an open source camera stack!
 
 I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
 

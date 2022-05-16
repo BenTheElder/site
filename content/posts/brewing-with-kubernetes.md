@@ -36,7 +36,7 @@ I opted to solve this by re-creating my cluster, this time using [Weave Net](htt
 
 2) `kube-proxy` was deployed with a DaemonSet pointing to an amd64 specific image, and couldn't run on the Raspberry Pi.
 
-I solved this by editing the existing DaemonSet to have a `nodeSelector` for `beta.kubernetes.io/arch: amd64` and creating a copy with `arm` subsituted for `amd64` throughout the DaemonSet based on [this gist](https://gist.github.com/squidpickles/dda268d9a444c600418da5e1641239af).
+I solved this by editing the existing DaemonSet to have a `nodeSelector` for `beta.kubernetes.io/arch: amd64` and creating a copy with `arm` substituted for `amd64` throughout the DaemonSet based on [this gist](https://gist.github.com/squidpickles/dda268d9a444c600418da5e1641239af).
 
 These two rough spots are definitely not ideal, but also weren't particularly difficult to work around. Hopefully [we'll fix #2 in particular](https://github.com/kubernetes/kubeadm/issues/51) by publishing all of the core components with multi-architecture images.
 
@@ -67,7 +67,7 @@ It's worth noting that I did take a number of safety precautions when connecting
 
 3) The heater has an original-from-manufacturer [thermal fuse](https://en.wikipedia.org/wiki/Thermal_cutoff#Thermal_fuse) inline with the power mounted to the hotplate that will blow if temperature ratings are exceeded.
 
-4) The actual microntroller controlling the heater power (via solid state relay) has a hardware watchdog timer that will reboot it after five seconds passes without processing a valid command from the client (over USB serial)
+4) The actual microcontroller controlling the heater power (via solid state relay) has a hardware watchdog timer that will reboot it after five seconds passes without processing a valid command from the client (over USB serial)
 
 Similarly the heater is explicitly disabled on boot, and every time one second passes without receiving an enable command from the client
 

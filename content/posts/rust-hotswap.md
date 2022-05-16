@@ -98,7 +98,7 @@ After finding the library we can then use the (unstable!) `std::dynamic_lib::Dyn
 
 We'll wrap up the loading and calling bits in a helper function.
 
-Lastly we can throw in a `println!` and a keypress read between `ticks` to puase the program, and alert the user that it is now safe to modify the code.
+Lastly we can throw in a `println!` and a keypress read between `ticks` to pause the program, and alert the user that it is now safe to modify the code.
 This allows you to finally do the following:
 
 1) Run: `cargo run`.
