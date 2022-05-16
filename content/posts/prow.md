@@ -14,7 +14,7 @@ categories:
   <!--diagram attribution-->
   <!--min-margin hack-->
   <div style="margin: 0; width: calc(100% - 1em); padding-left: .5em; padding-right: .5em; margin-bottom: -.25em;">
-    <div class="card" style="margin-top: 0">
+    <div class="card" style="margin-top: 0; background: white">
       <p class="no-margin"><span class="bold italic">Prow</span> - extended nautical metaphor. <a href="https://blog.golang.org/gopher">Go Gopher</a> originally by <a href="http://reneefrench.blogspot.com/">Renee French</a>, <a href="https://github.com/golang-samples/gopher-vector#gopher">SVG version</a> by <a href="https://twitter.com/tenntenn">Takuya Ueda</a>, modified under the <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0 license</a>. Ship's wheel from <a href="https://github.com/kubernetes/kubernetes/blob/master/logo/logo.svg">Kubernetes logo</a> by <a href="http://www.hockin.org/~thockin/">Tim Hockin</a>.</p>
     </div>
   </div>
