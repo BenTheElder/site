@@ -14,7 +14,7 @@ Positive emoji responses in particular are a simple way to acknowledge messages 
 more friendly and welcoming.
 
 <img src="/images/slack_react_example.png" class="centered" style="max-width:295px;" />
-<span class="centered centered-text">slack emoji reaction example (thanks [dims](https://github.com/dims)!)</span>
+<span class="centered centered-text">slack emoji reaction example (thanks <a href="https://github.com/dims">dims</a>!)</span>
 
 
 A particularly fun part of this feature is [custom emoji support](https://get.slack.help/hc/en-us/articles/206870177-Add-custom-emoji), commonly known as "slackmoji",
