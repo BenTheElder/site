@@ -1668,7 +1668,13 @@ sup[id] {
   color: black !important;
 }
 
-.warning p {
+.warning p,
+.warning h1,
+.warning h2,
+.warning h3,
+.warning h4,
+.warning h5,
+.warning h6 {
   color: black !important;
 }
 
