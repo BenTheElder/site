@@ -552,7 +552,7 @@ Here's a quick clip I recorded of this in action:
 </video>
 
 
-Look! I'm dialing into the Millennium Falcon with an open source camera stack!
+Look! I'm dialing in from the Millennium Falcon with an open source camera stack!
 
 I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
 
