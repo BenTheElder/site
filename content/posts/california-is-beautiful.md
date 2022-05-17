@@ -3,8 +3,8 @@ markup: md
 title: California is Beautiful
 date: "2019-08-14"
 categories:
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f4f7.png)" title=":camera:"/>:camera:</span>
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3de.png)" title=":national_park:"/>:national_park:</span>
+- 📷
+- 🏞
 ---
 
 Just a few select photos from a short trip away from it all ...

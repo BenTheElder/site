@@ -4,7 +4,7 @@ title: Lazy Loading YouTube Videos
 date: "2020-12-12"
 categories:
 - web
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3a5.png)" title=":movie-camera:"/>:movie-camera:</span>
+- 🎥
 ---
 
 > First, let me acknowledge up-front that **this is neither a novel problem nor a

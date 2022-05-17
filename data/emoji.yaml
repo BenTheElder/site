@@ -5,11 +5,4 @@
 ":ship_it_parrot:":
   image: /images/slackmoji/ship_it_parrot.gif
   value: ":ship_it_parrot:"
-# normal emoji
-":heart:":
-  image: /images/emoji/emoji_u2764.png
-  value: ❤
-":warning:":
-  image: /images/emoji/emoji_u26a0.png
-  value: ⚠️
 

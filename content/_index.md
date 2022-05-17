@@ -19,7 +19,7 @@ title: Home
         <td>Senior Software Engineer @ <code style="font-family:inherit">Google</code> {{< emoji ":kubernetes:" >}}</td>
       </tr>
       <tr>
-        <td>Dog Dad to <a href="https://twitter.com/BobbyTheHound">@BobbyTheHound</a> <span class="emoji" style="background-image:url(/images/emoji/emoji_u2764.png)" title=":heart:">❤</span></td>
+        <td>Dog Dad to <a href="https://twitter.com/BobbyTheHound">@BobbyTheHound</a> ❤️</td>
       </tr>
     </tbody>
   </table>

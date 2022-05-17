@@ -5,7 +5,7 @@ date: "2020-04-09"
 draft: false
 categories:
 - <span class="emoji" style="background-image:url(/images/slackmoji/linux.png)" title=":linux:"/>:linux:</span>
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3a5.png)" title=":movie-camera:"/>:movie-camera:</span>
+- 🎥
 ---
 
 With many of us around the globe under [shelter in place] due to [COVID-19]
@@ -24,7 +24,7 @@ a green screen with uniform lighting.
 
 Since I do not have a green screen I decided to simply implement my own background
 removal, which was obviously better than cleaning my apartment or just using
-my laptop all the time. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
+my laptop all the time. 😀
 
 It turns out we can actually get pretty decent results with off the shelf, open source
 components and just a little of our own code.
@@ -337,13 +337,13 @@ A frame with the hologram effect now looks like:
 
 <img src="./holo-frame.jpg">
 
-On it's own this looks pretty <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f937.png)" title=":shrug:"/>:shrug:</span>
+On it's own this looks pretty 🤷
 
 But combined with our virtual background it looks more like:
 
 <img src="./holo-masked.jpg">
 
-There we go! <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f389.png)" title=":tada:"/>:tada:</span> (I promise it looks cooler with motion / video <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f643.png)" title=":upside_down_face:">:upside_down_face:</span>)
+There we go! 🎉 (I promise it looks cooler with motion / video 🙃
 
 ## Outputting Video
 
@@ -554,7 +554,7 @@ Here's a quick clip I recorded of this in action:
 
 Look! I'm dialing in from the Millennium Falcon with an open source camera stack!
 
-I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f600.png)" title=":grin:"/>:grin:</span>
+I'm pretty happy with how this came out. I'll definitely be joining all of my meetings this way in the morning. 😀
 
 [shelter in place]: https://www.sfchronicle.com/local-politics/article/Bay-Area-must-shelter-in-place-Only-15135014.php
 [COVID-19]: https://www.cdc.gov/coronavirus/2019-ncov/index.html

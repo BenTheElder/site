@@ -8,7 +8,7 @@ categories:
 ---
 [Previously](/blog/hello-again) when I brought my my site back online I briefly mentioned the simple setup I threw together with Caddy running on a tiny [GCE](https://cloud.google.com/compute/) VM with a few scripts  —  Since then I've had plenty of time to experience the awesomeness that is managing services with [Kubernetes](https://kubernetes.io/) at work while developing Kubernetes's [testing infrastructure](https://github.com/kubernetes/test-infra/) (which we run on [GKE](https://cloud.google.com/kubernetes-engine/)).
 
-So I decided, of course, that it was only natural to migrate my own service(s) to Kubernetes for maximum dog-fooding. <span class="nowrap"><span style="background-image:url(/images/kubernetes_logo.svg)" class="emoji" title=":kubernetes:">:kubernetes:</span> ↔ <span style="background-image:url(/images/emoji/emoji_u1f436.png)" class="emoji" title=":dog:">:dog:</img></span>
+So I decided, of course, that it was only natural to migrate my own service(s) to Kubernetes for maximum dog-fooding. <span class="nowrap"><span style="background-image:url(/images/kubernetes_logo.svg)" class="emoji" title=":kubernetes:">:kubernetes:</span> ↔ 🐶
 
 This turned out to be even easier than expected and I was quickly up and running on a toy single-node cluster running on a spare linux box at home with the help of the excellent [official docs for setting up a cluster with kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/).
 After that I set up [ingress-nginx](https://github.com/kubernetes/ingress-nginx) to handle ingress to my service(s) and [kube-lego](https://github.com/jetstack/kube-lego) to manage [letsencrypt](https://letsencrypt.org/) certificates. I then replaced Caddy with my own minimal containerized Go service to continue having [GitHub webhooks](https://developer.github.com/webhooks/) trigger site updates. <span style="background-image:url(/images/gopher_favicon.svg)" class="emoji" title=":go_gopher:">:go_gopher:<span>
@@ -32,7 +32,7 @@ data:
 ```
 </div>
 
-2) I also needed to configure [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) for `kube-lego` which doesn't currently ship with RBAC configured out of the box. Again, this was just involved applying a config update based on the comments at [jetstack/kube-lego#99](https://github.com/jetstack/kube-lego/issues/99) with `kubectl apply -f k8s/kube-lego.yaml`. The config below is probably giving `kube-lego` a lot more access than it needs, but I wasn't particularly concerned about this since this is on a toy "cluster" for my personal site and the service is already managing my TLS certificates. <span style="background-image:url(/images/emoji/emoji_u1f937_1f3fb_200d_2642.png)" title=":shrug:" class="emoji">:shrug:</span>  
+2) I also needed to configure [RBAC](https://kubernetes.io/docs/admin/authorization/rbac/) for `kube-lego` which doesn't currently ship with RBAC configured out of the box. Again, this was just involved applying a config update based on the comments at [jetstack/kube-lego#99](https://github.com/jetstack/kube-lego/issues/99) with `kubectl apply -f k8s/kube-lego.yaml`. The config below is probably giving `kube-lego` a lot more access than it needs, but I wasn't particularly concerned about this since this is on a toy "cluster" for my personal site and the service is already managing my TLS certificates. 🤷  
 
 My `k8s/kube-lego.yaml` contained:
 
@@ -195,7 +195,7 @@ In conclusion:
 - If you haven't given Kubernetes a try but you are already comfortable with Docker
  you should give it a try. Kubernetes makes managing services *easy and portable*.
 The same `kubectl` commands I use to debug our services for the Kubernetes project's
- infrstructure on GKE work just as well on my toy cluster at home. <span style="background-image:url(/images/emoji/emoji_u1f604.png)" title=":smile:" class="emoji">:smile:</span>
+ infrastructure on GKE work just as well on my toy cluster at home. 😄
 
 - If you want to give hosting on Kubernetes a try with much less effort, [Google Cloud](https://cloud.google.com/) offers [a free 12 month, $300 credit](https://cloud.google.com/free/) and an [always-free tier](https://cloud.google.com/free/) which both include [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/).  
 We use GKE heavily for the project infrastructure and I can speak highly to it's ease of use
@@ -213,10 +213,10 @@ Addendum:
 
 - I also used [Calico](https://www.projectcalico.org/) for my overlay network, but I haven't really exercised it yet so I can't really comment on it.
 
-- Kubernetes [secrets](https://kubernetes.io/docs/concepts/configuration/secret/) are awesome. My simple Go service can just read in the GitHub webhook secret as an environment variable injected into the container without worrying about how the secret is loaded and stored.<!-- <img src="/images/emoji/emoji_u1f510.png" title="Locked with Key" class="emoji"></img> -->
+- Kubernetes [secrets](https://kubernetes.io/docs/concepts/configuration/secret/) are awesome. My simple Go service can just read in the GitHub webhook secret as an environment variable injected into the container without worrying about how the secret is loaded and stored.
 
 - To get a one node cluster working you need to [remove the master taint](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#master-isolation). This is terrible idea for a production cluster but great for tinkering and effectively using kubelet as your PID1.
 
 ----
 
-**UPDATE**: My site [is on Netlify now](/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, execept when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f643.png)" title=":upside_down_face:">:upside_down_face:</span>
+**UPDATE**: My site [is on Netlify now](/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, execept when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify 🙃

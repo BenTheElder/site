@@ -39,7 +39,7 @@ Using Kubernetes frees us from worrying about most of the resource management an
 
 Prow / "hook" also provides <a href="http://prow.k8s.io/plugin-help.html">a number of GitHub automation plugins</a>
  used to provide things like issue and pull request <a href="https://github.com/kubernetes/test-infra/blob/master/commands.md">slash commands</a> for applying and removing labels, opening and closing issues, etc.
- This has been particularly helpful since <a href="https://help.github.com/articles/repository-permission-levels-for-an-organization/">GitHub's permissions model is not particularly granular</a> and we'd like contributors to be able to label issues without write permissions. <span  class="emoji" style="background-image:url(/images/emoji/emoji_u1f643.png)" title=":upside_down_face:">:upside_down_face:</span>
+ This has been particularly helpful since <a href="https://help.github.com/articles/repository-permission-levels-for-an-organization/">GitHub's permissions model is not particularly granular</a> and we'd like contributors to be able to label issues without write permissions. 🙃
 <br>
 <br>
 If any of this sounds interesting to you come check out <a href="https://github.com/kubernetes/test-infra/tree/master/prow">Prow's source code</a> and join our <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a> meetings for more. 

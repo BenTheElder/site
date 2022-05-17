@@ -5,7 +5,7 @@ date: "2019-03-17"
 categories:
 - OSS
 - <span class="emoji" style="background-image:url(/images/kubernetes_logo.svg)" title=":kubernetes:"/>:kubernetes:</span>
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f525.png)" title=":git:"/>:fire:</span>
+- 🔥
 ---
 
 This post may come off a bit ironic, coming from someone [who burned out] pretty hard recently, but I received some really good advice and I hope it can help someone else.
@@ -37,7 +37,7 @@ Some of the advice I received:
 Some of this may sound very obvious, but I found it very helpful to actually
 hear it spelled out from people I know and respect, from my peers, and even people I don't know yet.
 
-Thank you to everyone who reached out and gave this advice. I really appreciate it. {{< emoji ":heart:" >}}
+Thank you to everyone who reached out and gave this advice. I really appreciate it. ❤️
 
 Please keep an eye on your peers, I know others are going through similar bouts with burnout or are nearly at their own limits. Check up on them, and if they're up for it, go organize something fun and unrelated for a change.
 

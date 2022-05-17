@@ -6,7 +6,7 @@ draft: true
 categories:
 - OSS
 - <span class="emoji" style="background-image:url(/images/kubernetes_logo.svg)" title=":kubernetes:"/>:kubernetes:</span>
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f525.png)" title=":git:"/>:fire:</span>
+- 🔥
 ---
 
 ## What Is etcd?

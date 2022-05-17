@@ -5,8 +5,8 @@ title: Mapping Appalachia
 subtitle: An Interactive Fallout 76 Journal
 categories:
 - <span class="emoji" style="background-image:url(/images/slackmoji/pipboy.png)" title=":pipboy:">:pipboy:</span>
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f3ae.png)" title=":video_game:">:video_game:</span>
-- <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f5fa.png)" title=":map:">:map:</span>
+- 🎮
+- 🗺
 head: |
   <!--scripts and styling-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.4/dist/leaflet.css" />
@@ -185,7 +185,7 @@ a few small bugs, but no show-stoppers.
 
 Proximity voice chat also led to some ... interesting moments, including a
 ringing iPhone and a McDonalds order placed from the wastelands of West 
-Virginia <span class="emoji" style="background-image:url(/images/emoji/emoji_u1f914.png)" title=":thinking:">:thinking:</span>
+Virginia 🤔
 
 ## Acknowledgements
 <hr>
