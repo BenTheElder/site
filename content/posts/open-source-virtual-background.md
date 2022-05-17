@@ -71,7 +71,7 @@ cv2.imwrite("test.jpg", frame)
 
 And now we can see that our camera works. Success!
 
-{{< figure src="./2020-04-09-031036.jpg" caption="*don't mind my corona beard*" >}}
+{{< figure src="./2020-04-09-031036.jpg" caption="*Don't mind my corona beard*" >}}
 
 ## Finding The Background
 

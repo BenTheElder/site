@@ -10,7 +10,7 @@ I enjoy hiking, gaming, and building things. I love [my wife] and [my dog].
 I want machines to help people do more and focus on what really matters.
 
 I am an open source software developer.
-I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [kind] is my favorite and probably my most popular project. I love working
+I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [KIND] is my favorite and probably my most popular project. I love working
 with the community. 
 
 <picture>
@@ -113,16 +113,8 @@ We spoke about [KIND and testing your Kubernetes Applications][testing-k8s-apps-
 I was pretty jet-lagged for this talk but I was blown away by the response. I really
 enjoyed this talk and the Q&A, and I love working with my good friend [James Munnelly].
 
-<figure>
-  <picture>
-    <source type="image/webp" srcset="/images/about/IMG_20190523_110248.20pct.webp">
-    <source type="image/jpeg" srcset="/images/about/IMG_20190523_110248.20pct.jpg">
-    <img src="/images/about/IMG_20190523_110248.20pct.jpg" alt="This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!" style="object-fit: cover; object-position: 50% 100%; max-height: 16em" title="my view from the stage shortly before the talk">
-  </picture>
-  <figcaption>
-    <p><em>This is easily one of my most popular talks, 1229 people registered as attending and there was only standing room!</em></p>
-  </figcaption>
-</figure>
+
+{{< figure src="/images/about/IMG_20190523_110248.20pct.jpg" alt="This was easily one of my most popular talks, 1229 people registered as attending and there was only standing room! 🤯" caption="This was easily one of my most popular talks, 1229 people registered as attending and there was only standing room! 🤯" >}}
 
 {{< lazyYoutube id="8KtmevMFfxA" title="Testing your K8s apps with KIND - Benjamin Elder, Google & James Munnelly, Jetstack.io">}}
 

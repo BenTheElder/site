@@ -466,29 +466,50 @@ img.outlined {
 }
 
 .tile figure,
-.card figure {
+.tile figure.full-bleed,
+.card figure,
+.card figure.full-bleed {
+  padding: 0;
+  margin-top: 0;
   margin: 0;
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-}
-
-.tile figcaption,
-.card figcaption {
-  margin: 0 auto;
-  text-align: center;
+  border: 2px solid black;
+  margin-bottom: 1em;
 }
 
 .tile figure img,
 .card figure img {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
+}
+
+.tile figure>a,
+.card figure>a {
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .tile figcaption p:first-of-type,
 .card figcaption p:first-of-type {
   margin-top: 0;
+}
+
+figcaption {
+  color: rgb(255 255 255 / 85%);
+  background: #000000;
+  padding: 0;
+  margin-top: -0.5em;
+  margin-bottom: -1em;
+  text-align: center;
+  font-style: italic;
+}
+
+figcaption p {
+  padding: .5em;
 }
 
 .tile .page-title,
@@ -1084,18 +1105,9 @@ sup[id] {
   margin-top: -5rem;
 }
 
-.tile figure,
-.tile figure.full-bleed,
-.card figure,
-.card figure.full-bleed {
-  padding: 0;
-  margin-bottom: 0;
-  margin-top: 0;
-}
-
 .block {
   border-left: .25em solid #3388ff;
-  background: #f0f8ff55;
+  background: #9accf954;
   margin: .5em -1em;
   padding: .1em 1em;
   padding-left: .5em;
