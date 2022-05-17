@@ -27,7 +27,9 @@ body {
 }
 
 body,
-html {
+html,
+.timeline-entry::after,
+.timeline-entry .icon {
   background: #eefcfc;
 }
 
@@ -209,9 +211,6 @@ button,
 .card h5,
 .card h6,
 .timeline-entry .date {
-  color: #008A00;
-  color: #02a421;
-  color: #1d6cbf;
   color: #01a407;
   display: block;
 }
@@ -1437,7 +1436,6 @@ sup[id] {
   content: '';
   position: absolute;
   width: .225em;
-  background-color: #105ae2;
   background-color: #1b6bff;
   top: 0;
   bottom: 0;
@@ -1464,9 +1462,7 @@ sup[id] {
   width: 1.5em;
   margin-top: .7em;
   margin-left: -1.95em;
-  border: .2em solid #105ae2;
-  border-color: #1b6bff;
-  background: #dbedff;
+  border: .2em solid #1b6bff;
   background-size: 1.5em;
   background-repeat: no-repeat;
   background-size: cover;
