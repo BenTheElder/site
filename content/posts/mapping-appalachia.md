@@ -20,7 +20,8 @@ head: |
     position: relative;
     display: inline-block;
     margin: 1em auto;
-    margin-bottom: -1em;
+    margin-bottom: 0;
+    border: none;
   }
   #map {
     font-size: 1em;
