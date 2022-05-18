@@ -336,11 +336,9 @@ a:focus {
   width: calc(100% - 2rem);
   max-width: 52em;
   position: relative;
-  margin: auto auto 0 auto;
+  margin: .75em auto .25em auto;
   flex-shrink: 0;
   color: #414141;
-  /* experimenting */
-  margin-top: .75em;
 }
 
 .footer>:first-child {
