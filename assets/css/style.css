@@ -336,7 +336,7 @@ a:focus {
   width: calc(100% - 2rem);
   max-width: 52em;
   position: relative;
-  margin: .75em auto .25em auto;
+  margin: .75em auto .4em auto;
   flex-shrink: 0;
   color: #414141;
 }
