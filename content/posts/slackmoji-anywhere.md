@@ -119,8 +119,9 @@ span.emoji::-moz-selection {
 highlighting is slightly off on Firefox in varying ways depending on the platform,
 but still works and the shortcodes copy correctly.~~
 
-**Update**: Thanks to some sleuthing with [matter123](https://github.com/matter123) this
+{{% update %}} Thanks to some sleuthing with [matter123](https://github.com/matter123) this
 has been improved and now works pretty well in Firefox, Edge, Chrome, Safari ...
+{{% /update %}}
 
 Finally, here are a few of my favourite slackmoji:
 

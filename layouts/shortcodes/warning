@@ -1,0 +1,4 @@
+<blockquote class="warning">
+<div class="heading">⚠ Warning</div>
+<div>{{ .Inner | markdownify }}</div>
+</blockquote>

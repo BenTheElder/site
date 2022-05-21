@@ -7,9 +7,9 @@ categories:
 - 🎥
 ---
 
-> First, let me acknowledge up-front that **this is neither a novel problem nor a
+{{< note >}}First, let me acknowledge up-front that **this is neither a novel problem nor a
 novel solution**. This is simply what I cobbled together to fit my own needs,
-I thought I'd share about how this went / works.
+I thought I'd share about how this went / works.{{< /note >}}
 
 ## Why Lazy Load?
 

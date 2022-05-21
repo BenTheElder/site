@@ -9,7 +9,7 @@ categories:
 - <span class="emoji" style="background-image:url(/images/kubernetes_logo.svg)" title=":kubernetes:"/>:kubernetes:</span>
 ---
 <!--prow diagram-->
-<div class="full-page-width" style="background-color: #1155b3; padding: 0; padding-bottom: 1em; padding-top: 1em; margin-top: -.25em;">
+<div class="full-page-width" style="background-color: #1155b3; padding: 0; padding-bottom: 1em; padding-top: 1em; margin-top: -.25em; margin-bottom: 1em">
   <div><img src="/images/prow_diagram.svg" title="Prow Diagram" width="1100px" style="width: 1100px; max-width: 100%; margin: 0 auto; display: block" /></div>
   <!--diagram attribution-->
   <!--min-margin hack-->
@@ -20,13 +20,9 @@ categories:
   </div>
 </div>
 
-<!--hack for markdown-->
-<div style="display: none"></div>
+[The Kubernetes project](https://kubernetes.io/) does [*a lot*](http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1) of testing, **on the order of 10000 jobs per day** covering everything from build and unit tests, to end-to-end testing on real clusters deployed from source all the way up to ~5000 node [scalability and performance tests](https://k8s-testgrid.appspot.com/sig-scalability-gce#Summary).
 
-<p><a href="https://kubernetes.io/">The Kubernetes project</a> does <a href="http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1" class="italic">a lot</a> of testing, <span class="bold">on the order of 10000 jobs per day</span> covering everything from build and unit tests, to end-to-end testing on real clusters deployed from source all the way up to ~5000 node <a href="https://k8s-testgrid.appspot.com/sig-scalability-gce#Summary">scalability and performance tests</a>.</p>
-
-<img src="/images/test_metrics.png" alt="Velodrome job metrics" title="Velodrome job metrics"></img>
-<p class="centered-text"><a href="http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1">Velodrome metrics</a></p>
+{{< figure src="/images/test_metrics.png" alt="a grafana dashboard screenshot showing over 10,000 jobs / day, with around an 80% pass-rate" caption="Velodrome [job metrics](http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1)" >}}
 
 The system handling all of this leverages Kubernetes, naturally, and of-course has a number
  of nautically-named components. This system is <a href="https://github.com/kubernetes/test-infra/tree/master/prow" class="italic">Prow</a>, and is used to manage automatic validation and merging of
@@ -44,9 +40,8 @@ Prow / "hook" also provides <a href="http://prow.k8s.io/plugin-help.html">a numb
 <br>
 If any of this sounds interesting to you come check out <a href="https://github.com/kubernetes/test-infra/tree/master/prow">Prow's source code</a> and join our <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a> meetings for more. 
 
-<hr>
 
-Notes:
+## Notes
 
   - There are many other tools that didn't make the diagram or dicussion above, you can find these and more about everything at <a href="https://github.com/kubernetes/test-infra">github.com/kubernetes/test-infra</a>.
  
@@ -54,10 +49,6 @@ Notes:
  
   - A number of other projects / groups including <a href="https://www.openshift.com/">OpenShift</a>, <a href="https://istio.io/">Istio</a>, and <a href="https://www.jetstack.io/">Jetstack</a> are also using and contributing (greatly!) to Prow and the rest of Kubernetes "test-infra".
 
----
+{{% update date="August 2018" %}}Work on this is still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly.{{% /update %}} 
 
-**UPDATE (August 2018)**: Work on this is still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly. 
-
-----
-
-**UPDATE (August 2019)**: The TestGrid repo is now created at <a href="https://github.com/GoogleCloudPlatform/testgrid">github.com/GoogleCloudPlatform/testgrid</a>, Michelle received approval and has started migrating the code. 🎉
+{{% update date="August 2019" %}}The TestGrid repo is now created at [github.com/GoogleCloudPlatform/testgrid](https://github.com/GoogleCloudPlatform/testgrid), [Michelle](https://github.com/michelle192837) received approval and has started migrating the code. 🎉{{% /update %}}

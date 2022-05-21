@@ -6,7 +6,8 @@ categories:
 - dev
 - <span class="emoji" style="background-image:url(/images/rust-logo-128x128-blk.png)" title=":rust:">:rust:</span>
 ---
-<div class="tile centered-text warning"><p class="title centered">This post is old (!)</p><p class="no-margin">Rust has changed since this post was written, it may not still be accurate.</p></div>
+{{% warning %}}This post is old! Rust has changed a lot since this post was written, it may not still be accurate.
+{{% /warning %}}
 
 Mozilla's [Rust](http://rust-lang.org) language has just [reached 1.0 alpha](http://blog.rust-lang.org/2015/01/09/Rust-1.0-alpha.html).
 

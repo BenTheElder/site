@@ -245,6 +245,12 @@ a {
   padding: 0;
 }
 
+a.no-underline {
+  border-bottom: none;
+  padding: 0;
+  margin: 0;
+}
+
 .tile a,
 .card a {
   padding-left: 2px;
@@ -869,17 +875,46 @@ p.min-para:before {
 }
 
 blockquote {
-  border-left: .33rem solid #008eff;
-  border-left-color: #94ff00;
+  /*border: .1rem solid #c0c0c0;*/
+  border: .05rem solid #c0c0c0;
+  border-left: .45rem solid #c0c0c0;
   background-color: #dbedff;
   background-color: #e6ffdb;
-  padding: 1em;
+  background: #fafafa;
+  padding: .75em 1em;
   margin: 1em 0;
+}
+
+blockquote.twitter-tweet {
+  border-color: #1DA1F2;
+  background: white;
 }
 
 blockquote>p {
   margin-top: 0.25em;
   margin-bottom: 0.25em;
+}
+
+blockquote .heading {
+  font-weight: bold;
+  font-size: 1.1em;
+  color: black;
+  margin-bottom: .5em;
+}
+
+blockquote.note {
+  border-color: #0969da;
+  background: #e0f4ff;
+}
+
+blockquote.warning {
+  border-color: #ffa800;
+  background: lightyellow;
+}
+
+blockquote.update {
+  border-color: #00E676;
+  background: #e6ffdb;
 }
 
 .nowrap {
@@ -1668,21 +1703,6 @@ sup[id] {
 }
 
 /* colors */
-
-.warning {
-  background-color: #FDD835 !important;
-  color: black !important;
-}
-
-.warning p,
-.warning h1,
-.warning h2,
-.warning h3,
-.warning h4,
-.warning h5,
-.warning h6 {
-  color: black !important;
-}
 
 .error {
   background-color: #FF1744 !important;

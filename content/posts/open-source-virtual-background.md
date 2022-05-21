@@ -207,8 +207,7 @@ Which gives us a result something like:
 
 While I was working on this, I spotted this tweet:
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is definitely the BEST background for video calls. 💯 <a href="https://t.co/Urz62Kg32k">pic.twitter.com/Urz62Kg32k</a></p>
-<img src="https://pbs.twimg.com/media/EUn1cBxUwAAi6gv?format=jpg&name=large">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">This is definitely the BEST background for video calls. 💯 <a href="https://t.co/Urz62Kg32k" class="no-underline"><img src="https://pbs.twimg.com/media/EUn1cBxUwAAi6gv?format=jpg&name=large"></a></p>
 &mdash; Ashley Willis (McNamara) (@ashleymcnamara) <a href="https://twitter.com/ashleymcnamara/status/1245796639408701440?ref_src=twsrc%5Etfw">April 2, 2020</a></blockquote>
 
 

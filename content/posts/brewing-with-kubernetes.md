@@ -12,11 +12,9 @@ My coffee pot is now a node in my home Kubernetes cluster, and it's awesome.
 <img src="./optim/coffeebot.25pct.jpg" title="my coffee pot"/>
 More specifically the Raspberry Pi wired to [my CoffeePot controller](https://github.com/bentheelder/mrcoffeebot) now runs on Kubernetes thanks to [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) in a cluster with [the node running my site](/posts/migrating-my-site-to-kubernetes).
 
-I've set up a public <a href="/projects/coffee">live status page</a>* displaying all of the sensor data as well as the last update time, with control restricted to users on my local network. I've done this simply by proxying the status endpoint and not the rest of the `coffeebot` service. I'm also busily adding back support for scheduling brewing as well as alarms via [the Google Calendar API](https://developers.google.com/google-apps/calendar/quickstart/go), listening to a dedicated `coffee` calendar on my personal account.
+I set up a public live status page displaying all of the sensor data as well as the last update time, with control restricted to users on my local network. I've done this simply by proxying the status endpoint and not the rest of the `coffeebot` service. I'm also busily adding back support for scheduling brewing as well as alarms via [the Google Calendar API](https://developers.google.com/google-apps/calendar/quickstart/go), listening to a dedicated `coffee` calendar on my personal account.
 
-<hr/>
-* As of September 2018 I've migrated to static site hosting and taken this page down for the moment.
-<hr/>
+{{% update date="September 2018" %}} I've migrated my site to static hosting for unrelated reasons and taken the status page down for the moment.{{% /update %}}
 
 ## Background
 
@@ -40,9 +38,7 @@ I solved this by editing the existing DaemonSet to have a `nodeSelector` for `be
 
 These two rough spots are definitely not ideal, but also weren't particularly difficult to work around. Hopefully [we'll fix #2 in particular](https://github.com/kubernetes/kubeadm/issues/51) by publishing all of the core components with multi-architecture images.
 
-<hr/>
-<strong>UPDATE (AUGUST 2021)</strong>: This has since been fixed upstream, these images are properly multi-arch and kubeadm references the manifest list instead of architecture specific images.
-<hr/>
+{{% update date="August 2021" %}}The kube-proxy image has since been fixed upstream, these images are properly multi-arch and kubeadm references the manifest list instead of architecture specific images. This workaround is no longer required.{{% /update %}}
 
 ## Leveraging Kubernetes
 

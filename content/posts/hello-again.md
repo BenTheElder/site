@@ -14,12 +14,5 @@ The new site is also now on <a href="https://www.cloudflare.com/">Cloudflare</a>
 The <a href="https://bentheelder.github.io">old site</a> will be redirected to this one soon, and what little content it had has been preserved here. The pages have been
  reformatted to match the new site, and should be much easier on the eyes.
 
-<p></p>
-<hr/>
-<p></p>
-<p class="centered centered-text"><span class="bold">Update:</span> I've since <a href="/posts/migrating-my-site-to-kubernetes">migrated my site to Kubernetes</a>.</p>
-
-<div style="clear: both;"></div>
-</div>
-</div>
+{{% update %}}I've since [migrated my site to Kubernetes](/posts/migrating-my-site-to-kubernetes).{{% /update %}}
 

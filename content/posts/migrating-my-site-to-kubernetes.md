@@ -207,9 +207,7 @@ You may also want to look around the list of the many [CNCF certified Kubernetes
 
 If you really just want to play with it first (and not host anything), check out [minikube](https://github.com/kubernetes/minikube).
 
-----
-
-Addendum:
+## Addendum
 
 - I also used [Calico](https://www.projectcalico.org/) for my overlay network, but I haven't really exercised it yet so I can't really comment on it.
 
@@ -217,6 +215,4 @@ Addendum:
 
 - To get a one node cluster working you need to [remove the master taint](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#master-isolation). This is terrible idea for a production cluster but great for tinkering and effectively using kubelet as your PID1.
 
-----
-
-**UPDATE**: My site [is on Netlify now](/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, execept when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify 🙃
+{{% update %}} My site [is on Netlify now](/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, except when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify 🙃{{% /update %}}

@@ -41,9 +41,9 @@ head: |
   }
   </style>
 ---
-**UPDATE**: It's worth noting that I did NOT wind up playing Fallout 76 much
+{{% update %}} It's worth noting that I did NOT wind up playing Fallout 76 much
 further.
-After the B.E.T.A. my interest fell off quickly as the locations and quests failed to be as engaging for me as previous Fallout games.
+After the B.E.T.A. my interest fell off quickly as the locations and quests failed to be as engaging for me as previous Fallout games. {{% /update %}}
 
 -----
 
@@ -169,7 +169,6 @@ station, with two cars there.
 
 
 ## Notes
-<hr>
 
 - Crashed planes are definitely a thing in Appalachia, there are a _lot_ of
 crashed planes, I suspect part of the plot (possibly for the "scorched" enemies)
@@ -189,7 +188,6 @@ ringing iPhone and a McDonalds order placed from the wastelands of West
 Virginia 🤔
 
 ## Acknowledgements
-<hr>
 
 - Interactive map built with [Leaflet](https://leafletjs.com) and [Leaflet.fullscreen](https://github.com/Leaflet/Leaflet.fullscreen).
 
