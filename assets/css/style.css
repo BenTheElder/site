@@ -19,7 +19,6 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.5;
-  color: black;
   min-height: 100%;
   /* sticky footer */
   display: flex;
@@ -29,8 +28,11 @@ body {
 body,
 html,
 .timeline-entry::after,
-.timeline-entry .icon {
+.timeline-entry .icon,
+.tile,
+.card {
   background: #eefcfc;
+  color: rgba(0, 0, 0, 0.9);
 }
 
 h1 {
@@ -362,7 +364,6 @@ a:focus {
 .tile,
 .card {
   padding: 1.33em;
-  color: rgba(0, 0, 0, 0.87);
   max-width: 40em;
   margin: .75rem auto;
 }
@@ -497,13 +498,12 @@ img.outlined {
 }
 
 figcaption {
-  color: rgb(255 255 255 / 85%);
+  color: rgb(255 255 255 / 90%);
   background: #000000;
   padding: 0;
   margin-top: -0.5em;
   margin-bottom: -1em;
   text-align: center;
-  font-style: italic;
 }
 
 figcaption p {
