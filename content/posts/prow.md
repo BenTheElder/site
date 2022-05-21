@@ -49,6 +49,6 @@ If any of this sounds interesting to you come check out <a href="https://github.
  
   - A number of other projects / groups including <a href="https://www.openshift.com/">OpenShift</a>, <a href="https://istio.io/">Istio</a>, and <a href="https://www.jetstack.io/">Jetstack</a> are also using and contributing (greatly!) to Prow and the rest of Kubernetes "test-infra".
 
-{{% update date="August 2018" %}}Work on this is still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly.{{% /update %}} 
+{{% update date="August 2018" %}}Work on open-sourcing TestGrid still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly.{{% /update %}} 
 
 {{% update date="August 2019" %}}The TestGrid repo is now created at [github.com/GoogleCloudPlatform/testgrid](https://github.com/GoogleCloudPlatform/testgrid), [Michelle](https://github.com/michelle192837) received approval and has started migrating the code. 🎉{{% /update %}}
