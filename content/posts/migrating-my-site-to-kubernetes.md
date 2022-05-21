@@ -216,3 +216,7 @@ If you really just want to play with it first (and not host anything), check out
 - To get a one node cluster working you need to [remove the master taint](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/#master-isolation). This is terrible idea for a production cluster but great for tinkering and effectively using kubelet as your PID1.
 
 {{% update %}} My site [is on Netlify now](/posts/gitops-all-the-things/), but I still run my own Kubernetes cluster to host other small projects. Hosting it on a toy Kubernetes cluster worked well, except when the power went out at my apartment ... I'd like my site to be online even then, hence Netlify 🙃{{% /update %}}
+
+{{% update %}} I've since simplified my home server further to minimize time spent on upkeep, my website remains on Netlify since the last update. If you're interested, you can read more on that in "[Self-Driving Debian](/posts/self-driving-debian/)".
+
+I would still recommend considering Kubernetes for larger application infrastructure management, but unless you are doing so for educational purposes, I'm not sure I'd recommend it for simple small-scale deployments ... Your results may vary.{{% /update %}}
