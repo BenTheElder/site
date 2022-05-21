@@ -41,9 +41,11 @@ head: |
   }
   </style>
 ---
-{{% update %}} It's worth noting that I did NOT wind up playing Fallout 76 much
-further.
-After the B.E.T.A. my interest fell off quickly as the locations and quests failed to be as engaging for me as previous Fallout games. {{% /update %}}
+{{% update %}} It's worth noting that I did not wind up playing Fallout 76 much
+more.
+After the B.E.T.A. my interest fell off quickly as the locations and quests failed to be as engaging for me as previous Fallout games. 
+
+**I do not recommend Fallout 76** to anyone.{{% /update %}}
 
 -----
 
