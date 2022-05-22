@@ -20,7 +20,6 @@ one of those is the old trick of hot-swapping code by reloading a shared library
 The rest of this post assumes that you have a pretty fair knowledge of rust.
 If not, you should probably start with the rust [book](http://doc.rust-lang.org/book/).
 
-__________________________________________________________________________
 
 # Project Setup
 
@@ -58,8 +57,6 @@ We'll discuss glob in a moment.
 
 The key thing is that we specify that the library be built as a `dylib` so that we get a c style
 dynamic library.
-
-__________________________________________________________________________
 
 # Code
 
@@ -111,7 +108,6 @@ This allows you to finally do the following:
 A real usecase for this would be EG game development, where the game is implemented as a small wrapper executable and the rest as methods in a dynamic library, you can pass in a struct full of globals to the library and between ticks reload the library with modified code. You might monitor the source for changes to the library, and rebuild and reload between ticks during development.
 In anycase, it's a cool trick.
 
-----------------------
 
 # Full Source
 

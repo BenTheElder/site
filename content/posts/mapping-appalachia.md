@@ -19,8 +19,7 @@ head: |
     width: 100%;
     position: relative;
     display: inline-block;
-    margin: 1em auto;
-    margin-bottom: 0;
+    margin: 0.25em auto;
     border: none;
   }
   #map {
@@ -47,13 +46,10 @@ After the B.E.T.A. my interest fell off quickly as the locations and quests fail
 
 **I do not recommend Fallout 76** to anyone.{{% /update %}}
 
------
-
 <!--the map-->
 <figure id="map-wrapper"><div id="map" style=""></div></figure>
 
 # October 30th [B.E.T.A.] (Break-It Early Test Application)
-<hr>
 
 During the first B.E.T.A. some places I discovered along my travels were:
 
@@ -98,9 +94,8 @@ including a geodesic dome. I was attacked and killed by Super Mutant Skirmisher 
   <img class="centered" src="./photo_2018-10-31_19-07-30.jpg"/>
 {{% /linedsection %}}
 
-<hr>
-<p class="centered-text">At this point I respawned back at the vault.</p>
-<hr>
+
+{{% note %}}At this point I respawned back at the vault.{{% /note %}}
 
 
 {{% linedsection class="yellow" %}}
@@ -133,12 +128,10 @@ to the previous crash.
 
 # November 1st B.E.T.A.
 
----
-
 I got in another hour during the November 1st session.
 
 {{% linedsection class="red" %}}
-1. The Burning Mine - As the name suggests, a burnt out mine. This was the first
+1. The Burning Mine – As the name suggests, a burnt out mine. This was the first
 and only place I visited in the "Ash Heap Region". Thankfully I had already
 equipped a gas mask which saved me from getting lung disease many times ...
 There was a Power Armor station here, but the game broke when I tried to enter the power armor.

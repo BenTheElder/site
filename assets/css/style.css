@@ -1111,9 +1111,8 @@ sup[id] {
 .block {
   border-left: .25em solid #3388ff;
   background: #9accf954;
-  margin: .5em -1em;
-  padding: .1em 1em;
-  padding-left: .5em;
+  margin: .5em 0;
+  padding: 0.1em .75em 0.1em 0.25em;
 }
 
 .block.yellow {
