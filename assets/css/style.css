@@ -736,34 +736,6 @@ span.icon {
   user-select: none;
 }
 
-/* set a consistent highlight color for the site */
-/* we use #b4d5fe which is default in most browsers on macOS, */
-/* and a pretty good choice, but adjust it to 25% transparent, */
-/* for non-webkit browsers so we can still see the emoji image */
-/* webkit will control the highlight color transparency itself */
-/*
-::selection {
-  background-color: rgba(180,213,254,0.75);
-}
-::-webkit-selection {
-  background-color: #b4d5fe;
-}
-/* firefox for android does not seem to know ::selection */
-/*
-::-moz-selection {
-  background-color: rgba(180,213,254,0.75);
-}*/
-/* emoji text needs to stay transparent */
-/*
-span.emoji::selection, span.icon::selection {
-  color: transparent!important;
-}*/
-/* repeat for firefox on android */
-/*
-span.emoji::-moz-selection , span.icon::-moz-selection {
-  color: transparent!important;
-}*/
-
 /* make code highlight with different color for contrast */
 .chroma *::selection {
   background-color: rgba(87, 90, 90, 0.9) !important;
