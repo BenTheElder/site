@@ -25,20 +25,20 @@ categories:
 {{< figure src="./test_metrics.33pct.png" alt="a grafana dashboard screenshot showing over 10,000 jobs / day, with around an 80% pass-rate" caption="Velodrome [job metrics](http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1)" >}}
 
 The system handling all of this leverages Kubernetes, naturally, and of-course has a number
- of nautically-named components. This system is <a href="https://github.com/kubernetes/test-infra/tree/master/prow" class="italic">Prow</a>, and is used to manage automatic validation and merging of
+ of nautically-named components. This system is [*Prow*](https://github.com/kubernetes/test-infra/tree/master/prow), and is used to manage automatic validation and merging of
  human-approved pull requests and to verify branch-health leading up to each release.
 
-With Prow each job is a single-container <a href="https://kubernetes.io/docs/concepts/workloads/pods/pod/">pod</a>, created in a dedicated build and test cluster by "plank", a micro-service running in the services cluster. 
-Each Prow component (roughly outlined above, along with <a href="http://testgrid.k8s.io">TestGrid</a>) is a small Go service structured around managing these one-off single-pod "ProwJobs".  
+With Prow each job is a single-container [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/), created in a dedicated build and test cluster by "plank", a micro-service running in the services cluster. 
+Each Prow component (roughly outlined above, along with [TestGrid](http://testgrid.k8s.io)) is a small Go service structured around managing these one-off single-pod "ProwJobs".  
 
 Using Kubernetes frees us from worrying about most of the resource management and scheduling / bin-packing of these jobs once they have been created and has generally been a pleasant experience.  
 
-Prow / "hook" also provides <a href="http://prow.k8s.io/plugin-help.html">a number of GitHub automation plugins</a>
- used to provide things like issue and pull request <a href="https://github.com/kubernetes/test-infra/blob/master/commands.md">slash commands</a> for applying and removing labels, opening and closing issues, etc.
- This has been particularly helpful since <a href="https://help.github.com/articles/repository-permission-levels-for-an-organization/">GitHub's permissions model is not particularly granular</a> and we'd like contributors to be able to label issues without write permissions. 🙃
+Prow / "hook" also provides [a number of GitHub automation plugins<](http://prow.k8s.io/plugin-help.html)
+ used to provide things like issue and pull request [slash commands](https://github.com/kubernetes/test-infra/blob/master/commands.md) for applying and removing labels, opening and closing issues, etc.
+ This has been particularly helpful since [GitHub's permissions model is not particularly granular](https://help.github.com/articles/repository-permission-levels-for-an-organization/) and we'd like contributors to be able to label issues without write permissions. 🙃
 <br>
 <br>
-If any of this sounds interesting to you come check out <a href="https://github.com/kubernetes/test-infra/tree/master/prow">Prow's source code</a> and join our <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a> meetings for more. 
+If any of this sounds interesting to you come check out [Prow's source code](https://github.com/kubernetes/test-infra/tree/master/prow) and join our [SIG Testing](https://github.com/kubernetes/community/blob/master/sig-testing/README.md) meetings for more. 
 
 
 ## Notes
@@ -47,7 +47,7 @@ If any of this sounds interesting to you come check out <a href="https://github.
  
   - These are all open source, except TestGrid, which is actually a <a href="https://testgrid.k8s.io">publicly hosted</a> and <a href="https://github.com/kubernetes/test-infra/tree/master/testgrid/config">configured</a> version of an internal tool developed at Google. We hope to open source a more performant rewrite of Testgrid sometime in Spring 2018.
  
-  - A number of other projects / groups including <a href="https://www.openshift.com/">OpenShift</a>, <a href="https://istio.io/">Istio</a>, and <a href="https://www.jetstack.io/">Jetstack</a> are also using and contributing (greatly!) to Prow and the rest of Kubernetes "test-infra".
+  - A number of other projects / groups including [OpenShift](https://www.openshift.com/), [Istio](https://istio.io/), and [Jetstack](https://www.jetstack.io/) are also using and contributing (greatly!) to Prow and the rest of Kubernetes "test-infra".
 
 {{% update date="August 2018" %}}Work on open-sourcing TestGrid still ongoing. TestGrid must be ported off of many Google internal libraries and is primarily staffed by one engineer currently, who must also maintain it, so this is taking longer than we hoped. We still intend to open source TestGrid and are making progress, slowly.{{% /update %}} 
 
