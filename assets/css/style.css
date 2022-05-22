@@ -1703,11 +1703,6 @@ sup[id] {
 }
 
 /* colors */
-
-.error {
-  background-color: #FF1744 !important;
-}
-
 .color-yellow-600 {
   color: #FDD835;
 }
@@ -1722,20 +1717,4 @@ sup[id] {
 
 .color-green-a400 {
   color: #00E676;
-}
-
-.google-green {
-  color: #3cba54;
-}
-
-.google-yellow {
-  color: #f4c20d;
-}
-
-.google-red {
-  color: #db3236;
-}
-
-.google-blue {
-  color: #4885ed;
 }

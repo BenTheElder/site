@@ -5,4 +5,7 @@
 ":ship_it_parrot:":
   image: /images/slackmoji/ship_it_parrot.gif
   value: ":ship_it_parrot:"
+":google:":
+  image: /images/google_g.png
+  value: ":google:"
 

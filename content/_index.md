@@ -16,7 +16,7 @@ title: Home
         <td>BSCS '17 @ <a href="http://www.gatech.edu/">Georgia Tech</a> <span class="emoji" style="background-image:url(/images/GT_Buzz_logo.svg)" title=":buzz:">:buzz:</span></td>
       </tr>
       <tr>
-        <td>Senior Software Engineer @ <code style="font-family:inherit">Google</code> {{< emoji ":kubernetes:" >}}</td>
+        <td>Senior Software Engineer @ Google{{< emoji ":google:" >}}<br> Working on <a href="https://kubernetes.io">Kubernetes</a> {{< emoji ":kubernetes:" >}}</td>
       </tr>
       <tr>
         <td>Dog Dad to <a href="https://twitter.com/BobbyTheHound">@BobbyTheHound</a> ❤️</td>
