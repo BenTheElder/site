@@ -1,5 +1,5 @@
 {{ $class := "" }}
 {{ with .Get "class" }}{{ $class = . }}{{ end }}
-<div class="block {{$class}}">
+<div class="block lined-block {{$class}}">
 {{ .Inner | markdownify }}
 </div>

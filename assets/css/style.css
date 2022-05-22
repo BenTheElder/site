@@ -1108,19 +1108,19 @@ sup[id] {
   margin-top: -5rem;
 }
 
-.block {
+.lined-block {
   border-left: .25em solid #3388ff;
   background: #9accf954;
   margin: .5em 0;
   padding: 0.1em .75em 0.1em 0.25em;
 }
 
-.block.yellow {
+.lined-block.yellow {
   border-color: #f1e93c;
   background: #ffffe055;
 }
 
-.block.red {
+.lined-block.red {
   border-color: #ce0019;
   background: #ffc0cb55;
 }
