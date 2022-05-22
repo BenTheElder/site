@@ -850,16 +850,14 @@ blockquote {
   /*border: .1rem solid #c0c0c0;*/
   border: .05rem solid #c0c0c0;
   border-left: .33rem solid #c0c0c0;
-  background-color: #dbedff;
-  background-color: #e6ffdb;
-  background: #fafafa;
+  background: #fcfcfc;
   padding: .75em 1em;
   margin: 1em 0;
 }
 
 blockquote.twitter-tweet {
   border-color: #1DA1F2;
-  background: white;
+  /*background: white;*/
 }
 
 blockquote p {
