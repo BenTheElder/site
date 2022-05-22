@@ -101,7 +101,7 @@ ul ul {
 }
 
 p {
-  margin-block-start: .5em;
+  margin-block-start: 1em;
   margin-block-end: 1em;
 }
 
@@ -226,7 +226,7 @@ hr {
   background-color: #000;
   border: none !important;
   height: 3px !important;
-  margin-top: .5em !important;
+  margin-top: .75em !important;
   margin-bottom: .75em !important;
   padding: 0 !important;
 }
@@ -456,7 +456,7 @@ a:focus {
   width: fit-content;
   max-width: 100%;
   height: auto;
-  margin: 0.5em auto;
+  margin: 1em auto;
   padding: 0;
 }
 
@@ -519,7 +519,6 @@ figcaption p {
 .tile .page-title,
 .card .page-title {
   margin: 0.2em auto;
-  margin-bottom: 0.2em;
   text-align: center;
   line-height: 1.3;
   font-weight: 700;
@@ -1623,9 +1622,9 @@ sup[id] {
     max-width: 100%;
   }
 
-  .page-title {
+  /*.page-title {
     font-size: 2em !important;
-  }
+  }*/
 
   .header {
     max-width: 98%;
