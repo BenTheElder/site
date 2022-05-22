@@ -29,7 +29,7 @@ my laptop all the time. 😀
 It turns out we can actually get pretty decent results with off the shelf, open source
 components and just a little of our own code.
 
-## Reading The Camera
+# Reading The Camera
 
 First thing's first: How are we going to get the video feed from our webcam for
 processing?
@@ -73,7 +73,7 @@ And now we can see that our camera works. Success!
 
 {{< figure src="./2020-04-09-031036.jpg" alt="a successful webcam picture of myself" caption="Don't mind my corona beard ..." >}}
 
-## Finding The Background
+# Finding The Background
 
 OK, now that we have a video feed, how do we identify the background so we can
 replace it? This is the tricky part ...
@@ -246,7 +246,7 @@ we made with our BodyPix parameters but .. so far so good!
 
 This background gave me an idea ...
 
-## Making It Fun
+# Making It Fun
 
 Now that we have the masking done, what can we do to make it look better?
 
@@ -344,7 +344,7 @@ But combined with our virtual background it looks more like:
 
 There we go! 🎉 (I promise it looks cooler with motion / video 🙃
 
-## Outputting Video
+# Outputting Video
 
 Now we're just missing one thing ... We can't actually use this in a call yet.
 
@@ -540,7 +540,7 @@ docker run -d \
 Now make sure to start this *before* opening the camera with any apps, and
 be sure to select the "v4l2loopback" / `/dev/video20` camera in Zoom etc.
 
-## The Finished Result
+# The Finished Result
 
 Here's a quick clip I recorded of this in action:
 

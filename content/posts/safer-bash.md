@@ -13,7 +13,7 @@ reliable bash can be hard. I've been reviewing and fixing a lot of bash while
 working on [cleaning up] the Kubernetes project's scripts and wanted to collect
 some tips for writing more reliable scripts.
 
-## Use ShellCheck
+# Use ShellCheck
 
 [ShellCheck][shellcheck] is an excellent open source linter for shell 
 capable of detecting many errors.
@@ -24,7 +24,7 @@ Running your scripts through ShellCheck is a great way to catch many common bugs
 We opted to turn off [a few of the lints][disabled lints] when testing Kubernetes
 pull requests, but generally these are useful and worth fixing.
 
-## Enable Error Handling Options
+# Enable Error Handling Options
 
 Add the following snippet to the beginning of your scripts:
 
@@ -55,12 +55,12 @@ foo_fails | bar_does_not_fail
 For more on these, read the bash manual page for [the set builtin].
 
 
-## Avoid Common Gotchas
+# Avoid Common Gotchas
 
 Bash has a few quirks that tend to be surprising to developers used to other
 languages. These are a few common ones to be aware of.
 
-### `export` and `local` always succeed
+## `export` and `local` always succeed
 
 Though ShellCheck will capture this one (see [SC2155] for more details), it seems
 to be common enough and misunderstood enough that I'm calling it out here.
@@ -94,7 +94,7 @@ readonly foo
 ```
 
 
-### `local` is not so local
+## `local` is not so local
 
 Unlike local variables in many other popular programming languages, `local`
 variables in bash are visible to called functions. In other words, if function
@@ -131,7 +131,7 @@ echo "${foo}"
 ```
 
 
-### Quoting is Hard
+## Quoting is Hard
 
 Quoting and parameter expansion (`"${FOO[@]}"`) behavior can be surprising.
 
@@ -144,7 +144,7 @@ For this specifically I recommend reading:
 - The bash [shell expansion] and [quoting] docs
 - ShellCheck's entry on double quoting and word splitting: [SC2086]
 
-### macOS ships old bash
+## macOS ships old bash
 
 Apple _still_ ships an old 3.X version of Bash in macOS. Meanwhile Bash 5.0 
 [released][bash 5 release] in January.
@@ -179,7 +179,7 @@ something reasonably compatible, macOS ships many *BSD derived utilities.
 `sed` differences alone have led to many scripts not being portable. Again we
 simply require GNU sed in some cases and ask the user to install this with Homebrew.
 
-## Recommended Reading
+# Recommended Reading
 
 This post only touched on a few common problems, to write safer Bash I 
 recommend reading these general references to understand it better:
@@ -190,7 +190,7 @@ recommend reading these general references to understand it better:
 
 You may also want to read Google's [Shell Style Guide].
 
-## Final Note
+# Final Note
 
 Consider writing non-trivial utilities in another lanuage (or don't! bash is great!) :^)
 

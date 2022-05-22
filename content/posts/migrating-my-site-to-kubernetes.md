@@ -207,7 +207,7 @@ You may also want to look around the list of the many [CNCF certified Kubernetes
 
 If you really just want to play with it first (and not host anything), check out [minikube](https://github.com/kubernetes/minikube).
 
-## Addendum
+# Addendum
 
 - I also used [Calico](https://www.projectcalico.org/) for my overlay network, but I haven't really exercised it yet so I can't really comment on it.
 

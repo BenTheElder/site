@@ -14,7 +14,7 @@ After replacing some parts starting over I really wanted it to be
 fully "self-driving" to the extent possible -- primarily meaning totally 
 unattended and automatic updates. No manual maintenance.
 
-## Automated Updates
+# Automated Updates
 
 [Debian] 10 "Buster" 🐶 ships with the [unattended-upgrades] package installed 
 out of the box, but it needs a little configuring to achieve what we want.
@@ -64,7 +64,7 @@ EOF
 unattended-upgrade -d
 ```
 
-## Automated Everything
+# Automated Everything
 
 To achieve the rest of "self-driving" I've embarked on the time-honored
 tradition of writing a bunch of [custom shell scripts] to automate configuring /
@@ -79,7 +79,7 @@ you need.
 - Keep your (non-secret!) configs, scripts etc. in git.
 - Take notes! You'll want them later 🙂
 
-## Addendum
+# Addendum
 
 I should also note: I am *not* yet using Kubernetes for the initial (re)setup unlike [last time].
 For a single-node, single-admin server in my apartment running a few simple services I expect less maintenance without it currently. 

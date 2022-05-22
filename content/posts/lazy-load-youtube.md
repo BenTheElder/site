@@ -11,7 +11,7 @@ categories:
 novel solution**. This is simply what I cobbled together to fit my own needs,
 I thought I'd share about how this went / works.{{< /note >}}
 
-## Why Lazy Load?
+# Why Lazy Load?
 
 YouTube is a pretty ubiquitous for video hosting and very easy to embed.
 For most videos you can just open the video on [youtube.com], click "share", click "embed", and finally copy + paste the generated `<iframe>` into your page source. Done!
@@ -41,7 +41,7 @@ In particular I have the following requirements:
 - No frameworks, no compilation. Only static HTML, CSS, and minimal Javascript
 
 
-## The Placeholder
+# The Placeholder
 
 
 One of the first useful tricks for building this is knowing that we can leverage 
@@ -283,7 +283,7 @@ able to recognize that the video is not fully loaded yet, so we'll leave the pla
 This is very lightweight, with just a small amount of inline HTML / CSS / SVG, and one
 relatively small thumbnail image. We've only taken a dependency on the YouTube thumbnail server.
 
-## Actual Lazy Loading
+# Actual Lazy Loading
 
 OK, so now we have a youtube-video-embed-esque preview, now how do we load in
 the video when the user clicks on it / "presses play"?
@@ -436,7 +436,7 @@ function createVidV1(videoDiv, videoID) {
 
 Pretty good!
 
-## Optimization
+# Optimization
 
 In this state the videos work pretty well, and use a fraction of the bandwidth, the `maxresdefault.jpg` are something like 120 kB versus 820+ for the whole embed, not bad.
 
@@ -469,7 +469,7 @@ These images are approximately 50% smaller in my limited sampling, our first exa
 drops from ~120 kB to ~60 kB.
 
 
-## Wrap Up
+# Wrap Up
 
 I'm relatively happy with this approach, and will probably continue to refine it
 and use it selectively.

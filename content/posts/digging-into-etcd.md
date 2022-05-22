@@ -9,7 +9,7 @@ categories:
 - <span class="emoji" style="background-image:url(/images/slackmoji/etcd.png)" title=":etcd:"/>:etcd:</span>
 ---
 
-## What Is etcd?
+# What Is etcd?
 
 [etcd] per the official site is:
 
@@ -25,7 +25,7 @@ which drove my own interest in collecting the information in this post.
 Clearly a lot of clusters out there are using etcd for critical data storage,
 but how does it work?
 
-## History
+# History
 
 For a history of etcd see: https://coreos.com/blog/history-etcd
 
@@ -43,9 +43,9 @@ Initially etcd was used by coreOS' `fleet` container orchestration system,
 but it was quickly adopted for other uses and later donated to the [CNCF].
 
 
-## Architecture
+# Architecture
 
-### Overview
+## Overview
 
 - `etcd` is a Go binary with a seperate CLI (`etcdctl`).
 
@@ -57,11 +57,11 @@ but it was quickly adopted for other uses and later donated to the [CNCF].
 
 - Each replica stores the full dataset, following the leader.
 
-### Data Model
+## Data Model
 
 etcd's upstream documentation is instructive here: [github.com/etcd-io/etcd/blob/master/Documentation/learning/data_model.md](https://github.com/etcd-io/etcd/blob/master/Documentation/learning/data_model.md)
 
-### Consensus
+## Consensus
 
 Leader election is used to maintain a single leader replica, all requests
 are routed to the leader internally and comitted only after acheiving consensus
@@ -74,18 +74,18 @@ Another great resource linked from the official site is [thesecretlivesofdata.co
 etcd's [raft implementation][etcd-raft-implementation] is widely used and 
 contains some useful documentation.
 
-### Storage
+## Storage
 
 Data is stored with a [memory-mapped][memory-mapped] [B+ tree] using [bbolt], a fork of [bolt], inspired by [LMDB].
 
-## TODO
+# TODO
 
 - elaborate on Kubernetes's usage
 - talk more aboult multiversion and revisions
 - talk more about data model
 - talk more about supported operations
 
-## Additional Resources
+# Additional Resources
 
 The Carnegie Mellon Database Group "Database of Databases" site has a great page
 on etcd at [dbdb.io/db/etcd][dbdb-etcd]

@@ -16,7 +16,7 @@ I set up a public live status page displaying all of the sensor data as well as 
 
 {{% update date="September 2018" %}} I've migrated my site to static hosting for unrelated reasons and taken the status page down for the moment.{{% /update %}}
 
-## Background
+# Background
 
 This might look a little ridiculous, but deploying (and debugging!) software updates to my coffeepot with `kubectl` has been *fantastic*.
 
@@ -24,7 +24,7 @@ If you know me then you know that I'm not a morning person and that I tend to sl
 
 {{< figure src="./optim/IMG_20160804_150506.25pct.jpg" caption="The original Mr. Coffee Bot" alt="photo of the original Mr. Coffee Bot project from college" >}}
 
-## Getting the Raspberry Pi Into my Cluster
+# Getting the Raspberry Pi Into my Cluster
 
 Installing Kubernetes / `kubeadm` was straightforward enough, I just followed [the official instructions](https://kubernetes.io/docs/setup/independent/install-kubeadm/). However I hit a few small roadblocks related to multi-architecture support:
 
@@ -40,7 +40,7 @@ These two rough spots are definitely not ideal, but also weren't particularly di
 
 {{% update date="August 2021" %}}The kube-proxy image has since been fixed upstream, these images are properly multi-arch and kubeadm references the manifest list instead of architecture specific images. This workaround is no longer required.{{% /update %}}
 
-## Leveraging Kubernetes
+# Leveraging Kubernetes
 
 I use Kubernetes to:
 
@@ -53,7 +53,7 @@ I use Kubernetes to:
 - conveniently and securely access the service(s) from anywhere with `kubectl proxy`
 
 
-## Safety ⚠️
+# Safety ⚠️
 
 It's worth noting that I did take a number of safety precautions when connecting an electric heater to the internet, Kubernetes powered or otherwise:
 
@@ -69,7 +69,7 @@ Similarly the heater is explicitly disabled on boot, and every time one second p
 
 5) The original power switch is still part of the circuit, which can be shut off manually and has a visible light when power is flowing.
 
-## Conclusion
+# Conclusion
 
 Using Kubernetes standardizes deploying software, managing network services, and monitoring applications. It turns out all of these things are very handy for over-re-engineering your $18 coffee maker.
 

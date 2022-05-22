@@ -52,7 +52,7 @@ After the B.E.T.A. my interest fell off quickly as the locations and quests fail
 <!--the map-->
 <figure id="map-wrapper"><div id="map" style=""></div></figure>
 
-## October 30th [B.E.T.A.] (Break-It Early Test Application)
+# October 30th [B.E.T.A.] (Break-It Early Test Application)
 <hr>
 
 During the first B.E.T.A. some places I discovered along my travels were:
@@ -131,7 +131,7 @@ to the previous crash.
 {{% /linedsection %}}
 
 
-## November 1st B.E.T.A.
+# November 1st B.E.T.A.
 
 ---
 
@@ -170,7 +170,7 @@ station, with two cars there.
 {{% /linedsection %}}
 
 
-## Notes
+# Notes
 
 - Crashed planes are definitely a thing in Appalachia, there are a _lot_ of
 crashed planes, I suspect part of the plot (possibly for the "scorched" enemies)
@@ -189,7 +189,7 @@ Proximity voice chat also led to some ... interesting moments, including a
 ringing iPhone and a McDonalds order placed from the wastelands of West 
 Virginia 🤔
 
-## Acknowledgements
+# Acknowledgements
 
 - Interactive map built with [Leaflet](https://leafletjs.com) and [Leaflet.fullscreen](https://github.com/Leaflet/Leaflet.fullscreen).
 

@@ -41,7 +41,7 @@ Prow / "hook" also provides [a number of GitHub automation plugins<](http://prow
 If any of this sounds interesting to you come check out [Prow's source code](https://github.com/kubernetes/test-infra/tree/master/prow) and join our [SIG Testing](https://github.com/kubernetes/community/blob/master/sig-testing/README.md) meetings for more. 
 
 
-## Notes
+# Notes
 
   - There are many other tools that didn't make the diagram or dicussion above, you can find these and more about everything at <a href="https://github.com/kubernetes/test-infra">github.com/kubernetes/test-infra</a>.
  
