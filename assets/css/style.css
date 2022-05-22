@@ -226,8 +226,8 @@ hr {
   background-color: #000;
   border: none !important;
   height: 3px !important;
-  margin-bottom: .25em !important;
-  margin-top: .25em !important;
+  margin-top: .5em !important;
+  margin-bottom: .75em !important;
   padding: 0 !important;
 }
 
