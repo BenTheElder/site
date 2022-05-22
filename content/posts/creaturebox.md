@@ -68,7 +68,7 @@ The color of each creature is based on the average of their brain weights divide
 All told, this project was pretty fun to work on.\
 Here's two a gifs of the result running on my laptop (the second gif has more evolved creatures):
 
-<div class="flex-container vertical-center"><img class="flex-2-col no-grow" src="/images/creaturebox_demo_lossy.gif" width="310" height="518" alt="gif of CreatureBox running on my laptop" style="max-width:50%"></img><img class="flex-2-col no-grow" src="/images/creaturebox_demo_2_lossy.gif" width="310" height="518" alt="gif of CreatureBox running on my laptop with more evolved creatures" style="max-width:50%"></img></div>
+<div class="flex-container vertical-center"><img class="flex-2-col no-grow" src="./creaturebox_demo_lossy.gif" width="310" height="518" alt="gif of CreatureBox running on my laptop" style="max-width:50%"></img><img class="flex-2-col no-grow" src="./creaturebox_demo_2_lossy.gif" width="310" height="518" alt="gif of CreatureBox running on my laptop with more evolved creatures" style="max-width:50%"></img></div>
 
 I posted the project to [my twitter](https://twitter.com/BenTheElder) before I wrote this post and received a kind
  reply from <a href="https://twitter.com/hardmaru">@hardmaru</a> of [studio otoro](http://otoro.net):

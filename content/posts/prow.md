@@ -10,7 +10,7 @@ categories:
 ---
 <!--prow diagram-->
 <div class="full-page-width" style="background-color: #1155b3; padding: 0; padding-bottom: 1em; padding-top: 1em; margin-top: -.25em; margin-bottom: 1em">
-  <div><img src="/images/prow_diagram.svg" title="Prow Diagram" width="1100px" style="width: 1100px; max-width: 100%; margin: 0 auto; display: block" /></div>
+  <div><img src="./prow_diagram.svg" title="Prow Diagram" width="1100px" style="width: 1100px; max-width: 100%; margin: 0 auto; display: block" /></div>
   <!--diagram attribution-->
   <!--min-margin hack-->
   <div style="margin: 0; width: calc(100% - 1em); padding-left: .5em; padding-right: .5em; margin-bottom: -.25em;">
@@ -22,7 +22,7 @@ categories:
 
 [The Kubernetes project](https://kubernetes.io/) does [*a lot*](http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1) of testing, **on the order of 10000 jobs per day** covering everything from build and unit tests, to end-to-end testing on real clusters deployed from source all the way up to ~5000 node [scalability and performance tests](https://k8s-testgrid.appspot.com/sig-scalability-gce#Summary).
 
-{{< figure src="/images/test_metrics.png" alt="a grafana dashboard screenshot showing over 10,000 jobs / day, with around an 80% pass-rate" caption="Velodrome [job metrics](http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1)" >}}
+{{< figure src="./test_metrics.33pct.png" alt="a grafana dashboard screenshot showing over 10,000 jobs / day, with around an 80% pass-rate" caption="Velodrome [job metrics](http://velodrome.k8s.io/dashboard/db/bigquery-metrics?orgId=1)" >}}
 
 The system handling all of this leverages Kubernetes, naturally, and of-course has a number
  of nautically-named components. This system is <a href="https://github.com/kubernetes/test-infra/tree/master/prow" class="italic">Prow</a>, and is used to manage automatic validation and merging of

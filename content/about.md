@@ -34,7 +34,7 @@ Below is a timeline highlighting some notable moments in my career.
     Previous Winners: <a href="https://twitter.com/fabxc">Fabian Reinartz</a> (2016), <a href="https://twitter.com/thockin">Tim Hockin</a> (2016), <a href="https://twitter.com/smarterclayton">Clayton Coleman</a> (2017), <a href="https://twitter.com/liggitt">Jordan Liggitt</a> (2018), <a href="https://twitter.com/fredbrancz">Frederic Branczyk</a> (2019)</div>
   </div>
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
+    <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">October 2020</div>
     <div class="description">Promoted to Senior Software Engineer, Google</div>
   </div>
@@ -45,18 +45,18 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="details">I was nominated for and took on a Co-Chair role in the Kubernetes Testing Special Interest Group along with <a href="https://twitter.com/spiffxp">Aaron Crickenberger</a> and <a href="https://github.com/stevekuznetsov">Steve Kuznetsov</a>. SIG Testing owns the infrastructure, frameworks, and tools used to test the Kubernetes project (amongst others).</a></div>
   </div>
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
+    <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">April 2020</div>
     <div class="description">Team Lead, Kubernetes Engineering Productivity, Google</div>
     <div class="details">After our previous Team / Tech Lead moved on to another opportunity I stepped into the semi-official lead role on the Kubernetes subteam of GKE Engineering Productivity.</div>
   </div>
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
+    <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">October 2018</div>
     <div class="description">Promoted to Software Engineer III, Google</div>
   </div>
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/google_g.png');"></div>
+    <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">July 2017</div>
     <div class="description">Software Engineer II, Google</div>
     <div class="details">I started my first full-time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
