@@ -15,7 +15,7 @@ categories:
 
 > A distributed, reliable key-value store for the most critical data of a distributed system
 
-Per [the FAQ][etcd-FAQ] etcd's name means "**d**istributed **`etc`** directory". With `etc` being a reference to the [Unix directory] for system-wide configuration [/etc], and `d` being a reference to "distributed".
+Per [the FAQ][etcd-FAQ] etcd's name means "**d**istributed **`etc`** directory". With `etc` being a reference to the [Unix directory] for system-wide configuration [/etc], and `d` being a reference to "distributed" [^1].
 The `d` is perhaps also a pun on the long history of naming [daemons]
 with a `d` suffix (see: `httpd`, `ntpd`, `systemd`, `containerd`, ...), though I've not yet found proof of this.
 
@@ -88,6 +88,11 @@ contains some useful documentation.
 The Carnegie Mellon Database Group "Database of Databases" site has a great page
 on etcd at [dbdb.io/db/etcd][dbdb-etcd]
 
+
+[^1]: As more clearly evidenced an [in older version of the etcd docs](https://etcd.io/docs/v3.1/learning/why/):
+    > The name “etcd” originated from two ideas, the unix “/etc” folder and “d"istributed systems. The “/etc” folder is a place to store configuration data for a single system whereas etcd stores configuration information for large scale distributed systems. Hence, a “d"istributed “/etc” is “etcd”.
+
+    This "Why etcd" page doesn't exist in currently supported versions.
 
 [/etc]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/etc.html
 [etcd]: https://etcd.io/
