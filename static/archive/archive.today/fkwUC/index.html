@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html><head><title>The History of etcd | CoreOS</title><meta http-equiv="Content-Type" content="text/html;charset=utf-8"/><link rel="canonical" href="http://archive.today/fkwUC"/><style type="text/css">@font-face {
+font-family:FontAwesome;
+src: url('0183979056f0b87616cd99d5c54a48f3b771eee6.0') format(embedded-opentype), url('7d65e0227d0d7cdc1718119cd2a7dce0638f151c.0') format(woff), url('6225ccc4ec94d060f19efab97ca42d842845b949.0') format(truetype), url('cd980eab6db5fa57db670cb2e4278e67e1a4d6c9.svg') format(svg);
+font-weight:normal;
+font-style:normal;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('f4ca58ee3c71d0b9396f342e50b9224d42142e77.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('f4ca58ee3c71d0b9396f342e50b9224d42142e77.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('f4ca58ee3c71d0b9396f342e50b9224d42142e77.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('8734e726f31df42a9eb8b49e1d74f5216089415a.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('c7f3ebde7004139945d51cec782710e05e656540.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('ac48d6215dbb4e93ad2963dc9308fff4b488d917.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:italic;
+font-weight:400;
+src: url('1944933acbc31455a4fb29cace9b967674b7b952.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('ec943eb592e5a2ff72faa0053e7a862c045a3c24.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('1bb2f5c11c5983b0af48540beaba5a928978eecb.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('0df12fba37357761c8a9897ade4d8516b27f5233.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('a65fe281e789e2a97786978ce66126a6db79b6db.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('68efa710351baf37fb8850f4376a7aa34fd326e4.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('9993e210a1860818be6a55b76e9e7a11576d5b70.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:200;
+src: url('f866ba79d0a50dd350d5f24f759c8ff0bfafad61.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('f54589d036b3eb732ceded13c129cbed0d47b985.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('a4db455ecc225718a3258aa36ce853c50a4b03be.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('479a9924565abfed36dccbb77d48852a332e090a.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('e212dc56da97692800d6ce007bf55e5721bba38b.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('95bd02cf4ba5f7c6c2af9ce3ea0c5416b3a7163b.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('f9c345f0fdd044be130d759df0281a2d17a26c6c.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:300;
+src: url('25e317eccfe2a3098cf5afc97075c612c2dd358d.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('1fb6493395bc72f8a6b804b7a684978d32604990.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('e999ea1ab77d4b0d0d41c6cf91576f9a29c85139.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('6c370ef24588f814b0fb3c605f4053e7aacaa92d.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('a4d4f6309b38b32a33a9d75fba76b6d42e48f5f0.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('1bab544580c63e31c29d46d168bee01d083f69f7.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('33081fc35b568fac09d64a87cbe612e5e9c02153.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:400;
+src: url('d4ae4e38ca7bb859c359e9df16efeb35a009053c.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('3683eef18bb1c33a2b19c2e0dd0f56e91971507f.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('aec9248f4ce1ab9130d2df05712d922d5537646e.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('815e11222e134efa913d458413cf19c0db797478.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('46b2f62fbe4cf3e3fe137686bbbe08d5a9cfcede.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('dd1a0c6cc8f1099f3c579e4cc7704dfb4122e375.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('0071c766496585d88bcadccde2ad5a4af67aeabb.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:600;
+src: url('a0c7bead0f83f1a6419f026c899de3af7c9e55e2.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('283bd8210d324f7264edf1f42dce14de767ede12.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('c30b396d623e2bc6a0f421733d9446d65b973591.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('e6d3bd987b40521d0a1e873e49f6f6e25a5fe05a.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('11d11c755bc840b20eb50ed74e0619519c0d17b8.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('9ba348c0f04f445683aeb0440b91cea158ef2d1b.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('f1ad8e3aaf90b15b04d1a4502be2e689dc4079e7.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:700;
+src: url('522d2582e68ffc6ea42513b7118828ca692cf50d.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('a383f77cd4fad345326758a4ca9ddf186fe7f8fb.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('87dcb3d5773362c51f9e25a4d45845c15ad27701.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('71b5a9280499b347b3caee0532bf3b3480ef48d3.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('dc5091d5ef5ea5f82fd39674d7a17aacd50fad45.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('1ace5010abc81052ea2292e508b4a52019bd582c.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('2eaa6c01499bd423e1f8c278f74fbe82aafe1dbd.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Sans Pro';
+font-style:normal;
+font-weight:900;
+src: url('3d355233e59b215316c705408c122a60f2b1cd63.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:400;
+src: url('40364badf0a43a4b3ade915443c86872f0213ca6.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:400;
+src: url('a66782c474bad25c36cfc168f3e724b7b88f5572.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:500;
+src: url('4a6b00ba0375741077541cbe0a27319d443a5464.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:500;
+src: url('047d0ac23634eed482cd4714efe698ade42a480f.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:600;
+src: url('c12ba39374de47e3f890f5f73527e7f262607d88.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:600;
+src: url('56c11540ff5541817b5fb32fdccdb42a1f5b56d5.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:700;
+src: url('db9ffadb11efb1b5a0da0e7a26f23e278bf4277b.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Source Code Pro';
+font-style:normal;
+font-weight:700;
+src: url('0dd5db91cb0f7608a4b0546a90bb0a18b0aa09d2.woff2') format(woff2);
+unicode-range:;
+}
+@font-face {
+font-family:'Glyphicons Halflings';
+src: url('d53dff38dfb5c414015dfb31d30a473c95b50904') format(embedded-opentype), url('c707207e52ffe555a36880e9873d146c226e3533.woff') format(woff), url('c427041d38cd6597ae7e758028ab72756849ec26.ttf') format(truetype), url('796e58aedfcfe8a3b0829bc0594f739936a9d7d0.svg') format(svg);
+}
+@font-face {
+font-family:'Glyphicons Halflings';
+src: url('c707207e52ffe555a36880e9873d146c226e3533.woff');
+font-weight:normal;
+font-style:normal;
+}
+</style></head><body style="margin:0;background-color:white;width:1024px"><div class="html1" style="width: 1024px;text-align: left;overflow-x: auto;overflow-y: auto; background-color: rgba(0, 0, 0, 0.0273438);position: relative;min-height: 4689px;; z-index: 0"><div class="html" style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-family:sans-serif;font-size:62.5%;overflow-x:visible;overflow-y:visible;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+
+
+<meta name="description" content="Today, Red Hat and the CoreOS team are contributing etcd to the Cloud Native Computing Foundation (CNCF). This move puts the popular consensus-based key-value store’s logos, domains, cloud infrastructure, hosted services and other project property into a neutral non-profit. This move helps the over 400 external contributors and thousands of users from around the world have confidence in the ongoing independence of the project."/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="body" style="vertical-align:bottom;min-height:4689px;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-family:'source sans pro', sans-serif;font-size:16px;font-weight:400;color:rgba(0, 0, 0, 0.746094);line-height:24px;position:relative;padding-top:0px;overflow-x:visible;overflow-y:visible;margin: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/blog/history-etcd%23main-content" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);clip:rect(1px 1px 1px 1px);overflow-x:hidden;overflow-y:hidden;height:1px;width:1px;word-wrap:normal;position:absolute;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+Skip to main content <span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<header style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;text-align:left;background-position: 50% 50%; background-repeat: repeat; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; min-height:50px;border-top-left-radius:0px 0px;border-top-right-radius:0px 0px;border-bottom-right-radius:0px 0px;border-bottom-left-radius:0px 0px;font-weight:400;font-size:16px;margin-bottom:0px;background-color: rgb(255, 255, 255); box-shadow:none;position:relative;z-index:80;border-width: 0px 0px 1px; border-style: none none solid; border-color: white white rgba(0, 0, 0, 0.199219); "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;max-width:970px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; float:left;margin-right:0px;margin-left:0px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<button type="button" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; color:inherit;font:inherit;overflow-x:visible;overflow-y:visible;text-transform:none;cursor:pointer;-webkit-appearance:button;font-family:inherit;font-size:inherit;line-height:inherit;background-image:none;position:relative;float:right;background-color: transparent; border-top-left-radius:4px 4px;border-top-right-radius:4px 4px;border-bottom-right-radius:4px 4px;border-bottom-left-radius:4px 4px;display:none;border-width: 1px; border-style: solid; margin: 8px 15px 8px 0px; padding: 9px 10px; border-color: transparent; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;width:22px;height:2px;border-top-left-radius:1px 1px;border-top-right-radius:1px 1px;border-bottom-right-radius:1px 1px;border-bottom-left-radius:1px 1px;background-color: rgb(0, 0, 0); "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;width:22px;height:2px;border-top-left-radius:1px 1px;border-top-right-radius:1px 1px;border-bottom-right-radius:1px 1px;border-bottom-left-radius:1px 1px;background-color: rgb(0, 0, 0); margin-top:4px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;width:22px;height:2px;border-top-left-radius:1px 1px;border-top-right-radius:1px 1px;border-bottom-right-radius:1px 1px;border-bottom-left-radius:1px 1px;background-color: rgb(0, 0, 0); margin-top:4px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></button>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);float:left;line-height:20px;display:inline-block;margin-right:30px;font-size:20px;width:130px;margin-left:-1px;padding: 10px 0px 0px 1px; " target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="xMidYMin" height="30px" viewBox="24.5 41.5 744 223" enable-background="new 24.5 41.5 744 223" xml:space="preserve" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-family:'source sans pro', sans-serif;overflow-x:hidden;overflow-y:hidden;">
+<defs style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<filter id="black-glow" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<fecolormatrix type="matrix" values="0 0 0 0   0&#10;                                           0 0 0 0   0&#10;                                           0 0 0 0   0&#10;                                           0 0 0 0.5 0" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<fegaussianblur stdDeviation="3.5" result="coloredBlur" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<femerge style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<femergenode in="coloredBlur" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<femergenode in="SourceGraphic" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+</femergenode></femergenode></femerge></fegaussianblur></fecolormatrix></filter>
+</defs>
+<path class="co-p-main-nav-brand-mantle" fill="#F1606D" d="M136.168,55.389c-17.283,0-31.941,27.645-37.235,66.069c-0.169,1.236-0.333,2.487-0.478,3.746&#10;                    c-0.723,6.047-1.213,12.335-1.458,18.808c-0.117,2.962-0.175,5.956-0.175,8.988c0,3.029,0.058,6.029,0.175,8.985&#10;                    c0.245,6.472,0.735,12.764,1.458,18.811c8.104,1.049,16.769,1.761,25.807,2.099c3.907,0.146,7.872,0.233,11.907,0.233&#10;                    c4.023,0,8-0.088,11.895-0.233c9.049-0.338,17.708-1.05,25.819-2.099c0.892-0.114,1.77-0.239,2.659-0.368&#10;                    c33.754-4.74,57.235-15.232,57.235-27.428C233.776,99.088,190.071,55.389,136.168,55.389z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<path class="co-p-main-nav-brand-core" fill="#FFFFFF" d="M176.541,125.569c-0.979-1.428-2.029-2.796-3.148-4.11c-8.956-10.557-22.297-17.265-37.224-17.265&#10;                    c-4.839,0-9.148,7.407-11.907,18.909c-1.096,4.586-1.947,9.819-2.495,15.498c-0.432,4.551-0.665,9.391-0.665,14.399&#10;                    s0.233,9.849,0.665,14.396c4.554,0.432,9.387,0.664,14.402,0.664c5.009,0,9.842-0.232,14.396-0.664&#10;                    c10.011-0.95,18.653-2.875,24.775-5.411c6.046-2.501,9.624-5.615,9.624-8.985C184.963,142.832,181.858,133.388,176.541,125.569z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<g class="co-p-main-nav-brand-text-bold" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; ">
+<path fill="#231F20" d="M344.891,100.053c12.585,0,22.816,6.138,29.262,13.062l-10.064,11.326&#10;                      c-5.353-5.192-11.175-8.495-19.041-8.495c-16.839,0-28.953,14.16-28.953,37.291c0,23.448,11.169,37.608,28.32,37.608&#10;                      c9.128,0,15.895-3.775,21.717-10.228l10.067,11.169c-8.335,9.598-19.038,14.95-32.099,14.95c-26.119,0-46.731-18.88-46.731-53.025&#10;                      C297.37,120.036,318.454,100.053,344.891,100.053z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<path fill="#231F20" d="M416.961,125.701c19.352,0,36.822,14.793,36.822,40.597c0,25.647-17.471,40.439-36.822,40.439&#10;                      c-19.197,0-36.66-14.792-36.66-40.439C380.301,140.494,397.764,125.701,416.961,125.701z M416.961,191.945&#10;                      c11.33,0,18.25-10.228,18.25-25.647c0-15.577-6.92-25.804-18.25-25.804s-18.094,10.227-18.094,25.804&#10;                      C398.867,181.717,405.631,191.945,416.961,191.945z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<path fill="#231F20" d="M459.771,127.589h14.943l1.26,13.688h0.629c5.506-10.07,13.691-15.577,21.871-15.577&#10;                      c3.938,0,6.455,0.472,8.811,1.574l-3.148,15.734c-2.67-0.784-4.717-1.257-8.018-1.257c-6.139,0-13.539,4.245-18.256,15.893v47.203&#10;                      h-18.092L459.771,127.589L459.771,127.589z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<path fill="#231F20" d="M541.121,125.701c20.928,0,31.941,15.107,31.941,36.667c0,3.458-0.314,6.604-0.787,8.495h-49.09&#10;                      c1.57,14.003,10.379,21.869,22.811,21.869c6.613,0,12.273-2.041,17.941-5.662l6.135,11.326c-7.395,4.878-16.676,8.341-26.432,8.341&#10;                      c-21.404,0-38.08-14.95-38.08-40.439C505.561,141.12,523.023,125.701,541.121,125.701z M557.326,159.376&#10;                      c0-12.277-5.189-19.671-15.732-19.671c-9.125,0-16.996,6.768-18.57,19.671H557.326z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+</g>
+<path class="co-p-main-nav-brand-text-light" fill="#F1606D" d="M600.602,152.607c0-32.729,17.785-53.344,42.799-53.344c24.863,0,42.641,20.615,42.641,53.344&#10;                    c0,32.889-17.777,54.13-42.641,54.13C618.387,206.737,600.602,185.496,600.602,152.607z M678.49,152.607&#10;                    c0-28.639-14.158-46.731-35.09-46.731c-21.084,0-35.248,18.093-35.248,46.731c0,28.796,14.164,47.521,35.248,47.521&#10;                    C664.332,200.128,678.49,181.403,678.49,152.607z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<path class="co-p-main-nav-brand-text-light" fill="#53A4D9" d="M699.738,186.125c7.557,8.495,18.412,14.003,30.529,14.003c15.732,0,25.807-8.499,25.807-20.767&#10;                    c0-12.904-8.494-17.154-18.723-21.717l-15.736-7.082c-8.969-3.936-20.934-10.385-20.934-25.808&#10;                    c0-14.947,12.904-25.492,30.059-25.492c12.588,0,22.658,5.665,28.949,12.435l-4.244,4.878c-5.982-6.452-14.32-10.7-24.705-10.7&#10;                    c-13.691,0-22.816,7.239-22.816,18.565c0,11.962,10.385,16.521,17.936,19.985l15.738,6.921&#10;                    c11.486,5.195,21.713,11.647,21.713,27.539s-13.061,27.851-33.201,27.851c-15.107,0-26.75-6.451-34.932-15.576L699.738,186.125z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+<path class="co-p-main-nav-brand-crust" fill="#53A3DA" d="M136.168,45.527C76.898,45.527,28.689,93.739,28.689,153c0,59.265,48.209,107.474,107.479,107.474&#10;                    c59.252,0,107.465-48.209,107.465-107.474C243.633,93.739,195.42,45.527,136.168,45.527z M176.542,180.428&#10;                    c-0.889,0.129-1.767,0.254-2.659,0.368c-8.111,1.049-16.77,1.761-25.819,2.099c-3.895,0.145-7.872,0.233-11.895,0.233&#10;                    c-4.035,0-8-0.087-11.907-0.233c-9.038-0.338-17.703-1.05-25.807-2.099c-0.723-6.047-1.213-12.339-1.458-18.811&#10;                    c-0.117-2.956-0.175-5.956-0.175-8.985c0-3.032,0.058-6.026,0.175-8.988c0.245-6.473,0.735-12.761,1.458-18.808&#10;                    c0.145-1.259,0.309-2.51,0.478-3.746c5.294-38.424,19.952-66.069,37.235-66.069c53.903,0,97.608,43.699,97.609,97.611&#10;                    C233.777,165.196,210.296,175.688,176.542,180.428z" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></path>
+</svg>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; padding-top:12px;float:right;display:none;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Menu<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; max-height:340px;padding-right:15px;padding-left:15px;width:auto;box-shadow:none;padding-bottom:0px;margin-right:0px;margin-left:0px;display:block;height:auto;overflow-x:visible;overflow-y:visible;border-width: 0px medium medium; border-style: none; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<nav style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<h2 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-family:'source sans pro', sans-serif;clip:rect(1px 1px 1px 1px);overflow-x:hidden;overflow-y:hidden;height:1px;width:1px;word-wrap:normal;font-size:18px;color:rgb(255, 255, 255);text-shadow:rgba(0, 0, 0, 0.246094) 1px 1px 2px;line-height:1.4;font-weight:300;position:absolute;margin: 5px 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Main navigation<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; padding-left:0px;float:left;list-style: none outside none; margin: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;position:relative;display:block;float:left;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/www.facebook.com/sharer/sharer.php?u=http://archive.is/fkwUC" style="box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;background-color:transparent;text-decoration:none;position:relative;display:block;line-height:20px;font-weight:600;color:rgb(24, 44, 60);padding:15px;cursor:pointer" target="_blank" social="yes"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Products
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;padding-left:5px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; position:absolute;top:100%;left:0px;display:none;font-size:14px;background-color: rgb(255, 255, 255); -webkit-box-shadow:rgba(0, 0, 0, 0.171875) 0px 6px 12px;background-clip:padding-box;width:100%;box-shadow:rgba(153, 153, 153, 0.746094) 0px 0px 3px;z-index:99;text-align:left;color:rgba(0, 0, 0, 0.746094);right:auto;min-width:220px;float:left;border-top-left-radius:3px 3px;border-top-right-radius:3px 3px;border-bottom-right-radius:3px 3px;border-bottom-left-radius:3px 3px;list-style: none outside none; border-width: 0px; border-style: none; margin: 0px; padding: 5px 0px; border-color: white; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-top:0px;margin-bottom:0px;padding-left:0px;list-style: none outside none; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/tectonic/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Tectonic - Kubernetes<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/quay-enterprise" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Quay - Registry<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/products/container-linux-subscription/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Container Linux Support<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;position:relative;display:block;float:left;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/www.facebook.com/sharer/sharer.php?u=http://archive.is/fkwUC" style="box-sizing:border-box;-moz-box-sizing:border-box;-ms-box-sizing:border-box;background-color:transparent;text-decoration:none;position:relative;display:block;line-height:20px;font-weight:600;color:rgb(24, 44, 60);padding:15px;cursor:pointer" target="_blank" social="yes"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Open Source
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;padding-left:5px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; position:absolute;top:100%;left:0px;display:none;font-size:14px;background-color: rgb(255, 255, 255); -webkit-box-shadow:rgba(0, 0, 0, 0.171875) 0px 6px 12px;background-clip:padding-box;width:100%;box-shadow:rgba(153, 153, 153, 0.746094) 0px 0px 3px;z-index:99;text-align:left;color:rgba(0, 0, 0, 0.746094);right:auto;min-width:220px;float:left;border-top-left-radius:3px 3px;border-top-right-radius:3px 3px;border-bottom-right-radius:3px 3px;border-bottom-left-radius:3px 3px;list-style: none outside none; border-width: 0px; border-style: none; margin: 0px; padding: 5px 0px; border-color: white; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-top:0px;margin-bottom:0px;padding-left:0px;list-style: none outside none; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/operators" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Operators<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/kubernetes" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Kubernetes<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/os/docs/latest" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Container Linux<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/rkt" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>rkt<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/etcd" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>etcd<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/clair" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Clair<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/flannel" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>flannel<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/ignition" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Ignition<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;line-height:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://github.com/coreos/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;text-shadow:none;color:rgb(24, 44, 60);font-weight:500;font-size:16px;padding-left:20px;padding-right:20px;display:block;width:100%;height:0px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>90+ more on Github<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;position:relative;display:block;float:left;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/docs" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;position:relative;display:block;line-height:20px;font-weight:600;color:rgb(24, 44, 60);padding: 15px; " target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Documentation
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;position:relative;display:block;float:left;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.coreos.com/blog" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;position:relative;display:block;line-height:20px;font-weight:600;color:rgb(24, 44, 60);padding: 15px; " target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Blog
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></nav>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;max-width:970px;text-align:left;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; padding-top:50px;color:rgb(255, 255, 255);position:relative;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><h1 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; line-height:1.1;font-family:'source sans pro', sans-serif;font-weight:300;font-size:36px;color:rgb(255, 255, 255);letter-spacing:-0.03em;text-shadow:rgba(0, 0, 0, 0.246094) 1px 1px 2px;margin: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>CoreOS Blog<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h1>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<nav style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;position:relative;margin-top:50px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<h2 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-family:'source sans pro', sans-serif;clip:rect(1px 1px 1px 1px);overflow-x:hidden;overflow-y:hidden;height:1px;width:1px;word-wrap:normal;font-size:18px;color:rgb(255, 255, 255);text-shadow:rgba(0, 0, 0, 0.246094) 1px 1px 2px;line-height:1.4;font-weight:300;position:absolute;margin: 5px 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Blog Menu<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-size:0px;list-style: none outside none; margin: 0px; padding: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;display:inline-block;border-right-color:rgba(153, 153, 153, 0.746094);width:25%;vertical-align:top;border-width: medium 1px medium medium; border-style: none solid none none; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/blog" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; text-decoration:none;font-weight:400;display:block;font-size:16px;text-align:center;color:rgb(34, 118, 173);background-color: rgba(255, 255, 255, 0.699219); padding: 5px 10px; " target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>All CoreOS Posts<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;display:inline-block;border-right-color:rgba(153, 153, 153, 0.746094);width:25%;vertical-align:top;border-width: medium 1px medium medium; border-style: none solid none none; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/blog/technical-posts" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; text-decoration:none;font-weight:400;display:block;font-size:16px;text-align:center;color:rgb(34, 118, 173);background-color: rgba(255, 255, 255, 0.699219); padding: 5px 10px; " target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Technical Posts<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;display:inline-block;border-right-color:rgba(153, 153, 153, 0.746094);width:25%;vertical-align:top;border-width: medium 1px medium medium; border-style: none solid none none; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/blog/announcements" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; text-decoration:none;font-weight:400;display:block;font-size:16px;text-align:center;color:rgb(34, 118, 173);background-color: rgba(255, 255, 255, 0.699219); padding: 5px 10px; " target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Announcements<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></nav>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></header>
+<main style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;max-width:970px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-right:-15px;margin-left:-15px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; position:relative;min-height:1px;padding-right:15px;padding-left:15px;float:left;width:75%;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-top:35px;background-color: rgb(255, 255, 255); margin-bottom:50px;border-width: 1px; border-style: solid; padding: 30px 30px 35px; border-color: rgb(243, 243, 243); "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-bottom:15px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><a href="http://archive.today/o/fkwUC/https://coreos.com/blog" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>← Back to All Blogs<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><h2 style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; line-height:1.1;margin-bottom:10px;font-family:'source sans pro', sans-serif;text-shadow:rgb(255, 255, 255) 0px 1px 0px;color:rgb(29, 65, 90);font-size:24px;font-weight:500;margin-top:0px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>The History of etcd<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-style:italic;display:inline;color:rgba(153, 153, 153, 0.746094);"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>December 11, 2018<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-style:italic;display:inline;color:rgba(153, 153, 153, 0.746094);"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+• By alexhandy<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-style:italic;color:rgba(153, 153, 153, 0.746094);display:block;margin-top:10px;border-bottom-color:rgba(230, 230, 230, 0.746094);margin-bottom:20px;border-width: medium medium 1px; border-style: none none solid; padding: 0px 0px 20px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Tags:<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><a href="http://archive.today/o/fkwUC/https://coreos.com/blog/etcd" hreflang="en" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);margin-left:10px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>etcd<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><a href="http://archive.today/o/fkwUC/https://coreos.com/blog/coreos" hreflang="en" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);margin-left:10px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>coreos<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:inline;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><a href="http://archive.today/o/fkwUC/https://coreos.com/blog/history" hreflang="en" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);margin-left:10px;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>history<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Today,
+<a href="http://archive.today/o/fkwUC/https://www.redhat.com/en/blog/red-hat-contributes-etcd-cornerstone-kubernetes-cloud-native-computing-foundation" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);font-weight:400;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Red Hat and the CoreOS team are contributing etcd to the Cloud Native Computing Foundation (CNCF)<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>. This move puts the popular consensus-based key-value store’s logos, domains, cloud infrastructure, hosted services and other project property into a neutral non-profit. This move helps the over 400 external contributors and thousands of users from around the world have confidence in the ongoing independence of the project.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>From humble beginnings in a garage, to forming the foundation for a worldwide revolution in container-based cloud computing, etcd is now ready for the next step in its journey to open source success. With the help of the CNCF, we plan to continue to improve and optimize etcd so that it can continue to work reliably at the core of your container infrastructure, and your applications. And for a consensus-based database, that’s about as appropriate an end as we could have hoped for the project.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<a href="4905bdca122ed705f15f92d7312c82ccfdcbfe2c.jpg" social="yes" target="_blank" style="cursor:zoom-in"><img alt="The Garage where CoreOS began" src="4905bdca122ed705f15f92d7312c82ccfdcbfe2c.jpg" style="width:635px;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; vertical-align:middle;display:block;margin-left:auto;margin-right:auto;max-width:100%;height:auto;border-width: 0px; border-style: none; border-color: white; "/></a><div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>The thing about consensus is that everyone has to agree on it. And after five years of development, it sure feels like everyone has agreed on etcd. While there are many other databases out there, etcd continues to fill a void around consistency, allowing it to function as the beating heart of a Kubernetes cluster.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Because etcd is built on top of the Raft consensus algorithm, it’s effective for keeping track of fast-moving information crucial to running a container orchestration system. If a container is locked and must be quickly moved to another area and restarted, etcd is able to be certain about that containers location and IP address because it’s storing a consensus on that information.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Brandon Philips was one of the creators of etcd, along with Alex Polvi and Xiang Li. Said Philips of the original effort to design etcd in 2013: “We wanted Container Linux to be able to essentially reboot one machine at any time, but we wanted people to be able to have application uptime. So we needed to run multiple copies of Container Linux and have some sort of coordination so an entire user application wouldn’t go down at once. This is a pretty well understood coordination problem, and really the way we worked to solve this is through a consensus database.”<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Philips and Li looked into Google Chubby, a proprietary database inside Google which had made it outside as a technology paper. They also looked at Apache Zookeeper, which performs similar actions, but had issues around scalability, correctness, and runtime reconfiguration.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span> <span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><img alt="Alex Polvi" src="4ea4c88ed085861b7deec0cb334428d8afe72232.jpg" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; vertical-align:middle;max-width:100%;height:auto;border-width: 0px; border-style: none; border-color: white; "/><a href="ad046884dc4ef12a1c9b20064eb9e9b2c2b1e5db.jpg" social="yes" target="_blank" style="cursor:zoom-in"><img alt="Brandon Philips" src="ad046884dc4ef12a1c9b20064eb9e9b2c2b1e5db.jpg" style="width:221px;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; vertical-align:middle;max-width:100%;height:auto;border-width: 0px; border-style: none; border-color: white; "/></a><a href="f055ac13cd0f7c87716067aa74c257489b73ee45.jpg" social="yes" target="_blank" style="cursor:zoom-in"><img alt="Xiang Li" src="f055ac13cd0f7c87716067aa74c257489b73ee45.jpg" style="width:222px;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; vertical-align:middle;max-width:100%;height:auto;border-width: 0px; border-style: none; border-color: white; "/></a><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span> <span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>“We wanted something cloud-capable; something that could be reconfigured on the fly. On the cloud at any point machines are coming and going, IP addresses are changing and you may need to resize the environment. We needed a database that could be reconfigured live without going down. Also you don’t often stand up large infrastructure with gigabytes of RAM and Zookeeper, at the time, required quite a bit of resources of its own. So we wanted something that scaled down well. A further hurdle was the Zookeeper RPC API, Thrift, being rarely used outside of Zookeeper; this meant you couldn’t use common tools like curl to interact with it. We wanted something dynamically reconfigurable that could scale down and was easy to develop against because it used HTTP+JSON. So, Alex Polvi and I sat down and sketched out a readme, and Xiang started working on it in his 2013 summer internship,” said Philips.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>While etcd was initially used exclusively by CoreOS’ early attempts at a container orchestration system, called fleet, it quickly gained traction from the community in other uses. “We saw a ton of other people pickup etcd, from DNS servers to load balancers to feature flag tools. The traction showed us that we were onto something. When Kubernetes began growing two years after etcd and they chose etcd as their primary key value store, that 10X’d the community over the next year or so,” said Philips.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Another side of the story of etcd is the Raft consensus algorithm that it implements. This algorithm was created by Diego Ongaro as an attempt to make a provably correct and easier to understand consensus algorithm for use by practitioners and researchers alike. Ongaro was a regular advisor as Li developed a Go Raft library while Ongaro completed his doctorate thesis on consensus algorithms. And it was a nice side benefit that Li was thanked in the Raft doctoral dissertation alongside CoreOS colleagues Blake Mizerany, and Yicheng Qin; together they helped to simplify the membership change algorithm.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Today, the project has racked up over 400 contributors, and has even been adopted by companies that theoretically compete with Red Hat. Such is the power of open source that even though Kubernetes and etcd both have thousands of users and multiple commercial products built on top of them, the underlying collaboration on those projects remains open and non-competitive.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Donating etcd to the CNCF will allow this to remain the case going forward. With so many major enterprises already utilizing etcd (<a href="http://archive.today/o/fkwUC/https://github.com/etcd-io/etcd/blob/master/Documentation/production-users.md" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);font-weight:400;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Google, NTT, Salesforce and Tencent<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>) and every major cloud provider offering a Kubernetes service, we expect the project to only grow further now that it has been donated to the CNCF.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>“When we introduced etcd, we wanted it to be this ubiquitously available component of a larger system. Part of the way you get ubiquity is to get everyone using it. As it goes into the CNCF, maintainers from Amazon, Alibaba, Google, and Red Hat all remain on the maintainer list, and etcd is deployed in every major cloud provider now. It’s all part of their products. Having somebody stewarding the copyrights, DNS and more seems like the reasonable next step,” said Philips.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>That’s not to say there aren’t still fond memories locked away inside the etcd developers’ heads. Indeed, when the project began, Li, Polvi and Philips had to think long and hard about just how much of a commitment they were willing to make to the project. After all, a database takes years to become stable enough for production use. It would seem those years are now complete, however.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Getting to stable meant pushing the limits of just about everything else etcd relied on, as well. Philips tells the story of one bug that was baffling the team and the customer for a good amount of time.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>“etcd developer Anthony Romano found this one crash scenario that was baffling, and was reliably reproducible, and it was having to do with sending pause signals to etcd interrupting whatever work etcd is doing. After resuming etcd this test case would find write ahead log corruption. In the end after a lot of investigation it was a bug in the Linux kernel
+<a href="http://archive.today/o/fkwUC/https://lkml.org/lkml/2016/5/8/52" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);font-weight:400;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>for handling syscall interruption on tmpfs<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>. This was completely unexpected,” said Philips. This bug lead to a Linux kernel patch.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Now that etcd is a CNCF project, Philips has a few ideas for work he’d like to see taken on. “I’d love to have the project go through another security audit. I’ve been working with the CNCF to setup security audits for Kubernetes. I’d also like to see it get a correctness audit. Other things I’d like to see include getting more resources around a number of services that the etcd community runs. Discovery.etcd.io, which helps people bring up etcd clusters more easily, and has been a free hosted service CoreOS has been running for 4 or 5 years, could use additional support. Having that run by a larger team will be helpful,” said Philips.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Lastly, he’d like to see the usability of the project improved. “We’ve gotten a lot of feedback that running an etcd cluster can be difficult, so I think having some people focusing on that would be great. At its core, etcd is a reliable and well deployed system, but there are always things you can do to make it easier for new people to use the database.”<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<div style="direction:ltr;text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; font-weight:400;letter-spacing:0.1px;color:rgb(29, 65, 90);font-size:16px;margin: 0px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><br style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "/>
+Want to help on the etcd project? Dive in and <a href="http://archive.today/o/fkwUC/https://github.com/etcd-io/etcd/blob/master/CONTRIBUTING.md" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);font-weight:400;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>contribute to the etcd codebase.
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>Some areas that could use some help include working toward a
+<a href="http://archive.today/o/fkwUC/https://github.com/kubernetes/community/pull/2835" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);font-weight:400;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>streamlined etcd cluster maintenance for Kubernetes
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a> or the
+<a href="http://archive.today/o/fkwUC/https://docs.google.com/document/u/2/d/1mSihXRJz8ROhXf4r5WrBGc8aka-b8HKjo2VDllOc6ac/edit" style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(65, 158, 218);font-weight:400;" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>cluster downgrade support to pair with etcd’s extensive runtime upgrade support<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>.<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<aside style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; position:relative;min-height:1px;padding-right:15px;padding-left:15px;float:left;width:25%;margin-top:35px;display:block;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="text-align:left;box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-bottom:30px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></aside>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></main>
+<footer style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;color:rgba(0, 0, 0, 0.746094);font-weight:300;margin-top:-1px;z-index:10;position:relative;text-align:left;border-top-color:rgba(230, 230, 230, 0.746094);background-color: rgb(0, 0, 0); border-width: 1px medium medium; border-style: solid none none; padding: 30px 0px 10px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto;max-width:970px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-right:-15px;margin-left:-15px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.coreos.com/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span><img alt="CoreOS" src="7d3856533349bab26b0c5c745f8577f300b1f82d.svg" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; vertical-align:middle;width:100px;margin-left:15px;border-width: 0px; border-style: none; border-color: white; "/><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; margin-right:-15px;margin-left:-15px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;"> </span>
+<div style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; position:relative;min-height:1px;padding-right:15px;padding-left:15px;width:100%;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<hr style="height:0px;box-sizing: content-box; -moz-box-sizing: content-box; -ms-box-sizing: content-box; margin-top:20px;margin-bottom:0px;border-width: 1px 0px 0px; border-style: solid none none; border-color: rgb(82, 163, 217) white white; "/>
+<nav style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;margin-right:7%;float:left;margin-top:5px;width:auto;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<h2 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; line-height:1.1;margin-top:20px;margin-bottom:10px;font-family:'source sans pro', sans-serif;font-weight:400;text-transform:uppercase;color:rgb(68, 159, 216);text-shadow:none;font-size:16px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Company<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; list-style: none outside none; margin: 0px; padding: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/about/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>About<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.redhat.com/en/about/privacy-policy" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Privacy Policy<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.coreos.com/blog" title="CoreOS Blog" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Blog<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></nav>
+<nav style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;margin-right:7%;float:left;margin-top:5px;width:auto;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<h2 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; line-height:1.1;margin-top:20px;margin-bottom:10px;font-family:'source sans pro', sans-serif;font-weight:400;text-transform:uppercase;color:rgb(68, 159, 216);text-shadow:none;font-size:16px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Products<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; list-style: none outside none; margin: 0px; padding: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/tectonic/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Tectonic Enterprise<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/products/container-linux-subscription/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Premium Managed Linux<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://tectonic.com/quay-enterprise/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Quay Enterprise<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></nav>
+<nav style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;margin-right:7%;float:left;margin-top:5px;width:auto;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<h2 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; line-height:1.1;margin-top:20px;margin-bottom:10px;font-family:'source sans pro', sans-serif;font-weight:400;text-transform:uppercase;color:rgb(68, 159, 216);text-shadow:none;font-size:16px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Contact &#38; Support<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; list-style: none outside none; margin: 0px; padding: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://coreos.com/contact" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Contact Us<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://groups.google.com/forum/%23!forum/coreos-user" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>General Mailing List<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://groups.google.com/forum/%23!forum/coreos-dev" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Developer Mailing List<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="irc://irc.freenode.org:6667/#coreos" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>IRC #coreos<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://twitter.com/coreos/" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>@CoreOS<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></nav>
+<nav style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:block;float:left;margin-top:5px;width:auto;margin-right:0px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<h2 style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; line-height:1.1;margin-top:20px;margin-bottom:10px;font-family:'source sans pro', sans-serif;font-weight:400;text-transform:uppercase;color:rgb(68, 159, 216);text-shadow:none;font-size:16px;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Docs<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></h2>
+<ul style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; list-style: none outside none; margin: 0px; padding: 0px; "><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.coreos.com/docs" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Docs<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.coreos.com/resources" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Resources<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<li style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; letter-spacing:0.1px;line-height:24px;margin-bottom:10px;font-weight:400;"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>
+<a href="http://archive.today/o/fkwUC/https://www.coreos.com/security" style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; background-color: transparent; text-decoration:none;font-weight:400;font-size:16px;display:block;text-overflow:ellipsis;white-space:nowrap;overflow-x:hidden;overflow-y:hidden;max-width:250px;color:rgb(255, 255, 255);" target="_blank"><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span>Security<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></a>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></li>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></ul>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></nav>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; display:table;clear:both;"> </span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></footer>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div>
+
+
+
+
+
+
+
+
+
+
+<span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div><span style="box-sizing: border-box; -moz-box-sizing: border-box; -ms-box-sizing: border-box; "></span></div></div></body></html>
