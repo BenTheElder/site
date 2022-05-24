@@ -114,6 +114,7 @@ p {
 
 .footnotes>ol>li {
   margin-left: 0em;
+  padding: 0 .5em;
 }
 
 .footnotes hr {
@@ -123,11 +124,7 @@ p {
 }
 
 .footnotes>ol>li>p {
-  padding: .3em;
-  position: relative;
-  left: -.4em;
-  margin-right: -.4em;
-  padding-left: .5em;
+  padding: .3em 0;
   margin-top: 0.25em;
   margin-bottom: 0.25em;
 }
@@ -138,7 +135,7 @@ p {
 
 /* highlight selected footnote / ref */
 sup:target a.footnote-ref,
-.footnotes>ol>li:target>p {
+.footnotes :target {
   background-color: #ffff92;
 }
 
