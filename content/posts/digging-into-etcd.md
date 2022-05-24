@@ -11,27 +11,25 @@ categories:
 
 # What Is etcd?
 
-[etcd] per the official site is:
+[etcd], **/ˈɛtsiːdiː/**, per the official site is:
 
 > A distributed, reliable key-value store for the most critical data of a distributed system
 
-I presume `etcd` is a play on `/etc` and the long history of nameing [daemons]
-with a `d` suffix, a daemon for your `/etc` config, though I've not yet found
-proof of this.
+Per [the FAQ][etcd-FAQ] etcd's name means "distributed **`etc`** **d**irectory". With `etc` being a reference to the [Unix directory] for system-wide configuration [/etc].
+The `d` is perhaps also a pun on the long history of naming [daemons]
+with a `d` suffix (see: `httpd`, `ntpd`, `systemd`, `containerd`, ...), though I've not yet found proof of this.
 
 [Kubernetes] uses etcd as the [backing store for cluster data][k8s-uses-etcd],
-which drove my own interest in collecting the information in this post.
-
-Clearly a lot of clusters out there are using etcd for critical data storage,
-but how does it work?
+which drove my own interest in learning more about it. Clearly a lot of clusters out there are using etcd for critical data storage,
+but how does it work? Why etcd?
 
 # History
 
-For a history of etcd see: https://coreos.com/blog/history-etcd
+For a history of etcd see: coreos.com/blog/history-etcd ([Archived](/archive/archive.today/fkwUC))
 
-For bonus points: https://www.wired.com/2013/08/coreos-the-new-linux/
+For bonus points: [www.wired.com/2013/08/coreos-the-new-linux/](https://www.wired.com/2013/08/coreos-the-new-linux/) ([Archived](/archive/archive.today/xKN1A))
 
-Roughly etcd was created out of a desire for a distributed data store addressing
+Roughly: etcd was created out of a desire for a distributed data store addressing
 the following issues:
 
 - Google's [Chubby Paper] was public, but Chubby itself was / is not.
@@ -47,7 +45,7 @@ but it was quickly adopted for other uses and later donated to the [CNCF].
 
 ## Overview
 
-- `etcd` is a Go binary with a seperate CLI (`etcdctl`).
+- `etcd` is a [Go] binary with a seperate CLI (`etcdctl`).
 
 - etcd exposes a [gRPC] service along with an HTTP JSON API.
 
@@ -59,7 +57,11 @@ but it was quickly adopted for other uses and later donated to the [CNCF].
 
 ## Data Model
 
-etcd's upstream documentation is instructive here: [github.com/etcd-io/etcd/blob/master/Documentation/learning/data_model.md](https://github.com/etcd-io/etcd/blob/master/Documentation/learning/data_model.md)
+etcd's upstream [data model] documentation is instructive here, I highly recommend reading this document.
+
+### Storage
+
+Data is stored with a [memory-mapped][memory-mapped] [B+ tree] using [bbolt], a fork of [bolt], inspired by [LMDB].
 
 ## Consensus
 
@@ -74,10 +76,6 @@ Another great resource linked from the official site is [thesecretlivesofdata.co
 etcd's [raft implementation][etcd-raft-implementation] is widely used and 
 contains some useful documentation.
 
-## Storage
-
-Data is stored with a [memory-mapped][memory-mapped] [B+ tree] using [bbolt], a fork of [bolt], inspired by [LMDB].
-
 # TODO
 
 - elaborate on Kubernetes's usage
@@ -91,8 +89,11 @@ The Carnegie Mellon Database Group "Database of Databases" site has a great page
 on etcd at [dbdb.io/db/etcd][dbdb-etcd]
 
 
+[/etc]: https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/etc.html
 [etcd]: https://etcd.io/
+[etcd-FAQ]: https://etcd.io/docs/v3.5/faq/
 [daemons]: https://en.wikipedia.org/wiki/Daemon_(computing)
+[data model]: https://etcd.io/docs/v3.5/learning/data_model/
 [Kubernetes]: https://kubernetes.io/
 [k8s-uses-etcd]: https://kubernetes.io/docs/concepts/overview/components/#etcd
 [Chubby Paper]: https://static.googleusercontent.com/media/research.google.com/en//archive/chubby-osdi06.pdf
@@ -110,4 +111,6 @@ on etcd at [dbdb.io/db/etcd][dbdb-etcd]
 [bbolt]: https://github.com/etcd-io/bbolt
 [memory-mapped]: https://en.wikipedia.org/wiki/Memory-mapped_file
 [B+ tree]: https://en.wikipedia.org/wiki/B%2B_tree
+[Go]: https://go.dev
+[Unix Directory]: https://en.wikipedia.org/wiki/Unix_filesystem#Conventional_directory_layout
 
