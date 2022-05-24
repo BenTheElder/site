@@ -15,7 +15,7 @@ categories:
 
 > A distributed, reliable key-value store for the most critical data of a distributed system
 
-Per [the FAQ][etcd-FAQ] etcd's name means "distributed **`etc`** **d**irectory". With `etc` being a reference to the [Unix directory] for system-wide configuration [/etc].
+Per [the FAQ][etcd-FAQ] etcd's name means "**d**istributed **`etc`** directory". With `etc` being a reference to the [Unix directory] for system-wide configuration [/etc], and `d` being a reference to "distributed".
 The `d` is perhaps also a pun on the long history of naming [daemons]
 with a `d` suffix (see: `httpd`, `ntpd`, `systemd`, `containerd`, ...), though I've not yet found proof of this.
 
