@@ -131,6 +131,7 @@ p {
 
 .footnote-ref {
   font-family: monospace;
+  font-weight: bold;
 }
 
 /* highlight selected footnote / ref */
