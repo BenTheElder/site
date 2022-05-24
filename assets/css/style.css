@@ -290,7 +290,7 @@ a:focus {
   top: 0;
   right: 0;
   z-index: 1;
-  height: 1.5em;
+  height: fit-content;
   min-height: 1.5em;
   line-height: normal;
   border-bottom: 3px solid black;
