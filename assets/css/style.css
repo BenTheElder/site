@@ -1664,8 +1664,11 @@ sup[id] {
 
 /* tiny screens */
 @media (max-width: 20em) {
-  .page-title {
-    font-size: 1.9em !important;
+
+  .page-title,
+  .tile .page-title,
+  .card .page-title {
+    font-size: 1.9em;
   }
 }
 
