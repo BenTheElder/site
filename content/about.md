@@ -13,7 +13,7 @@ I am an open source software developer.
 I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [KIND] is my favorite and probably my most popular project. I love working
 with the community. 
 
-{{< figure src="./kubecon_barcelona_group_cropped.36pct.guetzli.jpg" alt="Ben & Friends at KubeCon EU 2019" caption="Ben & Friends at KubeCon EU 2019 ♥️" >}}
+{{< figure src="./kubecon_barcelona_group_cropped.36pct.guetzli.jpg" alt="a group photo of Kubernetes contributors in Barcelona" caption="Ben & Friends at KubeCon EU 2019 ♥️" >}}
 
 ## Experience
 
