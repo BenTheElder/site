@@ -8,7 +8,7 @@ title: KubeLife
 </canvas>
 
 <div class="centered-text"><button id="kubelife-pause"><i class="material-icons">pause</i></button><button tabindex="0" onclick="doReset(event, this, initGOL)"><i class="material-icons">replay</i></button></div>
-<div class="centered-text">Inspired by the Kubernetes <a href="https://github.com/kubernetes/sig-release/blob/master/releases/release-1.12/README.md">1.12 Release</a></div>
+<p class="centered-text">Inspired by the Kubernetes <a href="https://github.com/kubernetes/sig-release/blob/master/releases/release-1.12/README.md">1.12 Release</a></p>
 
 <!-- script for demos -->
 <script>
