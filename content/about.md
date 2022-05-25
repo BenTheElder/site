@@ -15,7 +15,7 @@ with the community.
 
 {{< figure src="./kubecon_barcelona_group_cropped.36pct.guetzli.jpg" alt="a group photo of Kubernetes contributors in Barcelona" caption="Ben & Friends at KubeCon EU 2019 ♥️" >}}
 
-## Experience
+# Experience
 
 I am currently a Senior Software Engineer at Google on the Kubernetes Engineering Productivity team, which I lead.
 
@@ -71,24 +71,24 @@ Below is a timeline highlighting some notable moments in my career.
   </div>
 </div>
 
-## Speaking
+# Speaking
 
 I'm a novice speaker with a few [KubeCon](https://www.cncf.io/kubecon-cloudnativecon-events/) talks and a couple
 of smaller internal (company) talks under my belt. My public talks are listed below.
 
-### KubeCon NA 2019
+## KubeCon NA 2019
 
 I gave one talk and ran a workshop at [KubeCon NA 2019]. I also anchored a table
 at a [mentoring session](https://kccncna19.sched.com/event/WV57/mentoring-networking-signup-to-be-a-mentee-or-a-mentor) and represented Kubernetes [SIG Testing] and
 WG K8s Infra at the Kubernetes [Contributor Summit](https://events19.linuxfoundation.org/events/kubernetes-contributor-summit-north-america-2019/) [Meet & Greet](https://events19.linuxfoundation.org/events/kubernetes-contributor-summit-north-america-2019/program/schedule/).
 
-#### Deep Dive: KIND - Benjamin Elder & Antonio Ojea
+### Deep Dive: KIND - Benjamin Elder & Antonio Ojea
 
 We spoke about [KIND internals and the challenges ahead on the road to 1.0](https://kccncna19.sched.com/event/Uah7/deep-dive-kind-benjamin-elder-google-antonio-ojea-garcia-suse).
 
 {{< lazyYoutube id="tT-GiZAr6eQ" title="Deep Dive: Kind - Benjamin Elder, Google & Antonio Ojea Garcia, SUSE" >}}
 
-#### A Kind Workflow for Contributing to Kubernetes - Benjamin Elder & Duffie Cooley & James Munnelly & Patrick Lang
+### A Kind Workflow for Contributing to Kubernetes - Benjamin Elder & Duffie Cooley & James Munnelly & Patrick Lang
 
 We ran a hands on tutorial for contributing and testing your Kubernetes code with [KIND].
 
@@ -98,11 +98,11 @@ Hopefully many of them learned something about contributing to Kubernetes and us
 
 {{< lazyYoutube id="BPVO2mcfjJk" previewQuality="hq" title="Tutorial: A Kind Workflow for Contri... Benjamin Elder, Duffie Cooley, James Munnelly &amp; Patrick Lang" >}}
 
-### KubeCon EU 2019
+## KubeCon EU 2019
 
 I gave two talks at [KubeCon EU 2019] and participated as a mentor in one of the mentoring sessions, I also held a Kubernetes Contributor Summit Session on KIND (voted for / requested at the summit).
 
-#### Testing your K8s apps with KIND - Benjamin Elder & James Munnelly
+### Testing your K8s apps with KIND - Benjamin Elder & James Munnelly
 
 We spoke about [KIND and testing your Kubernetes Applications][testing-k8s-apps-with-kind].
 
@@ -114,17 +114,17 @@ enjoyed this talk and the Q&A, and I love working with my good friend [James Mun
 
 {{< lazyYoutube id="8KtmevMFfxA" title="Testing your K8s apps with KIND - Benjamin Elder, Google & James Munnelly, Jetstack.io">}}
 
-#### Deep Dive: Testing SIG - Benjamin Elder & James Munnelly
+### Deep Dive: Testing SIG - Benjamin Elder & James Munnelly
 
 We spoke about KIND and how we use it to test Kubernetes for the [SIG Testing Deep Dive][sig-testing-deep-dive-kind].
 
 {{< lazyYoutube id="6m9frvTxK0o" title="Deep Dive: Testing SIG - Benjamin Elder, Google & James Munnelly, Jetstack" >}}
 
-### KubeCon NA 2018
+## KubeCon NA 2018
 
 I gave one talk at [KubeCon NA 2018] and ran a Kubernetes Contributor Summit session on KIND (voted for / requested at the summit).
 
-#### Behind Your PR: How Kubernetes Uses Kubernetes to Run Kubernetes CI - Sen Lu & Benjamin Elder
+### Behind Your PR: How Kubernetes Uses Kubernetes to Run Kubernetes CI - Sen Lu & Benjamin Elder
 
 I spoke with [Sen Lu][@krzyzacy] about The Kubernetes Project's
 testing tools and infrastructure, including a brief discussion of [KIND] and running
