@@ -13,11 +13,7 @@ I am an open source software developer.
 I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [KIND] is my favorite and probably my most popular project. I love working
 with the community. 
 
-<picture>
-  <source type="image/webp" srcset="/images/kubecon_barcelona_group.32pct.webp">
-  <source type="image/jpeg" srcset="/images/kubecon_barcelona_group.32pct.jpg">
-  <img src="/images/kubecon_barcelona_group.32pct.jpg" class="centered outlined" style="object-fit: cover; height: 14em; width: 100%" alt="Ben & Friends at KubeCon EU 2019" title="Ben & Friends at KubeCon EU 2019" />
-</picture>
+{{< figure src="./kubecon_barcelona_group_cropped.36pct.guetzli.jpg" alt="Ben & Friends at KubeCon EU 2019" caption="Ben & Friends at KubeCon EU 2019 ♥️" >}}
 
 ## Experience
 
@@ -39,7 +35,7 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="description">Promoted to Senior Software Engineer, Google</div>
   </div>
   <div class="timeline-entry">
-    <div class="icon" style="background-image: url('/images/kubernetes-icon-color.png'); background-size: 86%; background-position: center;"></div>
+    <div class="icon" style="background-image: url('/images/kubernetes_logo.svg'); background-size: 86%; background-position: center;"></div>
     <div class="date">May 2020</div>
     <div class="description">Chair, Kubernetes <a href="https://github.com/kubernetes/community/blob/master/sig-testing/README.md">SIG Testing</a></div>
     <div class="details">I was nominated for and took on a Co-Chair role in the Kubernetes Testing Special Interest Group along with <a href="https://twitter.com/spiffxp">Aaron Crickenberger</a> and <a href="https://github.com/stevekuznetsov">Steve Kuznetsov</a>. SIG Testing owns the infrastructure, frameworks, and tools used to test the Kubernetes project (amongst others).</a></div>
@@ -114,7 +110,7 @@ I was pretty jet-lagged for this talk but I was blown away by the response. I re
 enjoyed this talk and the Q&A, and I love working with my good friend [James Munnelly].
 
 
-{{< figure src="/images/about/IMG_20190523_110248.20pct.jpg" alt="This was easily one of my most popular talks, 1229 people registered as attending and there was only standing room! 🤯" caption="This was easily one of my most popular talks, 1229 people registered as attending and there was only standing room! 🤯" >}}
+{{< figure src="./IMG_20190523_110248.20pct.guetzli.jpg" alt="This was easily one of my most popular talks, 1229 people registered as attending and there was only standing room! 🤯" caption="This was easily one of my most popular talks, 1229 people registered as attending and there was only standing room! 🤯" >}}
 
 {{< lazyYoutube id="8KtmevMFfxA" title="Testing your K8s apps with KIND - Benjamin Elder, Google & James Munnelly, Jetstack.io">}}
 

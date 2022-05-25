@@ -508,6 +508,7 @@ figcaption {
   margin-top: -0.5em;
   margin-bottom: -1em;
   text-align: center;
+  font-family: monospace;
 }
 
 figcaption p {
