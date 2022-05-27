@@ -13,7 +13,7 @@ for reacting to posts without notifying everyone in the group.
 Positive emoji responses in particular are a simple way to acknowledge messages and make discussions 
 more friendly and welcoming.
 
-{{< figure src="/images/slack_react_example.png" alt="slack emoji reaction example (thanks dims!)" caption="slack emoji reaction example (thanks [dims](https://github.com/dims) !)" >}}
+{{< figure src="/images/slack_react_example.png" alt="slack emoji reaction example (thanks dims!)" caption="slack emoji reaction example (thanks [dims](https://github.com/dims)!)" >}}
 
 
 A particularly fun part of this feature is [custom emoji support](https://get.slack.help/hc/en-us/articles/206870177-Add-custom-emoji), commonly known as "slackmoji",
