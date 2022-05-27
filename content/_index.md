@@ -2,7 +2,7 @@
 title: Home
 ---
 <h1 class="page-title">Hi, I'm Benjamin Elder 👋</h1>
-<figure class="full-bleed" style="border: none; position: relative; width: 42%; padding-bottom: 42%; left: 50%; transform: translateX(-50%); margin-bottom: .75em; margin-top: .1em;">
+<figure class="full-bleed" style="background: none; border: none; position: relative; width: 42%; padding-bottom: 42%; left: 50%; transform: translateX(-50%); margin-bottom: .75em; margin-top: .1em;">
   <picture>
     <source type="image/webp" srcset="/images/ben-2020.33pct.webp">
     <source type="image/jpeg" srcset="/images/ben-2020.33pct.jpg">

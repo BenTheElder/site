@@ -481,11 +481,13 @@ img.outlined {
   margin: 0 auto;
   margin-bottom: 1em;
   width: fit-content;
+  background: black;
 }
 
 .tile figure img,
 .card figure img {
   margin: 0;
+  background: black;
 }
 
 .tile figure>a,
