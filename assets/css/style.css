@@ -118,9 +118,7 @@ p {
 }
 
 .footnotes hr {
-  margin-left: 0;
-  max-width: 8em;
-  margin-bottom: -.5em !important;
+  margin: 0 !important;
 }
 
 .footnotes>ol>li>p {
@@ -227,12 +225,7 @@ hr {
   margin-top: .75em !important;
   margin-bottom: .75em !important;
   padding: 0 !important;
-}
-
-hr.footnotes {
-  margin-left: 0;
-  max-width: 8em;
-  margin-bottom: .25em !important;
+  min-width: 100%;
 }
 
 a {
@@ -477,11 +470,11 @@ img.outlined {
   margin-block-start: 0;
   margin-inline-start: 0;
   margin-inline-end: 0;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
   margin: 0 auto;
   margin-bottom: 1em;
   width: fit-content;
-  background: black;
+  /*background: black;*/
 }
 
 .tile figure img,
@@ -506,9 +499,9 @@ img.outlined {
 figcaption {
   color: rgb(255 255 255 / 90%);
   background: #000000;
+  /*background: #fcfcfc;*/
   padding: 0;
   margin-top: -0.5em;
-  margin-bottom: -1em;
   text-align: center;
   font-family: monospace;
 }
@@ -847,9 +840,7 @@ p.min-para:before {
 }
 
 blockquote {
-  /*border: .1rem solid #c0c0c0;*/
-  border: .05rem solid #c0c0c0;
-  border-left: .33rem solid #c0c0c0;
+  border-left: .33rem solid #787878;
   background: #fcfcfc;
   padding: .75em 1em;
   margin: 1em 0;
