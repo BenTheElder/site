@@ -38,6 +38,9 @@ head: |
     max-width: 100%;
     max-height: 100%;
   }
+  #map-wrapper img {
+    background: none;
+  }
   </style>
 ---
 {{% update %}} It's worth noting that I did not wind up playing Fallout 76 much
