@@ -2,7 +2,6 @@
   <div id="content">
     <div class="tile">
       <h1 class="page-title">Posts</h1>
-      <hr class="full-bleed">
       {{ range $i, $post := .Pages.ByDate.Reverse }}
       {{ if .Params.draft }}{{ else }}
       <div style="margin: 1em 0">

@@ -12,8 +12,7 @@
         {{ else if or (eq $day "3") (eq $day "23") }}
           {{ $suffix = "rd" }}
         {{ end }}
-       <p class="sub-title">{{ replace $date "SUFFIX" $suffix }}</p>
-      <hr class="full-bleed">
+      <p class="sub-title">{{ replace $date "SUFFIX" $suffix }}</p>
       {{if .Draft}}<blockquote class="warning"><div class="heading">⚠ Warning</div><div>You've discovered a draft post! 🚧<br>This entry is still under construction and shouldn't be listed anywhere ... 🤔</div></blockquote>{{end}}
       {{ partial "fancymarkdown.html" .Content }}
     </div>
