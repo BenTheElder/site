@@ -23,9 +23,11 @@ title: Home
       </tr>
     </tbody>
   </table>
-  <div style="padding-top: .33em; font-weight: bold; line-height: 1.7em;"><span>Occasionally I write – <a href="/posts">Posts 📝</a></span><br><span>More about me – <a href="/about">About Ben 🤔</a></span></div>
-</div>
-<div class="full-page-width" style="padding: .5em">
+  <div style="font-weight: bold; line-height: 2em; margin: .5em auto">
+    <span>Occasionally I write – <a href="/posts">Posts 📝</a></span>
+    <br>
+    <span>More about me – <a href="/about">About Ben 🤔</a></span>
+  </div>
   <table style="margin: 0 auto; text-align: left;">
     <tbody>
       <tr>
