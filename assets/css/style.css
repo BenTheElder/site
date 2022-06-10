@@ -341,15 +341,16 @@ a:focus {
   width: calc(100% - 2rem);
   max-width: 52em;
   position: relative;
-  margin: .75em auto .5em auto;
+  margin: 2.5em auto .75em auto;
   flex-shrink: 0;
   color: #414141;
 }
 
-.footer>:first-child {
+/*.footer>:first-child {
   border-top: .01em solid #414141;
   padding-top: .5em;
 }
+*/
 
 .footer a {
   font-style: inherit;
