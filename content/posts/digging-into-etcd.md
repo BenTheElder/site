@@ -37,7 +37,7 @@ the following issues:
 - Zookeeper was expensive to run, didn't scale down, and couldn't be interacted
 with via common simple tools like [curl].
 
-Initially etcd was used by coreOS' `fleet` container orchestration system,
+Initially etcd was developed by coreOS for their `fleet` container orchestration system,
 but it was quickly adopted for other uses and later donated to the [CNCF].
 
 
