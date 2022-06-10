@@ -9,7 +9,7 @@ categories:
 - <span class="emoji" style="background-image:url(/images/kubernetes_logo.svg)" title=":kubernetes:"/>:kubernetes:</span>
 ---
 <!--prow diagram-->
-<div class="full-page-width" style="background-color: #1155b3; padding: 0; padding-bottom: 1em; padding-top: 1em; margin-top: 0; margin-bottom: 1em">
+<div class="full-page-width" style="background-color: #1155b3; padding: 0; padding-bottom: 1em; padding-top: 1em; margin-top: 1em; margin-bottom: 1em">
   <div><img src="./prow_diagram.svg" title="Prow Diagram" width="1100px" style="width: 1100px; max-width: 100%; margin: 0 auto; display: block" /></div>
   <!--diagram attribution-->
   <!--min-margin hack-->
