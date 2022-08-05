@@ -17,11 +17,17 @@ with the community.
 
 # Experience
 
-I am currently a Senior Software Engineer at Google on the Kubernetes Engineering Productivity team, which I lead.
+I am currently a Senior Software Engineer at Google on Kubernetes Engineering.
 
 Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
+  <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
+    <div class="date">August 2022</div>
+    <div class="description">Senior Software Engineer, Kubernetes Engineering, Google</div>
+    <div class="details">After 5+ years of work on <a href="https://cloud.google.com/kubernetes-engine">GKE</a> / Kubernetes <a href="https://landing.google.com/engprod/">Engineering Productivity</a> teams I transferred to a new role on Kubernetes Engineering under GKE Engineering to  focus more on Kubernetes core.</div>
+  </div>
   <div class="timeline-entry">
     <div class="icon" style=""><div style="background-image:url('/images/cncf-icon-color.png'); width: 1.11em; height: 1.11em; background-size: 1.11em; background-position: center; background-repeat: no-repeat; margin: .1925em;"></div></div>
     <div class="date">November 2020</div>
@@ -33,6 +39,7 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">October 2020</div>
     <div class="description">Promoted to Senior Software Engineer, Google</div>
+    <div class="details">For work like continuing to develop <a href="https://kind.sigs.k8s.io/">KIND</a> enabling additional use cases in <a href="https://cloud.google.com/anthos">Anthos</a> and more Cloud Native open source projects like <a href="https://istio.io/">Istio</a> and <a href="https://knative.dev/">Knative</a>, Co-Leading SIG Testing, and <a href="https://github.com/kubernetes/enhancements/issues/2420">Reducing Kubernetes Build Maintenance</a>, amongst other things.</div>
   </div>
   <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/kubernetes_logo.svg'); background-size: 86%; background-position: center;"></div>
@@ -50,12 +57,13 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">October 2018</div>
     <div class="description">Promoted to Software Engineer III, Google</div>
+    <div class="details">For work like creating <a href="https://kind.sigs.k8s.io/">KIND</a>, amongst other things.</div>
   </div>
   <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">July 2017</div>
     <div class="description">Software Engineer II, Google</div>
-    <div class="details">I started my first full-time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes Engineering Productivity Team.</div>
+    <div class="details">I started my first full-time job on the <a href="https://cloud.google.com/kubernetes-engine">GKE</a>-Kubernetes <a href="https://landing.google.com/engprod/">Engineering Productivity</a> Team.</div>
   </div>
   <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/buzz.png'); background-size: 79%; background-position: 52% 69%;"></div>
@@ -74,7 +82,14 @@ Below is a timeline highlighting some notable moments in my career.
 # Speaking
 
 I'm a novice speaker with a few [KubeCon](https://www.cncf.io/kubecon-cloudnativecon-events/) talks and a couple
-of smaller internal (company) talks under my belt. My public talks are listed below.
+of smaller internal (company) talks under my belt. My public speaking is listed here.
+
+## Open Source Productivity Day on Google Open Source Live
+
+In October 2021 I gave a short talk about [testing Kubernetes with KIND and Kubetest2](
+https://opensourcelive.withgoogle.com/events/open-source-productivity-day?talk=session-2) with my colleauge [Amit Watve] for [Google Open Source Live](https://opensourcelive.withgoogle.com/)'s [Open Source Productivity Day](https://opensourcelive.withgoogle.com/events/open-source-productivity-day).
+
+In my opinion this was unfortunately not some of my best speaking as I was distracted by a family emergency the day of recording. The KubeCon talks below are better.
 
 ## KubeCon NA 2019
 
@@ -97,6 +112,12 @@ most of the session.
 Hopefully many of them learned something about contributing to Kubernetes and using KIND.
 
 {{< lazyYoutube id="BPVO2mcfjJk" previewQuality="hq" title="Tutorial: A Kind Workflow for Contri... Benjamin Elder, Duffie Cooley, James Munnelly &amp; Patrick Lang" >}}
+
+## KIND on The Kubernetes Podcast
+
+I spoke with Craig Box and Adam Glick on the Kubernetes Podcast about [KIND].
+
+Episode #69 – [kind, with Ben Elder](https://kubernetespodcast.com/episode/069-kind/)
 
 ## KubeCon EU 2019
 
@@ -133,6 +154,7 @@ it on Kubernetes's [Kubernetes-based CI infrastructure][prow].
 {{< lazyYoutube id="pz0lpl6h-Gc" title="Behind Your PR: How Kubernetes Uses Kubernetes - Sen Lu & Benjamin Elder" >}}
 
 
+[Amit Watve]: https://mobile.twitter.com/theamwat
 [BenTheElder]: https://twitter.com/BenTheElder
 [gsoc-kubernetes]: https://www.google-melange.com/archive/gsoc/2015/orgs/kubernetes/projects/bentheelder.html
 [kube-proxy]: https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/
