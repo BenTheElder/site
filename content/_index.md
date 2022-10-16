@@ -4,9 +4,7 @@ title: Home
 <h1 class="page-title">Hi, I'm Benjamin Elder 👋</h1>
 <figure class="full-bleed" style="background: none; border: none; position: relative; width: 42%; padding-bottom: 42%; left: 50%; transform: translateX(-50%); margin-bottom: .75em; margin-top: .1em;">
   <picture>
-    <source type="image/webp" srcset="/images/ben-2020.33pct.webp">
-    <source type="image/jpeg" srcset="/images/ben-2020.33pct.jpg">
-    <img src="/images/ben-2020.33pct.jpg" alt="ben's avatar" class="circle-badge" style="position: absolute; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; border-width: .25em;">
+    <img src="/images/ben_avatar_optim.jpg" alt="ben's avatar" class="circle-badge" style="position: absolute; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; border-width: .25em;">
   </picture>
 </figure>
 <div class="" style="padding: .5em; padding-top: 0">
