@@ -3,7 +3,6 @@ markup: md
 type: misc
 title: About Ben
 ---
-<div style="float: left; width: 6em; height: 6em; margin-right: 1em; margin-left: 0; margin-top: 0;" class="circle-badge"><picture><source type="image/webp" srcset="/images/ben_avatar.30pct.webp"><source type="image/jpeg" srcset="/images/ben_avatar.30pct.jpg"><img src="/images/ben_avatar.30pct.jpg" style="padding-top: 0; padding-bottom: 0; margin: 0;" alt="Ben" title="Ben"></picture></div>
 
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
 I enjoy hiking, reading, video games, and building things. I love [my wife] and [my dog].
