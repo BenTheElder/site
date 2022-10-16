@@ -10,8 +10,9 @@ I enjoy hiking, gaming, and building things. I love [my wife] and [my dog].
 I want machines to help people do more and focus on what really matters.
 
 I am an open source software developer.
-I help maintain [Kubernetes] – particularly build, test, release, project infrastructure ... through which I hope to improve the developer and contributor experience. To that end [KIND] is my favorite and probably my most popular project. I love working
-with the community. 
+I help maintain [Kubernetes] and the project's infrastructure.
+[KIND] is my favorite and probably my most popular project. 
+I love working with the community.
 
 {{< figure src="./kubecon_barcelona_group_cropped.36pct.guetzli.jpg" alt="a group photo of Kubernetes contributors in Barcelona" caption="Ben & Friends at KubeCon EU 2019 ♥️" >}}
 
@@ -23,10 +24,20 @@ Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
   <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/kubernetes_logo.svg'); background-size: 86%; background-position: center;"></div>
+    <div class="date">October 2022</div>
+    <div class="description">Elected Member, Kubernetes Steering Committee</div>
+    <div class="details">I was honored to be <a href="https://groups.google.com/a/kubernetes.io/g/dev/c/gGgJZKbDLOc">elected</a> to a two-year term in one of the three open seats on the seven-member <a href="https://github.com/kubernetes/steering/blob/main/README.md">Kubernetes Steering Committee</a> in the 2022 election. From <a href="https://github.com/kubernetes/steering/blob/main/charter.md#mission">The Steering Committee Charter</a>:
+    <blockquote>The Kubernetes Steering Committee is the governing body of the Kubernetes project, providing decision-making and oversight pertaining to the Kubernetes project bylaws, sub-organizations, and financial planning. The Steering Committee also defines the project values and structure.</blockquote>
+    The Steering Committee are also the official representatives from the project
+    to the <a href="https://www.cncf.io/">Cloud Native Computing Foundation</a>.
+    </div>
+  </div>
+  <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/slackmoji/google.png');"></div>
     <div class="date">August 2022</div>
-    <div class="description">Senior Software Engineer, Kubernetes Engineering, Google</div>
-    <div class="details">After 5+ years of work on <a href="https://cloud.google.com/kubernetes-engine">GKE</a> / Kubernetes <a href="https://landing.google.com/engprod/">Engineering Productivity</a> teams I transferred to a new role on Kubernetes Engineering under GKE Engineering to  focus more on Kubernetes core.</div>
+    <div class="description">Senior Software Engineer, Anthos Kubernetes Kernel Team, Google</div>
+    <div class="details">After 5+ years of work on <a href="https://cloud.google.com/kubernetes-engine">GKE</a> / Kubernetes <a href="https://landing.google.com/engprod/">Engineering Productivity</a> teams I transferred to a new role on the Kubernetes Kernel Team under <a href="https://cloud.google.com/anthos">Anthos</a> Engineering to focus more on Kubernetes core.</div>
   </div>
   <div class="timeline-entry">
     <div class="icon" style=""><div style="background-image:url('/images/cncf-icon-color.png'); width: 1.11em; height: 1.11em; background-size: 1.11em; background-position: center; background-repeat: no-repeat; margin: .1925em;"></div></div>
