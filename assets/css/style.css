@@ -31,7 +31,7 @@ html,
 .timeline-entry .icon,
 .tile,
 .card {
-  background: #eefcfc;
+  background: #ffffff;
   color: rgba(0, 0, 0, 0.9);
 }
 
@@ -158,18 +158,7 @@ sup a.footnote-ref {
 
 /* fonts */
 html,
-body,
-.tile .section-title,
-.card .section-title,
-button,
-.button,
-.category,
-.label,
-.tile>.category,
-.card>.category,
-.tile>.label,
-.card>.label,
-.sourceCode .details {
+body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, Roboto, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
@@ -192,7 +181,18 @@ button,
 .card h4,
 .card h5,
 .card h6,
-.timeline-entry .date {
+.timeline-entry .date,
+.tile .section-title,
+.card .section-title,
+button,
+.button,
+.category,
+.label,
+.tile>.category,
+.card>.category,
+.tile>.label,
+.card>.label,
+.sourceCode .details {
   font-family: Montserrat, -apple-system, BlinkMacSystemFont, Roboto, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-weight: 600;
 }
@@ -848,7 +848,7 @@ p.min-para:before {
 
 blockquote {
   border-left: .33rem solid #787878;
-  background: #fcfcfc;
+  background: #f5f5f5;
   padding: .75em 1em;
   margin: 1em 0;
 }
