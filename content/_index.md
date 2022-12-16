@@ -2,7 +2,7 @@
 title: Home
 ---
 <h1 class="page-title">Hi, I'm Benjamin Elder 👋</h1>
-<figure class="full-bleed" style="background: none; border: none; position: relative; width: 42%; padding-bottom: 42%; left: 50%; transform: translateX(-50%); margin-bottom: .75em; margin-top: .1em;">
+<figure class="full-bleed" style="background: none; border: none; position: relative; width: 15em; padding-bottom: 15em; left: 50%; transform: translateX(-50%); margin-bottom: .75em; margin-top: .1em;">
   <picture>
     <img src="/images/ben_avatar_optim.jpg" alt="ben's avatar" class="circle-badge" style="position: absolute; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; border-width: .25em;">
   </picture>
@@ -22,9 +22,9 @@ title: Home
     </tbody>
   </table>
   <div style="font-weight: bold; line-height: 2em; margin: .5em auto">
-    <span>Occasionally I write – <a href="/posts">Posts 📝</a></span>
+    <span>Occasionally I write: <a href="/posts">Posts 📝</a></span>
     <br>
-    <span>More about me – <a href="/about">About Ben 🤔</a></span>
+    <span>More about me: <a href="/about">About Ben 🤔</a></span>
   </div>
   <table style="margin: 0 auto; text-align: left;">
     <tbody>
