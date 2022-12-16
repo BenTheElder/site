@@ -10,7 +10,7 @@ is maintained below, with recordings when available.
 
 ## KubeCon NA 2022
 
-Besides a Kubernetes Contributor Summit talk and two maintainer track talks, I also helped staff the Contributor Summit and participated in a as a member of the Kubernetes Steering Committee in two Steering AMA panels (one at the summit and one at the main conference).
+Besides a Kubernetes Contributor Summit talk and two maintainer track talks, I also helped staff the Contributor Summit and participated as a member of the Kubernetes Steering Committee in two Steering AMA panels (one at the summit and one at the main conference).
 
 I also joined the CNCF Governing Board meeting on Thursday to discuss Kubernetes Project Infrastructure funding and staffing. It was a busy week.
 
