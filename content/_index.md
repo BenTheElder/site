@@ -29,23 +29,23 @@ title: Home
   <table style="margin: 0 auto; text-align: left;">
     <tbody>
       <tr>
-        <td style="text-align: right"><span class="bold">Email <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)"></span></span></td>
-        <td><a href="mailto:ben@elder.dev">ben@elder.dev</a></td>
+        <td style="text-align: right"><span class="bold nowrap">Email <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)"></span></span></td>
+        <td><a href="mailto:ben@elder.dev">ben<wbr>@elder.dev</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Work <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)"></span></span></span></td>
-        <td><a href="mailto:bentheelder@google.com">bentheelder@google.com</a></td>
+        <td style="text-align: right"><span class="bold nowrap">Work <span class="icon" style="background-image:url(/images/material_icons/ic_contact_mail_black_24px.svg)"></span></span></span></td>
+        <td><a href="mailto:bentheelder@google.com">bentheelder<wbr>@google.com</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">GitHub <span class="icon" style="background-image:url(/images/GitHub-Mark-120px-plus.png); background-size: 95%"></span></span></td>
+        <td style="text-align: right"><span class="bold nowrap">GitHub <span class="icon" style="background-image:url(/images/GitHub-Mark-120px-plus.png); background-size: 95%"></span></span></td>
         <td><a href="https://www.github.com/BenTheElder">BenTheElder</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Mastodon <span class="icon" style="background-image:url(/images/mastodon-black-icon.png)"></span></span></td>
-        <td><a rel="me" href="https://mastodon.social/@BenTheElder">@BenTheElder@mastodon.social</a></td>
+        <td style="text-align: right"><span class="bold nowrap">Mastodon <span class="icon" style="background-image:url(/images/mastodon-black-icon.png)"></span></span></td>
+        <td><a rel="me" href="https://mastodon.social/@BenTheElder">@BenTheElder<wbr>@mastodon.social</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Twitter <span class="icon" style="background-image:url(/images/twitter-512.png)"></span></span></td>
+        <td style="text-align: right"><span class="bold nowrap">Twitter <span class="icon" style="background-image:url(/images/twitter-512.png)"></span></span></td>
         <td><a href="https://twitter.com/BenTheElder">@BenTheElder</a></td>
       </tr>
     </tbody>
