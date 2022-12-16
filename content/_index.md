@@ -41,11 +41,11 @@ title: Home
         <td><a href="https://www.github.com/BenTheElder">BenTheElder</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Mastodon <span class="icon" style="background-image:url(/images/mastodon-black-icon.svg)"></span></span></td>
+        <td style="text-align: right"><span class="bold">Mastodon <span class="icon" style="background-image:url(/images/mastodon-black-icon.png)"></span></span></td>
         <td><a href="https://mastodon.social/@BenTheElder">@BenTheElder@mastodon.social</a></td>
       </tr>
       <tr>
-        <td style="text-align: right"><span class="bold">Twitter <span class="icon" style="background-image:url(/images/icons8-twitter.svg)"></span></span></td>
+        <td style="text-align: right"><span class="bold">Twitter <span class="icon" style="background-image:url(/images/twitter-512.png)"></span></span></td>
         <td><a href="https://twitter.com/BenTheElder">@BenTheElder</a></td>
       </tr>
     </tbody>
