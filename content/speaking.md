@@ -8,6 +8,30 @@ I'm a novice speaker with a few [KubeCon](https://www.cncf.io/kubecon-cloudnativ
 of smaller internal (company) talks under my belt. A complete list of my talks
 is maintained below, with recordings when available.
 
+## KubeCon NA 2022
+
+Besides a Kubernetes Contributor Summit talk and two maintainer track talks, I also helped staff the Contributor Summit and participated in a as a member of the Kubernetes Steering Committee in two Steering AMA panels (one at the summit and one at the main conference).
+
+I also joined the CNCF Governing Board meeting on Thursday to discuss Kubernetes Project Infrastructure funding and staffing. It was a busy week.
+
+### Why We Moved the Kubernetes Image Registry
+
+I spoke with Adolfo García Veytia, and Arnaud Meukam about https://registry.k8s.io, an effort Kubernetes undertook to improve The Project's container image hosting sustainability.
+
+{{< lazyYoutube id="9CdzisDQkjE" title="KCSNA22 - Why We Moved the Kubernetes Image Registry" >}}
+
+### Kubernetes Infra SIG: Intro And Updates
+
+I spoke with Arnaud Meukam about what's up in [SIG K8s-Infra](https://git.k8s.io/community/sig-k8s-infra/README.md). We both ran over from the CNCF Governing board meeting – Dims couldn't make it as he stayed behind to continue discussing.
+
+{{< lazyYoutube id="mJAC4asDCOw" title="Kubernetes Infra SIG: Intro And Updates - Davanum Srinivas, Arnaud Meukam, Benjamin Elder" >}}
+
+### SIG Testing: Intro And Updates
+
+As a Chair and Tech Lead of SIG Testing I spoke with Michelle Shepardson, Chao Dai, and Antonio Ojea Garcia about the SIG.
+
+{{< lazyYoutube id="CdKBl6CncHg" title="SIG Testing: Intro And Updates - Benjamin Elder & Michelle Shepardson & Chao Dai, Antonio Garcia" >}}
+
 ## Open Source Productivity Day on Google Open Source Live
 
 In October 2021 I gave a short talk about [testing Kubernetes with KIND and Kubetest2](
