@@ -5,7 +5,7 @@ title: About Ben
 ---
 
 My name is Benjamin Elder, though I am frequently known as Ben / [BenTheElder].
-I enjoy hiking, reading, video games, and building things. I love [my wife] and [my dog].
+I enjoy hiking, reading, gaming, and building things. I love [my wife] and [my dog].
 I want machines to help people do more and focus on what really matters.
 
 I am an open source software developer.
@@ -22,6 +22,12 @@ I am currently a Senior Software Engineer at Google working on Kubernetes.
 Below is a timeline highlighting some notable moments in my career.
 
 <div class="timeline">
+  <div class="timeline-entry">
+    <div class="icon" style="background-image: url('/images/kubernetes_logo.svg'); background-size: 86%; background-position: center;"></div>
+    <div class="date">May 2020</div>
+    <div class="description">Technical Lead, Kubernetes <a href="https://github.com/kubernetes/community/blob/master/sig-k8s-infra/README.md">SIG K8s Infra</a></div>
+    <div class="details">I was nominated for the Tech Lead role in the Kubernetes K8s Infra Special Interest Group along with <a href="https://github.com/ameukam">Arnaud Meukam </a> and <a href="https://github.com/upodroid">Mahamed Ali</a>. SIG K8s Infra manages the cloud credits and asset hosting infrastructure used to host the Kubernetes project itself, e.g. <a href="https://registry.k8s.io">registry.k8s.io</a>.<br><br>I am currently a Tech Lead in SIG K8s Infra and SIG Testing having rotated in new Tech Leads and Chairs to SIG Testing and stepped down from the SIG Testing Chair role (which split into Chair & Tech Lead). I am continuing to work on succession and sustainability in the project.</div>
+  </div>
   <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/kubernetes_logo.svg'); background-size: 86%; background-position: center;"></div>
     <div class="date">October 2022</div>
@@ -79,7 +85,7 @@ Below is a timeline highlighting some notable moments in my career.
     <div class="icon" style="background-image: url('/images/buzz.png'); background-size: 79%; background-position: 52% 69%;"></div>
     <div class="date">May 2017</div>
     <div class="description">Graduated BSCS, <a href="https://www.gatech.edu/">Georgia Tech</a></div>
-    <div class="details">With "<a href="https://www.cc.gatech.edu/academics/degree-programs/bachelors/computer-science/threads">threads</a>" (specialization) in "<a href="http://www.cc.gatech.edu/intelligence">Intelligence</a>" (Machine Learning) and "<a href="http://www.cc.gatech.edu/devices">Devices</a>" (hardware/software, robotics, embedded etc.). I studied Electrical Engineering before switching to Computer Science.</div>
+    <div class="details">With "<a href="https://www.cc.gatech.edu/academics/degree-programs/bachelors/computer-science/threads">threads</a>" (specialization) in "<a href="http://www.cc.gatech.edu/intelligence">Intelligence</a>" (machine learning) and "<a href="http://www.cc.gatech.edu/devices">Devices</a>" (hardware/software, robotics, embedded etc.). I studied Electrical Engineering and Computer Engineering before switching to Computer Science.</div>
   </div>
   <div class="timeline-entry">
     <div class="icon" style="background-image: url('/images/480px-GSoC-icon.svg.png');"></div>

@@ -8,6 +8,16 @@ I'm a novice speaker with a few [KubeCon](https://www.cncf.io/kubecon-cloudnativ
 of smaller internal (company) talks under my belt. A complete list of my talks
 is maintained below, with recordings when available.
 
+## KubeCon NA 2023
+
+The Steering Committee did our usual AMA session at the Kubernetes Contributor Summit (not recorded),
+I also co-spoke with Arnaud Meukam about SIG K8s Infra in the maintainer track.
+
+### Kubernetes Infra SIG: Intro and Updates - Arnaud Meukam & Benjamin Elder
+
+{{< lazyYoutube id="3H32HOJGuCI" title="Kubernetes Infra SIG: Intro and Updates - Arnaud Meukam, VMware & Benjamin Elder, Google" >}}
+
+
 ## KubeCon NA 2022
 
 Besides a Kubernetes Contributor Summit talk and two maintainer track talks, I also helped staff the Contributor Summit and participated as a member of the Kubernetes Steering Committee in two Steering AMA panels (one at the summit and one at the main conference).
